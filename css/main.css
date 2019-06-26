@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css?family=Mali&display=swap");
+
+/*
+Primary Color  : #2a2d30;
+Secondary Color : #363636
+Effects Color : #e74315;
+Accent Color : #999;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mali", cursive;
+}
+
+html,
+body {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #999;
+}
+
+.header {
+  background-image: linear-gradient(
+      to right,
+      rgb(42, 45, 48, 0.7),
+      rgb(54, 54, 54, 0.7)
+    ),
+    url("/img/banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
