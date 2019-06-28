@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Sans&display=swap");
+
+$font: "DM Sans", sans-serif;
+
+$colors: (
+  "primary": #2a2d30,
+  "secondary": #363636,
+  "ternary": #e74315,
+  "accent": #999
+);
+
+@mixin defaultStyling {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+@mixin flexRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+@mixin flexColumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+  justify-items: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font;
+}

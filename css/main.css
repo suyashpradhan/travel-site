@@ -28,8 +28,8 @@ body {
 .header {
   background-image: linear-gradient(
       to right,
-      rgb(42, 45, 48, 0.8),
-      rgb(54, 54, 54, 0.8)
+      rgb(42, 45, 48, 0.7),
+      rgb(54, 54, 54, 0.7)
     ),
     url("/img/banner.jpg");
   background-repeat: no-repeat;
@@ -76,8 +76,10 @@ nav {
 
 /*About Section*/
 .about_section {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: center;
+  grid-gap: 5rem;
   align-items: center;
   height: 75vh;
   max-width: 1140px;
@@ -109,7 +111,7 @@ nav {
   letter-spacing: 1px;
   padding: 1rem 2rem;
   border-radius: 0.8rem;
-  margin: 1rem 0 0 0;
+  margin: 2rem 0 0 0;
   display: inline-block;
   text-decoration: none;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
@@ -133,18 +135,18 @@ nav {
   flex-flow: column wrap;
   background: #fff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  border-radius: 0.8rem;
-  height: 22rem;
-  width: 22rem;
+  border-radius: 0.5rem;
+  height: 19rem;
+  width: 23rem;
   padding: 1rem;
 }
 
 .section__form--fields {
   width: 100%;
   display: block;
-  padding: 0.6rem;
+  padding: 0.7rem;
   margin: 0.5rem 0;
-  border-radius: 0.8rem;
+  border-radius: 0.5rem;
   border: 2px solid #ccc;
   color: #363636;
   font-size: 1rem;
@@ -166,7 +168,7 @@ nav {
   color: #ccc;
   font-size: 1.3rem;
   letter-spacing: 1px;
-  border-radius: 0.6rem;
+  border-radius: 0.5rem;
   margin: 0.6rem 0 0 0;
   padding: 1rem 0;
   width: 100%;
