@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tourizto.</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="slick_carousel/slick-theme.css">
+    <link rel="stylesheet" href="slick_carousel/slick.css">
 </head>
 
 <body>
@@ -27,15 +29,108 @@
             </div>
             <div class="about_section--right fromBottom">
                 <form action="#" method="post" class="section__form">
-                    <input type="text" name="" id="" placeholder="Source City" class="section__form--fields">
-                    <input type="text" name="" id="" placeholder="Destination City" class="section__form--fields">
-                    <input type="text" name="" id="" placeholder="Starting Date" class="section__form--fields">
+                    <input type="text" name="" id="" placeholder="WHERE" class="section__form--fields">
+                    <input type="text" name="" id="" placeholder="CHECK-IN" class="section__form--fields">
+                    <input type="text" name="" id="" placeholder="CHECKOUT" class="section__form--fields">
                     <!--  <input type="text" name="" id="" placeholder="Ending Date" class="section__form--fields"> -->
                     <a href="#" class="section__form--btn">Search</a>
                 </form>
             </div>
         </div>
     </header>
+    <div class="explore_section gutter pd">
+        <h1 class="section_header">
+            Explore Tourizto
+        </h1>
+        <div class="explore_section--inner">
+            <div class="explore_section--innerWrap one">
+                <img src="img/stays.jpg" alt="" class="explore_img">
+                <h1 class="innerHeader">Stays<br>
+                    <span>Homes, boutique hotels & more</span>
+                </h1>
+
+            </div>
+            <div class="explore_section--innerWrap two">
+                <img src="img/experience.jpg" alt="" class="explore_img">
+                <h1 class="innerHeader">Experiences<br>
+                    <span>Activities hosted by locals</span>
+                </h1>
+            </div>
+            <div class="explore_section--innerWrap three">
+                <img src="img/restaurant.jpg" alt="" class="explore_img">
+                <h1 class="innerHeader">Restaurants<br>
+                    <span>
+                        Popular spots to eat & drink
+                    </span></h1>
+            </div>
+        </div>
+    </div>
+    <div class="recommended_section gutter pd">
+        <h1 class="section_header">
+            Recommended for you
+        </h1>
+        <div class="recommended_section--inner">
+            <div class="recommended_section--innerWrap">
+                <div class="carousel_details">
+                    <img src="img/mumbai.jpg" alt="" class="carousel_img">
+                    <div class="carousel_info">
+                        <h1>Mumbai</h1>
+                        <i class="fas fa-rupee-sign"></i>6,332 /night average
+                    </div>
+                </div>
+            </div>
+            <div class="recommended_section--innerWrap">
+                <div class="carousel_details">
+                    <img src="img/kolkata.jpg" alt="" class="carousel_img">
+                    <div class="carousel_info">
+                        <h1>Kolkata</h1>
+                        <i class="fas fa-rupee-sign"></i>5,332 /night average
+                    </div>
+                </div>
+            </div>
+            <div class="recommended_section--innerWrap">
+                <div class="carousel_details">
+                    <img src="img/bangalore.jpg" alt="" class="carousel_img">
+                    <div class="carousel_info">
+                        <h1>Bangalore</h1>
+                        <i class="fas fa-rupee-sign"></i>6,011 /night average
+                    </div>
+                </div>
+            </div>
+            <div class="recommended_section--innerWrap">
+                <div class="carousel_details">
+                    <img src="img/kerala.jpg" alt="" class="carousel_img">
+                    <div class="carousel_info">
+                        <h1>Kerala</h1>
+                        <i class="fas fa-rupee-sign"></i>5,702 /night average
+                    </div>
+                </div>
+            </div>
+            <div class="recommended_section--innerWrap">
+                <div class="carousel_details">
+                    <img src="img/jaipur.jpg" alt="" class="carousel_img">
+                    <div class="carousel_info">
+                        <h1>Jaipur</h1>
+                        <i class="fas fa-rupee-sign"></i>4,147 /night average
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7fdc918442.js"></script>
+    <script src="slick_carousel/slick.js"></script>
+
+    <script>
+        $('.recommended_section--inner').slick({
+            slidesToShow: 3,
+            infinite: true,
+            slidesToScroll: 3,
+            arrows: true,
+            padding: '40px',
+        });
+    </script>
 </body>
 
 </html>
