@@ -111,13 +111,32 @@ nav {
       @include defaultStyling();
       padding: 0 1rem;
       list-style: none;
+      position: relative;
 
       a {
         font-size: 1.3rem;
         color: map-get($map: $colors, $key: text_light);
         @include defaultStyling();
-        text-transform: uppercase;
-        font-weight: 700;
+        font-weight: 600;
+
+        &::after {
+          background: none repeat scroll 0 0 transparent;
+          bottom: 0;
+          content: "";
+          display: block;
+          height: 4px;
+          left: 50%;
+          top: 3rem;
+          position: absolute;
+          background: #fff;
+          transition: width 0.3s ease 0s, left 0.3s ease 0s;
+          width: 0;
+        }
+
+        &:hover::after {
+          width: 100%;
+          left: 0;
+        }
       }
     }
   }
