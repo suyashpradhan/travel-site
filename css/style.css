@@ -45,11 +45,25 @@ nav {
     text-decoration: none;
     margin: 0;
     padding: 0; }
-  .navigation .navigation--menu img {
-    height: 3.5rem;
-    transition: all 0.5s ease; }
-  .navigation .navigation--menu img:hover {
-    transform: scale(1.3); }
+  .navigation .navigation--list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap; }
+    .navigation .navigation--list li {
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      padding: 0 1rem;
+      list-style: none; }
+      .navigation .navigation--list li a {
+        font-size: 1.3rem;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700; }
 
 /*End's Here*/
 /*About Section*/
@@ -111,16 +125,16 @@ nav {
     padding: 0.7rem;
     margin: 0.5rem 0;
     border-radius: 0.5rem;
-    border: 2px solid #484848;
+    border: 1px solid #ccc;
     color: #484848;
     font-size: 1rem;
     font-weight: 900; }
   .about_section .section__form--fields:active {
     outline: none;
-    border: 2px solid #e74315; }
+    border: 1px solid #e74315; }
   .about_section .section__form--fields:focus {
     outline: none;
-    border: 2px solid #e74315; }
+    border: 1px solid #e74315; }
   .about_section .section__form--btn {
     background-color: #e74315;
     color: #f5f6f7;
@@ -200,26 +214,29 @@ nav {
     .recommended_section .recommended_section--inner .carousel_details {
       position: relative; }
       .recommended_section .recommended_section--inner .carousel_details .carousel_img {
-        height: 22rem;
-        width: 23rem;
+        height: 20rem;
+        width: 13.5rem;
         object-fit: cover;
         border-radius: 0.3rem; }
       .recommended_section .recommended_section--inner .carousel_details .carousel_info {
         position: absolute;
         bottom: 0;
-        padding-top: 3rem;
+        padding-top: 2rem;
         text-align: center;
         color: #f5f6f7;
-        background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 20%, black 100%) !important;
-        height: 8rem !important;
-        width: 23rem !important;
+        background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 5%, black 100%) !important;
+        height: 6.5rem !important;
+        width: 13.5rem !important;
         border-radius: 0.3rem; }
         .recommended_section .recommended_section--inner .carousel_details .carousel_info h1 {
           margin: 0;
           padding: 0;
           text-decoration: none;
-          font-size: 1.5rem;
+          font-size: 1.2rem;
           letter-spacing: 1px; }
+        .recommended_section .recommended_section--inner .carousel_details .carousel_info .secondary_icons {
+          font-size: 0.8rem;
+          padding-right: 0.2rem; }
 
 /*End's Here*/
 /*Media Query*/

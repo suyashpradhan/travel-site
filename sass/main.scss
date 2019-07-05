@@ -6,7 +6,9 @@ $colors: (
   "primary": #2a2d30,
   "secondary": #363636,
   "ternary": #e74315,
-  "accent": #484848
+  "accent": #484848,
+  "light": #ccc,
+  "text_light": #fff
 );
 
 @mixin defaultStyling {
@@ -102,13 +104,22 @@ nav {
     padding: 0;
   }
 
-  .navigation--menu img {
-    height: 3.5rem;
-    transition: all 0.5s ease;
-  }
+  .navigation--list {
+    @include flexRow();
 
-  .navigation--menu img:hover {
-    transform: scale(1.3);
+    li {
+      @include defaultStyling();
+      padding: 0 1rem;
+      list-style: none;
+
+      a {
+        font-size: 1.3rem;
+        color: map-get($map: $colors, $key: text_light);
+        @include defaultStyling();
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
   }
 } /*End's Here*/
 
@@ -183,7 +194,7 @@ nav {
     padding: 0.7rem;
     margin: 0.5rem 0;
     border-radius: 0.5rem;
-    border: 2px solid map-get($map: $colors, $key: accent);
+    border: 1px solid map-get($map: $colors, $key: light);
     color: map-get($map: $colors, $key: accent);
     font-size: 1rem;
     font-weight: 900;
@@ -191,12 +202,12 @@ nav {
 
   .section__form--fields:active {
     outline: none;
-    border: 2px solid #e74315;
+    border: 1px solid #e74315;
   }
 
   .section__form--fields:focus {
     outline: none;
-    border: 2px solid #e74315;
+    border: 1px solid #e74315;
   }
 
   .section__form--btn {
@@ -284,8 +295,8 @@ nav {
       position: relative;
 
       .carousel_img {
-        height: 22rem;
-        width: 23rem;
+        height: 20rem;
+        width: 13.5rem;
         object-fit: cover;
         border-radius: 0.3rem;
       }
@@ -293,22 +304,27 @@ nav {
       .carousel_info {
         position: absolute;
         bottom: 0;
-        padding-top: 3rem;
+        padding-top: 2rem;
         text-align: center;
         color: #f5f6f7;
         background-image: linear-gradient(
           -180deg,
-          rgba(0, 0, 0, 0) 20%,
+          rgba(0, 0, 0, 0) 5%,
           rgb(0, 0, 0) 100%
         ) !important;
-        height: 8rem !important;
-        width: 23rem !important;
+        height: 6.5rem !important;
+        width: 13.5rem !important;
         border-radius: 0.3rem;
 
         h1 {
           @include defaultStyling();
-          font-size: 1.5rem;
+          font-size: 1.2rem;
           letter-spacing: 1px;
+        }
+
+        .secondary_icons {
+          font-size: 0.8rem;
+          padding-right: 0.2rem;
         }
       }
     }
