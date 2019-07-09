@@ -127,8 +127,12 @@ button {
 
 .slide-arrow {
     position: absolute;
-    top: 50%;
-    margin-top: -15px;
+    top: 45%;
+}
+
+.slide-arrow_2 {
+    position: absolute;
+    top: 30%;
 }
 
 .prev-arrow {
