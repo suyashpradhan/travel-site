@@ -7,61 +7,64 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/util.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Google+Sans:400|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
 </head>
 
-<body>
+<body style="background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+background-image: linear-gradient(
+    -180deg,
+    rgba(0, 0, 0, 0) 5%,
+    rgb(0, 0, 0) 100%
+  ),
+  url(' ../img/login.jpg');
+  height: 100vh;">
+    <nav>
+        <div class="navigation gutter">
+            <a href="#" class="navigation--logo fromLeft">Tourizto<span style="color: #e74315">.</span></a>
+            <!-- <a href="#" class="navigation--menu fromRight">
+                        <img src="img/menu-button.png" alt="">
+                    </a> -->
+            <ul class="navigation--list">
+                <li><a href="#">Host a home</a></li>
+                <li><a href="#">Host an experience</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Sign up</a></li>
+            </ul>
+        </div>
+    </nav>
     <div class="limiter">
-        <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
-            <div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
-                <form class="login100-form validate-form flex-sb flex-w">
-                    <span class="login100-form-title p-b-53">
-                        Sign In With
-                    </span>
-                    <a href="#" class="btn-face m-b-20">
-                        <i class="fa fa-facebook-official"></i>
-                        Facebook
-                    </a>
-                    <a href="#" class="btn-google m-b-20">
-                        <img src="images/icons/icon-google.png" alt="GOOGLE">
-                        Google
-                    </a>
-                    <div class="p-t-31 p-b-9">
-                        <span class="txt1">
-                            Username
-                        </span>
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-form">
+                    <div class="social_login">
+                        <a href="#" class="social_login--wrap _facebook"><i
+                                class="fab fa-facebook-f social_login--icons "></i>
+                            Log
+                            in with
+                            Facebook</a>
+                        <a href="#" class="social_login--wrap _google">
+                            <img src="https://img.icons8.com/color/20/000000/google-logo.png"
+                                class="social_login--icons">Log in
+                            with Google</a>
                     </div>
-                    <div class="wrap-input100 validate-input" data-validate="Username is required">
-                        <input class="input100" type="text" name="username">
-                        <span class="focus-input100"></span>
+                    <div class="or">
+                        <hr class="bar" />
+                        <span>OR</span>
+                        <hr class="bar" />
                     </div>
-                    <div class="p-t-13 p-b-9">
-                        <span class="txt1">
-                            Password
-                        </span>
-                        <a href="#" class="txt2 bo1 m-l-5">
-                            Forgot?
-                        </a>
-                    </div>
-                    <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <input class="input100" type="password" name="pass">
-                        <span class="focus-input100"></span>
-                    </div>
-                    <div class="container-login100-form-btn m-t-17">
-                        <button class="login100-form-btn">
-                            Sign In
-                        </button>
-                    </div>
-                    <div class="w-full text-center p-t-55">
-                        <span class="txt2">
-                            Not a member?
-                        </span>
-                        <a href="#" class="txt2 bo1">
-                            Sign up now
-                        </a>
-                    </div>
-                </form>
+                    <form action="#" method="POST" class="login_form">
+                        <input type="email" name="" id="" placeholder="Email Address" class="login_form--fields">
+                        <input type="password" name="" id="" placeholder="Password" class="login_form--fields">
+                        <a href="#" class="login_form--btn">Login</a>
+                        <a href="#" class="login_form--forgot">Forgot Password ?</a>
+                    </form>
+                    <hr class="_gap">
+                    <span class="sign_up">Don’t have an account?</span><a href="#" class="sign_up--link">Sign up</a>
+                </div>
             </div>
         </div>
     </div>

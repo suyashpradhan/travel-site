@@ -59,6 +59,14 @@ body {
   color: map-get($map: $colors, $key: accent);
 }
 
+img {
+  vertical-align: middle !important;
+}
+
+._gap {
+  border: 0.5px solid map-get($map: $colors, $key: light) !important;
+}
+
 .pd {
   padding: 2rem 0;
 }
@@ -74,6 +82,7 @@ body {
   font-weight: 600;
   color: map-get($map: $colors, $key: primary);
 }
+
 .secondary_icons {
   font-size: 0.8rem;
   padding-right: 0.2rem;
@@ -374,6 +383,7 @@ nav {
     margin: 1rem 0 0 0;
   }
 }
+
 /*End's Here*/
 
 /*Luxury Section*/
@@ -448,6 +458,7 @@ nav {
     margin: 1rem 0 0 0;
   }
 }
+
 /*End's Here*/
 
 footer {
@@ -488,6 +499,7 @@ footer {
       }
     }
   }
+
   .about_company--inner {
     @include grid();
     grid-template-columns: 1fr auto !important;
@@ -504,6 +516,7 @@ footer {
     .other {
       display: block;
       width: 100%;
+
       a {
         background-color: map-get($map: $colors, $key: text_light);
         padding: 0.3rem 1rem;
@@ -520,6 +533,176 @@ footer {
         }
       }
     }
+  }
+}
+
+/*Login Form*/
+.container-login100 {
+  width: 100%;
+  min-height: 85vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  overflow: auto;
+
+  .wrap-login100 {
+    width: 28.15rem;
+    background: #fff;
+    border-radius: 10px;
+    position: relative;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+      0 1px 2px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+      0 1px 2px rgba(0, 0, 0, 0.24);
+    -ms-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+  }
+
+  .login100-form {
+    width: 100%;
+    padding: 1.5rem;
+
+    .social_login {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: row wrap;
+
+      ._facebook {
+        background-color: #4568b2;
+        padding: 10px 0 !important;
+        margin-right: 5px;
+        color: map-get($map: $colors, $key: text_light);
+        @include defaultStyling();
+        margin-bottom: 0.5rem !important;
+        border-radius: 0.3rem;
+      }
+
+      ._google {
+        background-color: map-get($map: $colors, $key: text_light);
+        padding: 10px 0 !important;
+        margin-right: 5px;
+        color: map-get($map: $colors, $key: primary);
+        border: 2px solid map-get($map: $colors, $key: secondary);
+        @include defaultStyling();
+        margin-bottom: 0.5rem !important;
+        border-radius: 0.3rem;
+      }
+
+      .social_login--wrap {
+        width: 100%;
+        text-align: center;
+        font-size: 1.1rem;
+
+        .social_login--icons {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+    .or {
+      display: flex;
+      flex-direction: row;
+      margin: 0.5rem 0;
+      align-items: center;
+
+      .bar {
+        flex: auto;
+        border: none;
+        height: 1px;
+        background: map-get($map: $colors, $key: secondary);
+      }
+
+      span {
+        color: map-get($map: $colors, $key: primary);
+        padding: 0rem 0.9rem;
+      }
+    }
+  }
+
+  .login_form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column wrap;
+
+    .login_form--fields {
+      width: 100%;
+      display: block;
+      padding: 0.7rem;
+      margin: 0.5rem 0;
+      border-radius: 0.3rem;
+      border: 1px solid map-get($map: $colors, $key: light);
+      color: map-get($map: $colors, $key: accent);
+      font-size: 1rem;
+      font-weight: 900;
+    }
+
+    .login_form--fields:active {
+      outline: none;
+      border: 1px solid #e74315;
+    }
+
+    .login_form--fields:focus {
+      outline: none;
+      border: 1px solid #e74315;
+    }
+
+    .login_form--btn {
+      background-color: #e74315;
+      color: #f5f6f7;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      border-radius: 0.3rem;
+      margin: 0.6rem 0 0 0;
+      padding: 0.7rem 0;
+      width: 100%;
+      text-align: center;
+      display: inline-block;
+      text-decoration: none;
+      /*  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5); */
+      transition: all 0.2s ease-in-out;
+      backface-visibility: hidden;
+    }
+
+    .login_form--btn:hover {
+      transform: translateY(-3px) scale(1.03);
+    }
+
+    .login_form--btn:active {
+      outline: none;
+      transform: translateZ(-3px);
+    }
+
+    .login_form--forgot {
+      color: map-get($map: $colors, $key: primary);
+      font-weight: 600;
+      margin: 1rem 0;
+      text-align: right;
+      text-decoration: none;
+    }
+  }
+  .sign_up {
+    margin: 1rem 0 0 0;
+    display: inline-block;
+  }
+
+  .sign_up--link {
+    color: map-get($map: $colors, $key: ternary);
+    text-decoration: none;
+    margin-left: 0.3rem;
+    font-weight: 600;
   }
 }
 
@@ -575,6 +758,7 @@ footer {
     }
   }
 }
+
 /*End's Here*/
 
 /*Animation  Section*/
