@@ -61,6 +61,30 @@ img {
       font-size: 1.2rem;
       letter-spacing: 1px; }
 
+.__signup {
+  background-color: #e74315;
+  color: #f5f6f7;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  border-radius: 0.3rem;
+  margin: 0.6rem 0 1.5rem 0;
+  padding: 0.7rem 0;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  backface-visibility: hidden; }
+  .__signup:hover {
+    transform: translateY(-3px) scale(1.03); }
+  .__signup:active {
+    outline: none;
+    transform: translateZ(-3px); }
+
+label {
+  color: #2a2d30;
+  font-weight: 600; }
+
 .social_icons {
   width: 30px;
   height: 30px;
@@ -79,7 +103,7 @@ hr {
 /*End's Here*/
 /*Hero Section Styling*/
 .header {
-  background-image: linear-gradient(to right, #2a2d30b3, #363636b3), url("/img/banner.jpg");
+  background-image: url("/img/banner.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -143,11 +167,9 @@ nav {
 /*About Section*/
 .about_section {
   display: grid;
-  grid-template-columns: auto auto;
-  justify-items: center;
-  grid-gap: 5rem;
-  align-items: center;
-  height: 75vh; }
+  grid-template-columns: auto;
+  justify-items: flex-start;
+  align-items: center; }
   .about_section .section__header--main {
     font-size: 4rem;
     font-weight: 900;
@@ -172,7 +194,6 @@ nav {
     margin: 2rem 0 0 0;
     display: inline-block;
     text-decoration: none;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
     transition: all 0.2s ease-in-out;
     backface-visibility: hidden; }
   .about_section .section__header--btn:hover {
@@ -188,17 +209,16 @@ nav {
     background: #fff;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     border-radius: 0.5rem;
-    height: 19rem;
+    height: auto;
     width: 23rem;
-    padding: 1rem; }
+    padding: 2rem; }
   .about_section .section__form--fields {
     width: 100%;
     display: block;
     padding: 0.7rem;
-    margin: 0.5rem 0;
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
     border: 1px solid #ccc;
-    color: #484848;
+    color: #363636;
     font-size: 1rem;
     font-weight: 900; }
   .about_section .section__form--fields:active {
@@ -227,6 +247,12 @@ nav {
   .about_section .section__form--btn:active {
     outline: none;
     transform: translateZ(-3px); }
+  .about_section .section__form--header {
+    font-size: 1.7rem;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    margin-bottom: 0.8rem !important; }
 
 /*End's Here*/
 /*Explore Section*/
@@ -569,23 +595,6 @@ footer {
 
 /*End's Here*/
 /*Animation  Section*/
-.fromLeft {
-  animation: logoAnimation 1.5s forwards 0s linear; }
-
-@keyframes about_section--left {
-  0% {
-    transform: rotate(0) scale(1) translateY(-100px);
-    opacity: 0; }
-  50% {
-    transform: rotate(0) scale(1) translateY(-50px);
-    opacity: 0; }
-  100% {
-    transform: rotate(0) scale(1) translateY(0);
-    opacity: 1; } }
-
-.fromTop {
-  animation: about_section--left 1.5s forwards 0s linear; }
-
 @keyframes about_section--right {
   0% {
     transform: rotate(0) scale(1) translateY(100px);
