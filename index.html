@@ -41,7 +41,18 @@
                     <label for="check-in">CHECK-IN</label>
                     <input type="date" name="" id="check-in" placeholder="CHECK-IN" class="section__form--fields"><br>
                     <label for="check-out">CHECK-OUT</label>
-                    <input type="date" name="" id="check-out" placeholder="CHECK-OUT" class="section__form--fields">
+                    <input type="date" name="" id="check-out" placeholder="CHECK-OUT" class="section__form--fields"><br>
+                    <label for="check-out">GUEST</label>
+                    <div class="section__form--guest">
+                        <select name="adults" id="sources" class="custom-select sources" placeholder="Adults">
+                        </select>
+                        <select name="chidren" id="sources" class="custom-select sources"
+                            placeholder="Children (Ages 2-12)">
+                        </select>
+                        <select name="infant" id="sources" class="custom-select sources"
+                            placeholder="Infants (Under 2)">
+                        </select>
+                    </div><br>
                     <a href="#" class="section__form--btn">Search</a>
                 </form>
             </div>
@@ -362,7 +373,7 @@
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/7fdc918442.js"></script>
     <script src="slick_carousel/slick.js"></script>
-
+    <script src="script/script.js"></script>
     <script>
         $('.recommended_section--inner').slick({
             slidesToShow: 5,
