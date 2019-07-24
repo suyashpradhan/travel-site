@@ -19,7 +19,7 @@ background-image: linear-gradient(
     rgba(0, 0, 0, 0) 5%,
     rgb(0, 0, 0) 100%
   ),
-  url(' ../img/login.jpg');
+  url('img/login.jpg');
   height: 100vh;">
     <nav>
         <div class="navigation gutter">

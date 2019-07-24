@@ -34,7 +34,7 @@
         <div class="about_section pageWrapper gutter pd">
             <div class="about_section--right fromBottom">
                 <form action="#" method="post" class="section__form">
-                    <h1 class="section__form--header">Book unique places to <br>stay and things to do.</h1>
+                    <h1 class="section__form--header">Book unique places to stay and things to do.</h1>
                     <div class="section__form-group"></div>
                     <label for="place">WHERE</label>
                     <input type="text" name="" id="place" placeholder="Anywhere" class="section__form--fields"><br>

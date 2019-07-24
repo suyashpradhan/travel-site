@@ -1,3 +1,10 @@
+<?php
+
+require_once "config.php";
+$loginURL = $gClient->createAuthURL();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Google+Sans:400|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
@@ -19,7 +26,7 @@ background-image: linear-gradient(
     rgba(0, 0, 0, 0) 5%,
     rgb(0, 0, 0) 100%
   ),
-  url(' ../img/login.jpg');
+  url('../img/login.jpg');
   height: 100vh;">
     <nav>
         <div class="navigation gutter">
@@ -43,11 +50,11 @@ background-image: linear-gradient(
                             Continue
                             with
                             Facebook</a>
-                        <a href="#" class="social_login--wrap _google">
+                        <button type="button" onclick="window.location='<?php echo $loginURL; ?>'" class="social_login--wrap _google" >
                             <img src="https://img.icons8.com/color/20/000000/google-logo.png"
                                 class="social_login--icons">Continue
                             with
-                            Google</a>
+                            Google</button>
                     </div>
                     <div class="or">
                         <hr class="bar" />
