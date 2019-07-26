@@ -16,10 +16,13 @@ img {
   vertical-align: middle !important; }
 
 ._gap {
-  border: 0.5px solid #ccc !important; }
+  border: 0.5px solid #ddd !important; }
 
 .pd {
   padding: 2rem 0; }
+
+.margin {
+  margin: 0 1rem; }
 
 .pageWrapper {
   max-width: 71.25rem;
@@ -60,6 +63,24 @@ img {
       text-decoration: none;
       font-size: 1.2rem;
       letter-spacing: 1px; }
+
+.section__form--fields {
+  width: 100%;
+  display: block;
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  border: 1px solid #ddd;
+  color: #2a2d30;
+  font-size: 1rem;
+  font-weight: 900; }
+
+.section__form--fields:active {
+  outline: none;
+  border: 1px solid #e74315; }
+
+.section__form--fields:focus {
+  outline: none;
+  border: 1px solid #e74315; }
 
 .__signup {
   background-color: #e74315;
@@ -114,7 +135,8 @@ hr {
 nav {
   width: 100%;
   height: 5rem;
-  padding: 0.8rem 0; }
+  padding: 0.8rem 0;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1); }
 
 .navigation {
   display: flex;
@@ -164,6 +186,55 @@ nav {
           left: 0; }
 
 /*End's Here*/
+/*Booking Navigation*/
+.navigation__bookings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin: auto; }
+  .navigation__bookings .navigation--logo {
+    color: #2a2d30;
+    font-size: 2rem;
+    font-weight: 900;
+    text-decoration: none;
+    margin: 0;
+    padding: 0; }
+  .navigation__bookings .navigation--list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap; }
+    .navigation__bookings .navigation--list li {
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      padding: 0 1rem;
+      list-style: none;
+      position: relative; }
+      .navigation__bookings .navigation--list li a {
+        font-size: 1rem;
+        color: #363636;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+        text-decoration: none; }
+        .navigation__bookings .navigation--list li a::after {
+          background: none repeat scroll 0 0 transparent;
+          bottom: 0;
+          content: "";
+          display: block;
+          height: 4px;
+          left: 50%;
+          top: 3rem;
+          position: absolute;
+          background: #e74315;
+          transition: width 0.3s ease 0s, left 0.3s ease 0s;
+          width: 0; }
+        .navigation__bookings .navigation--list li a:hover::after {
+          width: 100%;
+          left: 0; }
+
 /*About Section*/
 .about_section {
   display: grid;
@@ -217,7 +288,7 @@ nav {
     display: block;
     padding: 0.7rem;
     border-radius: 0.3rem;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     color: #2a2d30;
     font-size: 1rem;
     font-weight: 900; }
@@ -373,7 +444,7 @@ nav {
 /*End's Here*/
 footer {
   width: 100%;
-  background-color: #ccc; }
+  background-color: #ddd; }
   footer .footer_inner {
     display: flex;
     justify-content: space-between;
@@ -520,7 +591,7 @@ footer {
       padding: 0.7rem;
       margin: 0.5rem 0;
       border-radius: 0.3rem;
-      border: 1px solid #ccc;
+      border: 1px solid #ddd;
       color: #484848;
       font-size: 1rem;
       font-weight: 900; }
@@ -565,6 +636,67 @@ footer {
     margin-left: 0.3rem;
     font-weight: 600; }
 
+/*Booking Page Css*/
+.bodyWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap; }
+  .bodyWrapper .bodyWrapper--header {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2a2d30;
+    margin: 0;
+    padding: 0;
+    text-decoration: none; }
+  .bodyWrapper .bodyWrapper--headerSub {
+    font-size: 1rem;
+    color: #2a2d30;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    padding-bottom: 0.5rem !important; }
+  .bodyWrapper #leftWrapper {
+    flex: 3;
+    border-right: 1px solid #ddd;
+    padding: 0 1rem 0 0; }
+    .bodyWrapper #leftWrapper .bodyWrapper--tags {
+      display: inline-block;
+      margin: 1rem 0; }
+      .bodyWrapper #leftWrapper .bodyWrapper--tags li {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        padding: 0.3rem 0.5rem;
+        background-color: #ddd;
+        border-radius: 0.3rem;
+        margin: 0.3rem 0.2rem;
+        transition: all 0.5s ease; }
+        .bodyWrapper #leftWrapper .bodyWrapper--tags li:hover {
+          background-color: #e74315; }
+        .bodyWrapper #leftWrapper .bodyWrapper--tags li a {
+          margin: 0;
+          padding: 0;
+          text-decoration: none;
+          text-decoration: none;
+          color: #363636; }
+          .bodyWrapper #leftWrapper .bodyWrapper--tags li a:hover {
+            color: #fff !important; }
+    .bodyWrapper #leftWrapper .view_more {
+      color: #e74315;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      font-weight: 700;
+      display: block; }
+      .bodyWrapper #leftWrapper .view_more .view_moreIcon {
+        font-size: 0.8rem; }
+  .bodyWrapper #rightWrapper {
+    flex: 9;
+    padding: 0 0 0 1rem; }
+
+/*End's Here*/
 /*Media Query*/
 @media screen and (max-width: 25rem) and (min-width: 0) {
   .gutter {
