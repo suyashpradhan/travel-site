@@ -695,6 +695,23 @@ footer {
   .bodyWrapper #rightWrapper {
     flex: 9;
     padding: 0 0 0 1rem; }
+    .bodyWrapper #rightWrapper .rightWrapper--head {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: row wrap;
+      justify-content: space-between; }
+    .bodyWrapper #rightWrapper .sortSelect {
+      padding: .5rem .2rem;
+      width: 14rem;
+      margin-left: 5px;
+      border: 2px solid #e74315;
+      text-align-last: left;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #2a2d30; }
+      .bodyWrapper #rightWrapper .sortSelect:focus {
+        outline: none; }
 
 /*End's Here*/
 /*Media Query*/
