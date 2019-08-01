@@ -1,13 +1,13 @@
-$font: Google Sans,
-Arial,
-sans-serif;
+$font: Google Sans, Arial, sans-serif;
 
-$colors: ("primary": #2a2d30,
+$colors: (
+  "primary": #2a2d30,
   "secondary": #363636,
   "ternary": #e74315,
   "accent": #484848,
   "light": #ddd,
-  "text_light": #fff);
+  "text_light": #fff
+);
 
 @mixin defaultStyling {
   margin: 0;
@@ -57,7 +57,6 @@ body {
   font-weight: 300;
   line-height: 1.5;
   color: map-get($map: $colors, $key: accent);
-
 }
 
 img {
@@ -109,9 +108,11 @@ img {
     padding-top: 2rem;
     text-align: center;
     color: #f5f6f7;
-    background-image: linear-gradient(-180deg,
-        rgba(0, 0, 0, 0) 5%,
-        rgb(0, 0, 0) 100%) !important;
+    background-image: linear-gradient(
+      -180deg,
+      rgba(0, 0, 0, 0) 5%,
+      rgb(0, 0, 0) 100%
+    ) !important;
     height: 6.5rem !important;
     width: 13.5rem !important;
     border-radius: 0.3rem;
@@ -199,8 +200,7 @@ hr {
 /*Hero Section Styling*/
 .header {
   background-image:
-    /* linear-gradient(to right, #2a2d30b3, #363636b3), */
-    url("/img/banner.jpg");
+    /* linear-gradient(to right, #2a2d30b3, #363636b3), */ url("/img/banner.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -269,7 +269,6 @@ nav {
     }
   }
 }
-
 /*End's Here*/
 
 /*Booking Navigation*/
@@ -908,14 +907,14 @@ footer {
     }
 
     .sortSelect {
-      padding: .5rem .2rem;
+      padding: 0.5rem 0.2rem;
       width: 14rem;
       margin-left: 5px;
-      border: 2px solid map-get($map: $colors, $key:ternary);
+      border: 2px solid map-get($map: $colors, $key: ternary);
       text-align-last: left;
       font-size: 1rem;
       font-weight: 700;
-      color: map-get($map: $colors, $key:primary);
+      color: map-get($map: $colors, $key: primary);
 
       &:focus {
         outline: none;
@@ -923,6 +922,8 @@ footer {
     }
   }
 }
+
+/*Price Slider*/
 
 /*End's Here*/
 

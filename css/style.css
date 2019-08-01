@@ -702,7 +702,7 @@ footer {
       flex-flow: row wrap;
       justify-content: space-between; }
     .bodyWrapper #rightWrapper .sortSelect {
-      padding: .5rem .2rem;
+      padding: 0.5rem 0.2rem;
       width: 14rem;
       margin-left: 5px;
       border: 2px solid #e74315;
@@ -713,6 +713,7 @@ footer {
       .bodyWrapper #rightWrapper .sortSelect:focus {
         outline: none; }
 
+/*Price Slider*/
 /*End's Here*/
 /*Media Query*/
 @media screen and (max-width: 25rem) and (min-width: 0) {
