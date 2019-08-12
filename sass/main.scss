@@ -200,7 +200,7 @@ hr {
 /*Hero Section Styling*/
 .header {
   background-image:
-    /* linear-gradient(to right, #2a2d30b3, #363636b3), */ url("/img/banner.jpg");
+    /* linear-gradient(to right, #2a2d30b3, #363636b3), */ url("img/banner.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -834,7 +834,6 @@ footer {
 .bodyWrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-flow: row wrap;
 
   .bodyWrapper--header {
@@ -923,7 +922,58 @@ footer {
   }
 }
 
-/*Price Slider*/
+.hotel__grid {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  justify-items: flex-start;
+  margin: 1rem 0 2rem 0;
+  padding: 0 0 1rem 0;
+  border-bottom: 1px solid map-get($map: $colors, $key: light);
+  .hotel__wrapper--left {
+    width: 100%;
+    .hotel__images {
+      height: 255px;
+      max-width: 380px;
+      width: 100%;
+      object-fit: fill;
+    }
+  }
+
+  .hotel__wrapper--right {
+    width: 100%;
+    .hotel__wrapperHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-flow: row wrap;
+      .hotel__wrapper--Header {
+        font-size: 1.2rem;
+        color: map-get($map: $colors, $key: secondary);
+        font-weight: 700;
+      }
+    }
+    .hotel__wrapper--subHeader {
+      font-size: 1rem;
+      color: map-get($map: $colors, $key: primary);
+      font-weight: 500;
+      display: block;
+    }
+  }
+  .hotel__listings {
+    .hotel__iconInfo {
+      font-size: 0.9rem;
+      color: map-get($map: $colors, $key: ternary);
+      font-weight: 500;
+      border: 1px solid map-get($map: $colors, $key: light);
+      padding: 0.3rem 0.8rem;
+      text-align: center;
+    }
+  }
+  .hotel__icons {
+    font-size: 0.8rem;
+    color: map-get($map: $colors, $key: ternary);
+  }
+}
 
 /*End's Here*/
 

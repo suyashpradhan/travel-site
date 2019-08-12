@@ -162,3 +162,11 @@ button {
     color: #e74315;
     font-weight: 900;
 }
+
+.hotel__previewPrev {
+    left: 15px;
+}
+
+.hotel__previewNext {
+    right: 35px;
+}

@@ -124,7 +124,7 @@ hr {
 /*End's Here*/
 /*Hero Section Styling*/
 .header {
-  background-image: url("/img/banner.jpg");
+  background-image: url("img/banner.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -640,7 +640,6 @@ footer {
 .bodyWrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-flow: row wrap; }
   .bodyWrapper .bodyWrapper--header {
     font-size: 1.5rem;
@@ -713,7 +712,47 @@ footer {
       .bodyWrapper #rightWrapper .sortSelect:focus {
         outline: none; }
 
-/*Price Slider*/
+.hotel__grid {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  justify-items: flex-start;
+  margin: 1rem 0 2rem 0;
+  padding: 0 0 1rem 0;
+  border-bottom: 1px solid #ddd; }
+  .hotel__grid .hotel__wrapper--left {
+    width: 100%; }
+    .hotel__grid .hotel__wrapper--left .hotel__images {
+      height: 255px;
+      max-width: 380px;
+      width: 100%;
+      object-fit: fill; }
+  .hotel__grid .hotel__wrapper--right {
+    width: 100%; }
+    .hotel__grid .hotel__wrapper--right .hotel__wrapperHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-flow: row wrap; }
+      .hotel__grid .hotel__wrapper--right .hotel__wrapperHeader .hotel__wrapper--Header {
+        font-size: 1.2rem;
+        color: #363636;
+        font-weight: 700; }
+    .hotel__grid .hotel__wrapper--right .hotel__wrapper--subHeader {
+      font-size: 1rem;
+      color: #2a2d30;
+      font-weight: 500;
+      display: block; }
+  .hotel__grid .hotel__listings .hotel__iconInfo {
+    font-size: 0.9rem;
+    color: #e74315;
+    font-weight: 500;
+    border: 1px solid #ddd;
+    padding: 0.3rem 0.8rem;
+    text-align: center; }
+  .hotel__grid .hotel__icons {
+    font-size: 0.8rem;
+    color: #e74315; }
+
 /*End's Here*/
 /*Media Query*/
 @media screen and (max-width: 25rem) and (min-width: 0) {
