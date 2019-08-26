@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../slick_carousel/slick-theme.css">
+    <link rel="stylesheet" href="../../../slick_carousel/slick.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Google+Sans:400|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
+</head>
+
+<body>
+    <nav>
+        <div class="navigation__bookings gutter margin">
+            <a href="#" class="navigation--logo fromLeft">Tourizto<span style="color: #e74315">.</span></a>
+            <ul class="navigation--list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Sign up</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="pageWrapperInner gutter pd">
+        <div class="bodyWrapper">
+            <div class="hotel__details">
+                <div id="__left">
+                    <div class="hotel__slider">
+                        <img src="../assets/images/waiting_area.jpg" alt="" class="hotel__slider--image">
+                        <img src="../assets/images/exterior.jpg" alt="" class="hotel__slider--image">
+                        <img src="../assets/images/bedroom_1.jpg" alt="" class="hotel__slider--image">
+                        <img src="../assets/images/bedroom_2.jpg" alt="" class="hotel__slider--image">
+                    </div>
+                </div>
+                <div id="__right">
+                    <h1>Check In</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer_section pageWrapperInner pd">
+            <div class="footer_inner">
+                <div class="footer_inner--one">
+                    <h1>Tourizto</h1>
+                    <ul class="footer_list">
+                        <li> <a href="#">Careers</a> </li>
+                        <li> <a href="#">Policies</a> </li>
+                        <li> <a href="#">Help</a> </li>
+                        <li> <a href="#">Press</a> </li>
+                        <li> <a href="#">Accesiblility</a> </li>
+                    </ul>
+                </div>
+                <div class="footer_inner--one">
+                    <h1>Discover</h1>
+                    <ul class="footer_list">
+                        <li> <a href="#">Trust & Safety</a> </li>
+                        <li> <a href="#">Travel Credit</a> </li>
+                        <li> <a href="#">Guidebooks</a> </li>
+                        <li> <a href="#">Touriztomag</a> </li>
+                        <li> <a href="#">Business Travel</a> </li>
+                    </ul>
+                </div>
+                <div class="footer_inner--one">
+                    <h1>Hosting</h1>
+                    <ul class="footer_list">
+                        <li> <a href="#">Why Host</a> </li>
+                        <li> <a href="#">Hospitality</a> </li>
+                        <li> <a href="#">Community Center</a> </li>
+                        <li> <a href="#">Open Homes</a> </li>
+                        <li> <a href="#">Host an Experience</a> </li>
+                    </ul>
+                </div>
+                <div class="footer_inner--one">
+                    <h1>Connect</h1>
+                    <ul class="footer_list">
+                        <li> <a href="#"><i class="fab fa-facebook-f secondary_icons social_icons"></i></a>
+                        </li>
+                        <li> <a href="#"><i class="fab fa-twitter secondary_icons social_icons"></i></a> </li>
+                        <li> <a href="#">Terms</a> </li>
+                        <li> <a href="#">Privacy</a> </li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="about_company pageWrapperInner">
+            <div class="about_company--inner">
+                <div class="logo">
+                    <a href="#" class="about_text">© 2019 Tourizto, Inc. All rights reserved.</a>
+                </div>
+                <div class="other">
+                    <a href="#">English</a>
+                    <a href="#">INR - <i class="fas fa-rupee-sign secondary_icons"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7fdc918442.js"></script>
+    <script src="../../../script/script.js"></script>
+    <script src="../../../slick_carousel/slick.js"></script>
+    <script>
+        $('.hotel__slider').slick({
+            slidesToShow: 1,
+            infinite: true,
+            slidesToScroll: 1,
+            arrows: true,
+            speed: 1000,
+            prevArrow: '<button class="slide-arrow prev-arrow fas fa-chevron-left hotel__previewPrev"></button>',
+            nextArrow: '<button class="slide-arrow next-arrow fas fa-chevron-right hotel__previewNext"></button>'
+        });
+    </script>
+</body>
+
+</html>

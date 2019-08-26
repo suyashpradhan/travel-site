@@ -19,13 +19,17 @@ img {
   border: 0.5px solid #ddd !important; }
 
 .pd {
-  padding: 2rem 0; }
+  padding: 1rem 0; }
 
 .margin {
   margin: 0 1rem; }
 
 .pageWrapper {
   max-width: 71.25rem;
+  margin: auto; }
+
+.pageWrapperInner {
+  max-width: 80rem;
   margin: auto; }
 
 .section_span {
@@ -661,7 +665,7 @@ footer {
     padding: 0 1rem 0 0; }
     .bodyWrapper #leftWrapper .bodyWrapper--tags {
       display: inline-block;
-      margin: 1rem 0; }
+      margin: 0.5rem 0; }
       .bodyWrapper #leftWrapper .bodyWrapper--tags li {
         display: inline-block;
         margin: 0;
@@ -672,16 +676,13 @@ footer {
         border-radius: 0.3rem;
         margin: 0.3rem 0.2rem;
         transition: all 0.5s ease; }
-        .bodyWrapper #leftWrapper .bodyWrapper--tags li:hover {
-          background-color: #e74315; }
         .bodyWrapper #leftWrapper .bodyWrapper--tags li a {
           margin: 0;
           padding: 0;
           text-decoration: none;
           text-decoration: none;
-          color: #363636; }
-          .bodyWrapper #leftWrapper .bodyWrapper--tags li a:hover {
-            color: #fff !important; }
+          color: #363636;
+          font-weight: 500; }
     .bodyWrapper #leftWrapper .view_more {
       color: #e74315;
       margin: 0;
@@ -691,6 +692,9 @@ footer {
       display: block; }
       .bodyWrapper #leftWrapper .view_more .view_moreIcon {
         font-size: 0.8rem; }
+  .bodyWrapper .leftWrapperGap {
+    border-bottom: 1px solid #ddd;
+    margin: 0.5rem 0; }
   .bodyWrapper #rightWrapper {
     flex: 9;
     padding: 0 0 0 1rem; }
@@ -725,7 +729,7 @@ footer {
   .hotel__grid .hotel__wrapper--left {
     width: 100%; }
     .hotel__grid .hotel__wrapper--left .hotel__images {
-      height: 255px;
+      height: 265px;
       max-width: 380px;
       width: 100%;
       object-fit: fill;
@@ -783,9 +787,9 @@ footer {
       color: #2a2d30; }
   .hotel__grid #hotel__features {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(5, auto);
     align-items: center;
-    grid-gap: 0.6rem;
+    grid-gap: 0.9rem;
     margin: 1rem 0; }
     .hotel__grid #hotel__features .features__text {
       color: #363636;
@@ -826,7 +830,7 @@ footer {
         padding: 0.3rem 0.8rem;
         text-decoration: none;
         color: #2a2d30;
-        font-weight: 700;
+        font-weight: 500;
         border-radius: 0.3rem; }
       .hotel__grid #pricing .price__wrap .book__now--btn {
         border: 2px solid #e74315;
@@ -835,7 +839,21 @@ footer {
         text-decoration: none;
         border-radius: 0.3rem;
         color: #fff;
-        font-weight: 700; }
+        font-weight: 500; }
+
+/*End's Here*/
+/*Check-In Page Css*/
+.hotel__details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  justify-items: center;
+  align-items: center; }
+  .hotel__details #__left .hotel__slider .hotel__slider--image {
+    height: 500px !important;
+    width: 700px !important;
+    object-fit: fill !important;
+    border-radius: 0.3rem; }
 
 /*End's Here*/
 /*Media Query*/

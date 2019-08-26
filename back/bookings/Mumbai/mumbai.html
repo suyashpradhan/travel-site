@@ -24,23 +24,31 @@
             </ul>
         </div>
     </nav>
-    <div class="pageWrapper gutter pd">
+    <div class="pageWrapperInner gutter pd">
         <div class="bodyWrapper">
             <div id="leftWrapper">
-                <h1 class="bodyWrapper--header">Filters</h1>
-                <h2 class="bodyWrapper--headerSub">Popular locations in Mumbai</h2>
-                <form action="#" method="POST" class="section__form">
-                    <input type="text" name="search" id="search" placeholder="Search.." class="section__form--fields">
-                </form>
-                <ul class="bodyWrapper--tags">
-                    <li><a href="">Andheri East</a></li>
-                    <li><a href="">Vashi</a></li>
-                    <li><a href="">Panvel</a></li>
-                    <li><a href="">Dadar</a></li>
-                    <li><a href="">Bandra</a></li>
-                    <li><a href="">Goregoan</a></li>
-                </ul>
-                <a href="#" class="view_more"><i class="fas fa-plus view_moreIcon"></i> View More </a>
+                <div class="filtersWrapper leftWrapperGap">
+                    <h1 class="bodyWrapper--header">Filters</h1>
+                    <h2 class="bodyWrapper--headerSub">Popular locations in Mumbai</h2>
+                    <form action="#" method="POST" class="section__form">
+                        <input type="text" name="search" id="search" placeholder="Search.."
+                            class="section__form--fields">
+                    </form>
+                    <ul class="bodyWrapper--tags">
+                        <li><a href="">Andheri East</a></li>
+                        <li><a href="">Vashi</a></li>
+                        <li><a href="">Panvel</a></li>
+                        <li><a href="">Dadar</a></li>
+                        <li><a href="">Bandra</a></li>
+                        <li><a href="">Goregoan</a></li>
+                    </ul>
+                </div>
+                <!--<a href="#" class="view_more"><i class="fas fa-plus view_moreIcon"></i> View More </a>
+ -->
+                <div class="priceWrapper">
+                    <h1 class="bodyWrapper--header">Price</h1>
+                    <div id="app"></div>
+                </div>
             </div>
             <div id="rightWrapper">
                 <div class="rightWrapper--head">
@@ -103,6 +111,9 @@
                                     Cameras</span>
                                 <span class="features__text feature__aid"><i
                                         class="fas fa-first-aid feature__icons"></i> First Aid </span>
+                                <span class="features__text feature__swimming"> <i
+                                        class="fas fa-plus feature__icons"></i>(7 More)
+                                </span>
                             </div>
                             <div id="pricing">
                                 <div class="price__wrap">
@@ -162,6 +173,9 @@
                                 <span class="features__text feature__swimming"><i
                                         class="fas fa-swimming-pool feature__icons"></i> Swimming Pool
                                 </span>
+                                <span class="features__text feature__swimming"> <i
+                                        class="fas fa-plus feature__icons"></i>(6 More)
+                                </span>
                             </div>
                             <div id="pricing">
                                 <div class="price__wrap">
@@ -183,7 +197,7 @@
         </div>
     </div>
     <footer>
-        <div class="footer_section pageWrapper pd">
+        <div class="footer_section pageWrapperInner pd">
             <div class="footer_inner">
                 <div class="footer_inner--one">
                     <h1>Tourizto</h1>
@@ -227,7 +241,7 @@
             </div>
             <hr>
         </div>
-        <div class="about_company pageWrapper">
+        <div class="about_company pageWrapperInner">
             <div class="about_company--inner">
                 <div class="logo">
                     <a href="#" class="about_text">© 2019 Tourizto, Inc. All rights reserved.</a>
