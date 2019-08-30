@@ -846,14 +846,125 @@ footer {
 .hotel__details {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
-  justify-items: center;
-  align-items: center; }
-  .hotel__details #__left .hotel__slider .hotel__slider--image {
-    height: 500px !important;
-    width: 700px !important;
-    object-fit: fill !important;
-    border-radius: 0.3rem; }
+  grid-gap: 1rem; }
+  .hotel__details #__left {
+    width: 40rem; }
+    .hotel__details #__left .hotel__slider .hotel__slider--image {
+      height: 30rem !important;
+      width: 100% !important;
+      max-width: 40rem !important;
+      height: auto;
+      object-fit: fill !important;
+      border-radius: 0.3rem; }
+  .hotel__details #__right {
+    padding: 0 1rem 0 1rem; }
+    .hotel__details #__right .hotel__nameWrapper .hotel__nameWrapper--Header {
+      font-size: 2rem;
+      display: block;
+      color: #2a2d30;
+      margin: 0;
+      padding: 0;
+      text-decoration: none; }
+      .hotel__details #__right .hotel__nameWrapper .hotel__nameWrapper--Header .hotel__nameWrapper--subHeader {
+        font-size: 1.5rem;
+        display: block;
+        color: #363636; }
+    .hotel__details #__right .hotel__checkoutWrapper {
+      margin: 1rem 0 0.5rem 0; }
+      .hotel__details #__right .hotel__checkoutWrapper #checkoutForm {
+        display: grid;
+        grid-template-columns: 1fr 1fr auto;
+        grid-gap: 1rem; }
+        .hotel__details #__right .hotel__checkoutWrapper #checkoutForm label {
+          color: #363636;
+          font-size: 1.1rem; }
+        .hotel__details #__right .hotel__checkoutWrapper #checkoutForm .checkoutForm--fields {
+          padding: 0.5rem 1rem;
+          border-radius: 0.3rem;
+          width: 100% !important;
+          border: 1px solid #ddd;
+          font-size: 1rem !important; }
+          .hotel__details #__right .hotel__checkoutWrapper #checkoutForm .checkoutForm--fields:focus {
+            border: 1px solid #e74315;
+            outline: none; }
+        .hotel__details #__right .hotel__checkoutWrapper #checkoutForm .checkoutForm--select {
+          padding: 0.5rem 1rem;
+          border-radius: 0.3rem;
+          width: 100% !important;
+          border: 1px solid #ddd;
+          font-size: 1rem !important; }
+          .hotel__details #__right .hotel__checkoutWrapper #checkoutForm .checkoutForm--select:focus {
+            border: 1px solid #e74315;
+            outline: none; }
+    .hotel__details #__right .booking__detailsWrapper ul {
+      list-style: none;
+      perspective: 900;
+      padding: 0;
+      margin: 0; }
+    .hotel__details #__right .booking__detailsWrapper ul li {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      padding: 0.8rem 0; }
+    .hotel__details #__right .booking__detailsWrapper ul li:nth-of-type(1) {
+      animation-delay: 0.5s; }
+    .hotel__details #__right .booking__detailsWrapper ul li i {
+      position: absolute;
+      transform: translate(-6px, 0);
+      margin-top: 0.5rem;
+      right: 0; }
+    .hotel__details #__right .booking__detailsWrapper ul li i:before,
+    .hotel__details #__right .booking__detailsWrapper ul li i:after {
+      content: "";
+      position: absolute;
+      background-color: #e74315;
+      width: 3px;
+      height: 9px; }
+    .hotel__details #__right .booking__detailsWrapper ul li i:before {
+      transform: translate(-2px, 0) rotate(45deg); }
+    .hotel__details #__right .booking__detailsWrapper ul li i:after {
+      transform: translate(2px, 0) rotate(-45deg); }
+    .hotel__details #__right .booking__detailsWrapper ul li input[type="checkbox"] {
+      position: absolute;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0; }
+    .hotel__details #__right .booking__detailsWrapper ul li input[type="checkbox"]:checked ~ p {
+      margin-top: 0;
+      max-height: 0;
+      opacity: 0;
+      transform: translate(0, 50%); }
+    .hotel__details #__right .booking__detailsWrapper ul li input[type="checkbox"]:checked ~ i:before {
+      transform: translate(2px, 0) rotate(45deg); }
+    .hotel__details #__right .booking__detailsWrapper ul li input[type="checkbox"]:checked ~ i:after {
+      transform: translate(-2px, 0) rotate(-45deg); }
+
+@keyframes flipdown {
+  0% {
+    opacity: 0;
+    transform-origin: top center;
+    transform: rotateX(-90deg); }
+  5% {
+    opacity: 1; }
+  80% {
+    transform: rotateX(8deg); }
+  83% {
+    transform: rotateX(6deg); }
+  92% {
+    transform: rotateX(-3deg); }
+  100% {
+    transform-origin: top center;
+    transform: rotateX(0deg); } }
+    .hotel__details #__right .booking__detailsWrapper .transition,
+    .hotel__details #__right .booking__detailsWrapper ul li i:before,
+    .hotel__details #__right .booking__detailsWrapper ul li i:after {
+      transition: all 0.25s ease-in-out; }
+    .hotel__details #__right .booking__detailsWrapper .flipIn,
+    .hotel__details #__right .booking__detailsWrapper h1,
+    .hotel__details #__right .booking__detailsWrapper ul li {
+      animation: flipdown 0.5s ease both; }
 
 /*End's Here*/
 /*Media Query*/
