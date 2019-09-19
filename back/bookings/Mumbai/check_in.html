@@ -21,7 +21,7 @@
 <body>
     <nav>
         <div class="navigation__bookings gutter margin">
-            <a href="#" class="navigation--logo fromLeft">Tourizto<span style="color: #e74315">.</span></a>
+            <a href="#" class="navigation--logo fromLeft">Tourizto<span style="color: #54504c">.</span></a>
             <ul class="navigation--list">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Help</a></li>
@@ -40,13 +40,15 @@
                         <img src="../assets/images/bedroom_1.jpg" alt="" class="hotel__slider--image">
                         <img src="../assets/images/bedroom_2.jpg" alt="" class="hotel__slider--image">
                     </div>
-                </div>
-                <div id="__right">
                     <div class="hotel__nameWrapper">
                         <h1 class="hotel__nameWrapper--Header">Palette - U - Tan Sea Resort
-                            <span class="hotel__nameWrapper--subHeader">Andheri (E),Mumbai</span>
+                            <span class="hotel__nameWrapper--subHeader">SV Road, Next to DCB Bank, Opp, Andheri Subway,
+                                Andheri West, Mumbai, Maharashtra 400058</span>
                         </h1>
                     </div>
+                </div>
+
+                <div id="__right">
                     <div class="hotel__checkoutWrapper">
                         <form action="#" id="checkoutForm">
                             <div class="check_in">
@@ -67,24 +69,78 @@
                                     <option value="">1</option>
                                     <option value="">2</option>
                                     <option value="">3</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                    <option value="">5+</option>
                                 </select>
                             </div>
                         </form>
                     </div>
                     <div class="booking__detailsWrapper">
-                        <ul>
+                        <ul id="accordion" class="accordion">
                             <li>
-                                <input type="checkbox" checked>
-                                <i></i>
-                                <h2 style="font-size: 1.1rem;color: #363636;">Booking
-                                    Details</h2>
-                                <p>This page was written in HTML and CSS. The CSS was compiled from SASS. I used
-                                    Normalize as my CSS reset and -prefix-free to save myself some headaches. I haven't
-                                    quite gotten the hang of Slim for compiling into HTML, but someday I'll use it since
-                                    its syntax compliments that of SASS. Regardless, this could all be done in plain
-                                    HTML and CSS.</p>
+                                <div class="link">Booking Details<i class="fa fa-chevron-down"></i></div>
+                                <ul class="submenu">
+                                    <form action="#" class="room__form">
+                                        <input type="text" name="infants" id="2" placeholder="Infants(0-2 Yrs)"
+                                            class="room_form--fields">
+                                        <input type="text" name="childrens" id="2" placeholder="Children(3-12 Yrs)"
+                                            class="room_form--fields">
+                                        <input type="text" name="adults" id="2" placeholder="Adults"
+                                            class="room_form--fields">
+                                        <input type="text" name="seniors" id="2" placeholder="Senior Citizen"
+                                            class="room_form--fields">
+                                    </form>
+                                </ul>
                             </li>
                         </ul>
+                    </div>
+                    <!-- <div class="bulk__booking" id="bulk">
+                        <h1 class="bulk__booking--header">For Bulk Booking, leave your name & phone number. We'll get
+                            back to you
+                            shortly.</h1>
+                        <form action="#" class="bulk__bookingForm">
+                            <input type="text" placeholder="Full Name" class="bulk__bookingForm--fields">
+                            <input class="bulk__bookingForm--fields" id="" value="+91" disabled>
+                            <input type="text" placeholder="Phone Number" class="bulk__bookingForm--fields">
+                        </form>
+                    </div> -->
+
+                    <div class="breakfast__wrapper" id="breakfast">
+                        <div class="breafast__inner">
+                            <div class="breakfast__innerImg">
+                                <img src="../../bookings/assets/images/breakfast.svg" alt="">
+                            </div>
+                            <div class="breafast__innerHeader">
+                                <h1>Add Breakfast for <i class="fas fa-rupee-sign secondary_icons"></i>65</h1>
+                                <h2>1 Room and 1 Guest</h2>
+                                <div class="tooltip">Know More
+                                    <span class="tooltiptext">You have got a great deal on your room tariff. Enjoy
+                                        Breakfast during your stay at a nominal price</span>
+                                </div>
+                            </div>
+                            <div class="breakfast__imgInner">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"><span class="checkbox-material"><span
+                                                class="check"></span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book__room" id="book ">
+                        <h1 class="book__room--info">Price for: <span id="guest">1 Guest</span> , <span id="room_type">1
+                                Classic (2X)
+                                Room</span>, <span id="rooms">1
+                                Night</span></h1>
+                        <h1 class="book__room--price"><i class="fas fa-rupee-sign secondary_icons"></i><span
+                                id="main__price">1200</span><i class="fas fa-rupee-sign secondary_icons"></i><span
+                                id="cutoff__price">3200</span><span id="percent__off">25% off</span></h1>
+                        <h1 class="book__room--tax">(inclusive of all taxes)</h1>
+                        <h1 class="coupon__text"><i class="fas fa-tag secondary_icons"></i> Coupon code FINDTOURIZTO is
+                            pre-applied</h1>
+                        <a href="#" id="book__btn" class="book__btn">Continue To Book</a>
                     </div>
                 </div>
             </div>
@@ -137,7 +193,7 @@
             </div>
             <hr>
         </div>
-        <div class="about_company pageWrapperInner">
+        <div class="about_company pageWrapper">
             <div class="about_company--inner">
                 <div class="logo">
                     <a href="#" class="about_text">© 2019 Tourizto, Inc. All rights reserved.</a>
