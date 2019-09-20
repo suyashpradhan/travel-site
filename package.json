@@ -4,7 +4,8 @@
   "description": "Travel Website Landing Page",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass_admin": "node-sass sass/admin.scss css/admin_style.css -w"
   },
   "repository": {
     "type": "git",

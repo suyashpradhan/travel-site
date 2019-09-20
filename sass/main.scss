@@ -1199,7 +1199,7 @@ footer {
 
       .accordion {
         width: 100%;
-        margin: 1.2rem 0;
+        margin: 0;
         background: #fff;
         -webkit-border-radius: 4px;
         -moz-border-radius: 4px;
@@ -1322,7 +1322,7 @@ footer {
     }
 
     .breakfast__wrapper {
-      margin: 2rem 0;
+      margin: 1.5rem 0;
       box-shadow: 0 0px 2px 0 map-get($map: $colors, $key: secondary);
       border: solid 1px map-get($map: $colors, $key: text_light);
       border-radius: 0.3rem;

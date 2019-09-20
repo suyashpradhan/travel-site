@@ -904,7 +904,7 @@ footer {
       list-style-type: none; }
     .hotel__details #__right .booking__detailsWrapper .accordion {
       width: 100%;
-      margin: 1.2rem 0;
+      margin: 0;
       background: #fff;
       -webkit-border-radius: 4px;
       -moz-border-radius: 4px;
@@ -994,7 +994,7 @@ footer {
             border: 1px solid #86817c;
             outline: none; }
     .hotel__details #__right .breakfast__wrapper {
-      margin: 2rem 0;
+      margin: 1.5rem 0;
       box-shadow: 0 0px 2px 0 #54504c;
       border: solid 1px #fff;
       border-radius: 0.3rem; }

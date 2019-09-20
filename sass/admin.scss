@@ -1,0 +1,151 @@
+//Vendor prefixes not added
+@import url("https://fonts.googleapis.com/css?family=Livvic&display=swap");
+
+$font: "Livvic", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font;
+}
+
+$colors: (
+  "primary": #282726,
+  "secondary": #54504c,
+  "ternary": #363636,
+  "light": #fff
+);
+
+html,
+body {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Start side navigation bar  */
+.side-nav {
+  float: left;
+  height: 100%;
+  width: 320px;
+  background-color: map-get($map: $colors, $key: primary);
+  color: map-get($map: $colors, $key: light);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  z-index: 9999999;
+}
+
+.side-nav .heading {
+  padding: 15px 15px 8px 30px;
+  overflow: hidden;
+  border-bottom: 1px solid #fff;
+}
+
+.side-nav .heading > img {
+  border-radius: 50%;
+  float: left;
+  width: 28%;
+}
+
+.side-nav .info {
+  float: left;
+  width: 69%;
+  margin-left: 3%;
+}
+
+.side-nav .heading .info > h3 {
+  margin: 0 0 5px;
+}
+
+.side-nav .heading .info > h3 > a {
+  color: #fff;
+  font-weight: 100;
+  margin-top: 4px;
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.side-nav .heading .info > h3 > a:hover {
+  color: #fff;
+}
+
+.side-nav .heading .info > p {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.categories {
+  width: 100%;
+
+  li {
+    list-style: none;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    text-align: left;
+
+    .side-nav_icons {
+      margin-right: 0.6rem;
+      color: #fff !important;
+    }
+
+    a {
+      color: #fff;
+      font-size: 1.2rem;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/* End heading */
+
+/* Start welcome */
+#contents {
+  position: relative;
+  transition: 0.3s;
+  margin-left: 320px;
+}
+
+.content {
+  background-color: map-get($map: $colors, $key: ternary);
+  padding: 1rem;
+
+  h2 {
+    font-size: 2rem;
+    color: map-get($map: $colors, $key: light);
+  }
+
+  p {
+    font-size: 1.3rem;
+    color: map-get($map: $colors, $key: light);
+  }
+}
+
+.pageWrapper {
+  margin: 0 0 0 1rem;
+  background-color: #363636;
+}
