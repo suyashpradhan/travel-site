@@ -74,21 +74,152 @@ p {
   color: #fff;
   font-size: 0.9rem; }
 
-.categories {
+.sidebar_header {
+  font-size: 1.2rem;
+  margin: 1rem 0 0 1rem !important; }
+
+.info__profile {
+  margin: 0.3rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.6rem;
   width: 100%; }
-  .categories li {
-    list-style: none;
-    padding: 0.5rem 1rem;
-    width: 100%;
-    text-align: left; }
-    .categories li .side-nav_icons {
-      margin-right: 0.6rem;
-      color: #fff !important; }
-    .categories li a {
-      color: #fff;
-      font-size: 1.2rem; }
-      .categories li a:hover {
-        text-decoration: none; }
+  .info__profile .-btn {
+    text-decoration: none;
+    padding: 0.2rem 1rem;
+    border-radius: 0.3rem;
+    font-weight: 500;
+    text-align: center; }
+  .info__profile .logout-btn {
+    background-color: #54504c;
+    color: #fff !important; }
+  .info__profile .profile-btn {
+    background-color: #fff;
+    color: #282726 !important; }
+
+.categories {
+  width: 100%;
+  margin: 1rem 0 !important;
+  padding: 0; }
+
+/*Drop Down*/
+.container > ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 !important;
+  display: block; }
+
+.dropDown a {
+  text-decoration: none; }
+
+.dropDown [data-toggle="dropdown"] {
+  display: block;
+  position: relative;
+  padding: 0.5rem;
+  margin: 0;
+  outline: 0;
+  font-size: 1rem;
+  cursor: pointer; }
+
+.dropDown [data-toggle="dropdown"] {
+  color: #fff; }
+
+.dropDown [data-toggle="dropdown"]:hover {
+  color: #fff; }
+
+.dropDown .icon-arrow {
+  position: absolute;
+  display: block;
+  font-size: 1rem;
+  color: #fff;
+  top: 12px;
+  right: 10px; }
+
+.side-nav_icons {
+  margin-right: 0.6rem;
+  color: #fff !important; }
+
+.droDdown .icon-arrow:hover {
+  color: #fff; }
+
+.dropDown .icon-arrow.open {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  -webkit-transition: -webkit-transform 0.6s;
+  -moz-transition: -moz-transform 0.6s;
+  -o-transition: -o-transform 0.6s;
+  transition: transform 0.6s; }
+
+.dropDown .icon-arrow.close {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 0.6s;
+  -moz-transition: -moz-transform 0.6s;
+  -o-transition: -o-transform 0.6s;
+  transition: transform 0.6s;
+  /*  color: map-get($map: $colors, $key: primary); */ }
+
+.dropDown .icon-arrow:before {
+  content: "\25BC"; }
+
+.dropDown .dropdown_menu {
+  max-height: 0;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.dropDown .dropdown_menu li {
+  padding: 0.6rem; }
+
+.dropDown .dropdown_menu li a {
+  color: #fff; }
+
+.dropdown .show,
+.dropdown .hide {
+  -webkit-transform-origin: 50% 0%;
+  -moz-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  -o-transform-origin: 50% 0%;
+  transform-origin: 50% 0%; }
+
+.dropDown .show {
+  display: block;
+  max-height: 9999px;
+  -webkit-transform: scaleY(1);
+  -moz-transform: scaleY(1);
+  -ms-transform: scaleY(1);
+  -o-transform: scaleY(1);
+  transform: scaleY(1);
+  animation: showAnimation 0.5s ease-in-out;
+  -moz-animation: showAnimation 0.5s ease-in-out;
+  -webkit-animation: showAnimation 0.5s ease-in-out;
+  -webkit-transition: max-height 1s ease-in-out;
+  -moz-transition: max-height 1s ease-in-out;
+  -o-transition: max-height 1s ease-in-out;
+  transition: max-height 1s ease-in-out;
+  width: 100% !important; }
+
+.dropDown .hide {
+  max-height: 0;
+  -webkit-transform: scaleY(0);
+  -moz-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  -o-transform: scaleY(0);
+  transform: scaleY(0);
+  animation: hideAnimation 0.4s ease-out;
+  -moz-animation: hideAnimation 0.4s ease-out;
+  -webkit-animation: hideAnimation 0.4s ease-out;
+  -webkit-transition: max-height 0.6s ease-out;
+  -moz-transition: max-height 0.6s ease-out;
+  -o-transition: max-height 0.6s ease-out;
+  transition: max-height 0.6s ease-out; }
 
 /* End heading */
 /* Start welcome */
@@ -106,7 +237,3 @@ p {
   .content p {
     font-size: 1.3rem;
     color: #fff; }
-
-.pageWrapper {
-  margin: 0 0 0 1rem;
-  background-color: #363636; }
