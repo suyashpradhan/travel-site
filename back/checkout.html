@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <nav>
+    <div class="navigation gutter">
+      <a href="#" class="navigation--logo fromLeft">Tourizto<span style="color: #54504c">.</span></a>
+      <!-- <a href="#" class="navigation--menu fromRight">
+                <img src="img/menu-button.png" alt="">
+            </a> -->
+      <ul class="navigation--list">
+        <li><a href="#">Host a home</a></li>
+        <li><a href="#">Host an experience</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Sign up</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="pageWrapper gutter pd">
+    <div class="container">
+      <a href="#" class="back-link"> <i class="fas fa-angle-left"></i> Modify your booking</a>
+
+      <div class="row">
+        <div class="col-md-5 order-md-2 mb-4">
+          <div class="card">
+            <h4 class="detail-head">Booking Details</h4>
+            <div class="pl-3 pr-3">
+              <div class="row">
+                <div class="col-9">
+                  <h1 class="booking-hotel-name">Palette -U Sea Resort</h1>
+                  <span class="booking-stay">1 Night</span>
+                </div>
+                <div class="col-3">
+                  <img src="../back/bookings/assets/images/bedroom_1.jpg" alt="" class="booking-img">
+                </div>
+              </div>
+              <div class="row mt-3 mb-4 ">
+                <div class="col-8">
+                  <i class="fas fa-calendar-week booking-icon"></i>
+                  <span class="booking-date">Tue, 26 Nov - Wed, 27 Nov</span>
+                </div>
+                <div class="col-4">
+                  <span class="booking-room-detail">1 Room, 1 Guest</span>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-9">
+                  <span class="booking-price-detail">Room price for 1 Night X 1 Guest</span>
+                </div>
+                <div class="col-3">
+                  <span class="booking-price"><i class="fas fa-rupee-sign secondary_icons"></i> 1500</span>
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="col-9">
+                  <span class="booking-price-detail -discount">25% Coupon Discount</span>
+                </div>
+                <div class="col-3">
+                  <span class="booking-price -discount-price"><i class="fas fa-rupee-sign secondary_icons"></i>
+                    -300</span>
+                </div>
+              </div>
+              <hr>
+              <div class="row mb-2">
+                <div class="col-9">
+                  <span class="final-price">Payable Amount</span>
+                  <span class="tax-span">inclusive of all taxes</span>
+                </div>
+                <div class="col-3">
+                  <span class="final-booking-price"><i class="fas fa-rupee-sign secondary_icons"></i> 1200</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7 order-md-1">
+
+          <div class="card">
+            <h4 class="detail-head">Billing address</h4>
+            <form class="needs-validation pt-2 pl-3 pr-3 pb-2" novalidate>
+              <span class="mb-4 btn-block">We will use these details to share your booking information</span>
+              <div class="row">
+                <div class="col-md-6 mb-3 ">
+                  <label for="firstName">First name</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                  <div class="invalid-feedback">
+                    Valid first name is required.
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="lastName">Last name</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                  <div class="invalid-feedback">
+                    Valid last name is required.
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3 ">
+                  <label for="phone-number">Phone Number</label>
+                  <input type="text" class="form-control" id="phone-number" placeholder="" value="" required>
+                  <div class="invalid-feedback">
+                    Phone Number Should be 10 digit
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="email">Email Address</label>
+                  <input type="email" class="form-control" id="email" placeholder="" value="" required>
+                  <div class="invalid-feedback">
+                    Email Is In Wrong Format
+                  </div>
+                </div>
+              </div>
+
+
+
+              <h4 class="mb-3">Payment</h4>
+
+              <div class="d-block my-3">
+                <div class="custom-control custom-radio">
+                  <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                  <label class="custom-control-label" for="credit">Credit card</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                  <label class="custom-control-label" for="debit">Debit card</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                  <label class="custom-control-label" for="paypal">Paypal</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="cc-name">Name on card</label>
+                  <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                  <small class="text-muted">Full name as displayed on card</small>
+                  <div class="invalid-feedback">
+                    Name on card is required
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="cc-number">Credit card number</label>
+                  <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                  <div class="invalid-feedback">
+                    Credit card number is required
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 mb-3">
+                  <label for="cc-expiration">Expiration</label>
+                  <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                  <div class="invalid-feedback">
+                    Expiration date required
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label for="cc-expiration">CVV</label>
+                  <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                  <div class="invalid-feedback">
+                    Security code required
+                  </div>
+                </div>
+              </div>
+              <hr class="mb-4">
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/7fdc918442.js"></script>
+
+</html>

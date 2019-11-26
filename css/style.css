@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Livvic&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
 /*Default CSS Styling*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Livvic", sans-serif; }
+  font-family: "Rubik", sans-serif; }
 
 html,
 body {
@@ -1234,6 +1234,94 @@ input[type="checkbox"][disabled]
     font-size: 2rem; }
   .section__header--sub {
     font-size: 1rem; } }
+
+/*Checkout Page Css*/
+.detail-head {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  color: black;
+  font-size: 1.4rem;
+  padding: 14px 24px;
+  background: #f9f9fb; }
+
+.back-link {
+  color: #54504c;
+  font-weight: 700;
+  padding: 1rem 0;
+  display: block;
+  font-size: 1.2rem; }
+
+.back-link:hover {
+  color: #282726;
+  text-decoration: none; }
+
+.booking-hotel-name {
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #282726;
+  font-weight: 700; }
+
+.booking-stay {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #54504c;
+  font-weight: 700; }
+
+.booking-img {
+  width: 4rem;
+  border-radius: 0.2rem;
+  text-align: right;
+  display: block;
+  margin: 0; }
+
+.booking-icon {
+  color: #54504c; }
+
+.booking-date {
+  color: #282726;
+  font-size: 0.9rem;
+  font-weight: 600; }
+
+.booking-room-detail {
+  color: #54504c;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: right;
+  display: block; }
+
+.booking-price-detail {
+  color: #282726;
+  font-size: 0.9rem;
+  font-weight: 600; }
+
+.booking-price {
+  color: #54504c;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: right;
+  display: block; }
+
+.final-price {
+  color: #282726;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: block; }
+
+.tax-span {
+  color: #54504c;
+  font-size: 0.9rem; }
+
+.final-booking-price {
+  color: #282726;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: right;
+  display: block; }
 
 @media screen and (max-width: 43.75rem) and (min-width: 25.1rem) {
   .gutter {

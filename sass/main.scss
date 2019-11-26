@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Livvic&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
 
-$font: "Livvic", sans-serif;
+$font: "Rubik", sans-serif;
 
 $colors: (
   "primary": #282726,
@@ -1617,6 +1617,105 @@ footer {
   .section__header--sub {
     font-size: 1rem;
   }
+}
+
+/*Checkout Page Css*/
+
+.detail-head {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-size: 1.4rem;
+  padding: 14px 24px;
+  background: rgb(249, 249, 251);
+}
+
+.back-link {
+  color: map-get($map: $colors, $key: secondary);
+  font-weight: 700;
+  padding: 1rem 0;
+  display: block;
+  font-size: 1.2rem;
+}
+
+.back-link:hover {
+  color: map-get($map: $colors, $key: primary);
+  text-decoration: none;
+}
+
+.booking-hotel-name {
+  font-size: 1.2rem;
+  @include defaultStyling();
+  color: map-get($map: $colors, $key: primary);
+  font-weight: 700;
+}
+
+.booking-stay {
+  font-size: 1rem;
+  @include defaultStyling();
+  color: map-get($map: $colors, $key: secondary);
+  font-weight: 700;
+}
+
+.booking-img {
+  width: 4rem;
+  border-radius: 0.2rem;
+  text-align: right;
+  display: block;
+  margin: 0;
+}
+
+.booking-icon {
+  color: map-get($map: $colors, $key: secondary);
+}
+
+.booking-date {
+  color: map-get($map: $colors, $key: primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.booking-room-detail {
+  color: map-get($map: $colors, $key: secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: right;
+  display: block;
+}
+
+.booking-price-detail {
+  color: map-get($map: $colors, $key: primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.booking-price {
+  color: map-get($map: $colors, $key: secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: right;
+  display: block;
+}
+
+.final-price {
+  color: map-get($map: $colors, $key: primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: block;
+}
+
+.tax-span {
+  color: map-get($map: $colors, $key: secondary);
+  font-size: 0.9rem;
+}
+
+.final-booking-price {
+  color: map-get($map: $colors, $key: primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: right;
+  display: block;
 }
 
 @media screen and (max-width: 43.75rem) and (min-width: 25.1rem) {
