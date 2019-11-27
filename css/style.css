@@ -68,6 +68,9 @@ img {
       font-size: 1.2rem;
       letter-spacing: 1px; }
 
+label {
+  margin: 0 !important; }
+
 .section__form--fields {
   width: 100%;
   display: block;
@@ -1242,7 +1245,7 @@ input[type="checkbox"][disabled]
   align-items: center;
   color: black;
   font-size: 1.4rem;
-  padding: 14px 24px;
+  padding: 0.8rem;
   background: #f9f9fb; }
 
 .back-link {
@@ -1322,6 +1325,26 @@ input[type="checkbox"][disabled]
   font-weight: 600;
   text-align: right;
   display: block; }
+
+.checkout-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.6rem;
+  margin: 1rem 0; }
+  .checkout-group .checkout-group-btn {
+    flex: 1;
+    padding: 0.6rem 1rem;
+    text-decoration: none;
+    border-radius: 0.3rem;
+    font-weight: 500; }
+  .checkout-group .pay-now-btn {
+    background-color: #fff;
+    border: 2px solid #54504c;
+    color: #282726; }
+  .checkout-group .checkout-btn {
+    background-color: #282726;
+    border: 2px solid #282726;
+    color: #fff; }
 
 @media screen and (max-width: 43.75rem) and (min-width: 25.1rem) {
   .gutter {
