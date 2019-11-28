@@ -1,10 +1,3 @@
-<?php
-
-require_once "config.php";
-$loginURL = $gClient->createAuthURL();
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,8 +44,7 @@ background-image: linear-gradient(
                             Facebook</a>
                         <button type="button" onclick="window.location='<?php echo $loginURL; ?>'"
                             class="social_login--wrap _google">
-                            <img src="https://img.icons8.com/color/20/000000/google-logo.png"
-                                class="social_login--icons">Continue
+                            <img src="https://img.icons8.com/ios/20/000000/google-logo.png"> Continue
                             with
                             Google</button>
                     </div>

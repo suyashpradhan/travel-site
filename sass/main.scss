@@ -3,11 +3,12 @@
 $font: "Rubik", sans-serif;
 
 $colors: (
-  "primary": #282726,
-  "secondary": #54504c,
-  "ternary": #86817c,
-  "light": #ddd,
-  "text_light": #fff
+  "primary": #f3533a,
+  "secondary": #fa9f42,
+  "ternary": #8ad879,
+  "text-color": #5acfc9,
+  "text-white": #fff,
+  "text-gray": #696969
 );
 
 @mixin defaultStyling {
@@ -65,11 +66,11 @@ img {
 }
 
 ._gap {
-  border: 0.5px solid map-get($map: $colors, $key: light) !important;
+  border: 0.5px solid map-get($map: $colors, $key: text-gray) !important;
 }
 
 .pd {
-  padding: 1rem 0;
+  padding: 2.5rem 0;
 }
 
 .margin {
@@ -113,7 +114,7 @@ img {
     bottom: 0;
     padding-top: 2rem;
     text-align: center;
-    color: map-get($map: $colors, $key: light);
+    color: map-get($map: $colors, $key: text-white);
     background-image: linear-gradient(
       -180deg,
       rgba(0, 0, 0, 0) 5%,
@@ -125,8 +126,8 @@ img {
 
     h1 {
       @include defaultStyling();
-      font-size: 1.2rem;
-      letter-spacing: 1px;
+      font-size: 1.3rem;
+      font-weight: 300;
     }
   }
 }
@@ -135,57 +136,9 @@ label {
   margin: 0 !important;
 }
 
-.section__form--fields {
-  width: 100%;
-  display: block;
-  padding: 0.7rem;
-  border-radius: 0.3rem;
-  border: 1px solid map-get($map: $colors, $key: light);
-  color: map-get($map: $colors, $key: primary);
-  font-size: 1rem;
-  font-weight: 900;
-}
-
-.section__form--fields:active {
-  outline: none;
-  border: 1px solid map-get($map: $colors, $key: ternary);
-}
-
-.section__form--fields:focus {
-  outline: none;
-  border: 1px solid map-get($map: $colors, $key: ternary);
-}
-
-.__signup {
-  border: 1px solid map-get($map: $colors, $key: primary);
-  color: map-get($map: $colors, $key: light);
-  background-color: map-get($map: $colors, $key: primary);
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  border-radius: 0.3rem;
-  margin: 0.6rem 0 1.5rem 0;
-  padding: 0.7rem 0;
-  width: 100%;
-  text-align: center;
-  display: inline-block;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-  backface-visibility: hidden;
-
-  &:active {
-    outline: none;
-    transform: translateZ(-3px);
-  }
-}
-
 .section_header {
   @include sectionHeader();
   color: map-get($map: $colors, $key: primary) !important;
-}
-
-label {
-  color: map-get($map: $colors, $key: primary);
-  font-weight: 600;
 }
 
 .social_icons {
@@ -199,12 +152,12 @@ label {
 
   &:hover {
     background-color: map-get($map: $colors, $key: ternary);
-    color: map-get($map: $colors, $key: text_light);
+    color: map-get($map: $colors, $key: text-white);
   }
 }
 
 hr {
-  border: 0.5px solid map-get($map: $colors, $key: text_light);
+  border: 0.5px solid map-get($map: $colors, $key: text-gray);
 }
 
 /*End's Here*/
@@ -216,6 +169,16 @@ hr {
   background-position: center;
   background-size: cover;
   height: 100vh;
+
+  /*  &::before {
+    content: "";
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+  } */
 }
 
 /*End's Here*/
@@ -223,9 +186,9 @@ hr {
 /*Navigation Section Styling*/
 nav {
   width: 100%;
-  height: 5rem;
+  height: 4rem;
   padding: 0.8rem 0;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1); */
 }
 
 .navigation {
@@ -236,7 +199,7 @@ nav {
   margin: auto;
 
   .navigation--logo {
-    color: map-get($map: $colors, $key: primary);
+    color: map-get($map: $colors, $key: text-white);
     font-size: 2rem;
     font-weight: 900;
     text-decoration: none;
@@ -254,8 +217,8 @@ nav {
       position: relative;
 
       a {
-        font-size: 1rem;
-        color: map-get($map: $colors, $key: text_light);
+        font-size: 1.1rem;
+        color: map-get($map: $colors, $key: text-white);
         @include defaultStyling();
 
         &::after {
@@ -267,7 +230,7 @@ nav {
           left: 50%;
           top: 3rem;
           position: absolute;
-          background: #fff;
+          background: map-get($map: $colors, $key: primary);
           transition: width 0.3s ease 0s, left 0.3s ease 0s;
           width: 0;
         }
@@ -312,7 +275,7 @@ nav {
 
       a {
         font-size: 1rem;
-        color: map-get($map: $colors, $key: primary);
+        color: map-get($map: $colors, $key: text-white);
         font-weight: 700;
         @include defaultStyling();
 
@@ -398,6 +361,11 @@ nav {
     height: auto;
     width: 30rem;
     padding: 1.5rem;
+
+    label {
+      color: map-get($map: $colors, $key: text-gray);
+      text-transform: unset;
+    }
   }
 
   .section__form--fields {
@@ -405,41 +373,41 @@ nav {
     display: block;
     padding: 0.7rem;
     border-radius: 0.3rem;
-    border: 1px solid map-get($map: $colors, $key: light);
-    color: map-get($map: $colors, $key: primary);
+    border: 1px solid map-get($map: $colors, $key: secondary);
+    color: map-get($map: $colors, $key: text-gray);
     font-size: 1rem;
     font-weight: 900;
+
+    &::placeholder {
+      color: map-get($map: $colors, $key: text-gray);
+    }
   }
 
   .section__form--fields:active {
     outline: none;
-    border: 1px solid map-get($map: $colors, $key: ternary);
+    border: 1px solid map-get($map: $colors, $key: primary);
   }
 
   .section__form--fields:focus {
     outline: none;
-    border: 1px solid map-get($map: $colors, $key: ternary);
+    border: 1px solid map-get($map: $colors, $key: primary);
   }
 
   .section__form--btn {
     background-color: map-get($map: $colors, $key: ternary);
-    color: map-get($map: $colors, $key: primary);
-    font-size: 1.1rem;
+    color: map-get($map: $colors, $key: text-white);
+    font-size: 1.3rem;
     letter-spacing: 1px;
     border-radius: 0.3rem;
     margin: 0.6rem 0 0 0;
     padding: 0.7rem 0;
     width: 100%;
-    font-weight: 900;
+    font-weight: 500;
     text-align: center;
     display: inline-block;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
     backface-visibility: hidden;
-  }
-
-  .section__form--btn:hover {
-    transform: translateY(-3px) scale(1.03);
   }
 
   .section__form--btn:active {
@@ -451,6 +419,7 @@ nav {
     font-size: 1.7rem;
     @include defaultStyling();
     margin-bottom: 0.8rem !important;
+    color: map-get($map: $colors, $key: primary);
   }
 
   .section__form--guest {
@@ -534,21 +503,30 @@ nav {
       @include defaultStyling();
     }
 
+    #luxe-price {
+      color: map-get($map: $colors, $key: secondary);
+      font-size: 1.4rem;
+    }
+
+    i {
+      color: map-get($map: $colors, $key: secondary);
+      font-size: 1.3rem;
+    }
+
     .luxury_carousel--info {
       margin: 0.5rem 0;
 
       span {
         font-size: 1rem;
         @include defaultStyling();
-        color: map-get($map: $colors, $key: secondary);
-        font-weight: 700;
+        color: map-get($map: $colors, $key: text-gray);
+        font-weight: 500;
 
         &:first-child {
-          background-color: map-get($map: $colors, $key: ternary);
-          color: map-get($map: $colors, $key: text_light);
+          background-color: map-get($map: $colors, $key: text-color);
+          color: map-get($map: $colors, $key: text-white);
           padding: 0.2rem 0.5rem;
           border-radius: 0.3rem;
-          font-weight: 400;
         }
 
         &:nth-child(3) {
@@ -565,7 +543,7 @@ nav {
       span {
         @include defaultStyling();
         color: map-get($map: $colors, $key: primary);
-        font-weight: 700;
+        font-weight: 500;
         font-size: 1rem;
 
         &:nth-child(2) {
@@ -577,12 +555,15 @@ nav {
 
   .show_more {
     margin: 2rem 0 0 0 !important;
-    color: map-get($map: $colors, $key: ternary);
-    font-size: 1.1rem;
+    color: map-get($map: $colors, $key: text-gray);
+    font-size: 1.3rem;
     @include defaultStyling();
     display: block;
-    font-weight: 700;
-    position: relative;
+    transition: all 0.5s ease-in;
+
+    &:hover {
+      color: map-get($map: $colors, $key: primary);
+    }
   }
 }
 
@@ -596,7 +577,8 @@ nav {
 
 footer {
   width: 100%;
-  background-color: map-get($map: $colors, $key: light);
+  background-color: #f5f6f7;
+  margin: 2rem 0 0 0;
 
   .footer_inner {
     display: flex;
@@ -618,7 +600,7 @@ footer {
         list-style: none;
 
         a {
-          color: map-get($map: $colors, $key: secondary);
+          color: map-get($map: $colors, $key: text-gray);
           text-decoration: none;
           text-align: center;
           font-weight: 700;
@@ -720,18 +702,18 @@ footer {
         background-color: #4568b2;
         padding: 10px 0 !important;
         margin-right: 5px;
-        color: map-get($map: $colors, $key: text_light);
+        color: map-get($map: $colors, $key: text-white);
         @include defaultStyling();
         margin-bottom: 0.5rem !important;
         border-radius: 0.3rem;
       }
 
       ._google {
-        background-color: map-get($map: $colors, $key: text_light);
+        background-color: #dd4c39;
         padding: 10px 0 !important;
         margin-right: 5px;
-        color: map-get($map: $colors, $key: primary);
-        border: 2px solid map-get($map: $colors, $key: secondary);
+        color: map-get($map: $colors, $key: text-white);
+        border: 2px solid #dd4c39;
         @include defaultStyling();
         margin-bottom: 0.5rem !important;
         border-radius: 0.3rem;
@@ -766,6 +748,28 @@ footer {
         padding: 0rem 0.9rem;
       }
     }
+
+    .__signup {
+      border: 1px solid map-get($map: $colors, $key: ternary);
+      color: map-get($map: $colors, $key: text-white);
+      background-color: map-get($map: $colors, $key: ternary);
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      border-radius: 0.3rem;
+      margin: 0.6rem 0 1.5rem 0;
+      padding: 0.7rem 0;
+      width: 100%;
+      text-align: center;
+      display: inline-block;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+      backface-visibility: hidden;
+
+      &:active {
+        outline: none;
+        transform: translateZ(-3px);
+      }
+    }
   }
 
   .login_form {
@@ -780,26 +784,26 @@ footer {
       padding: 0.7rem;
       margin: 0.5rem 0;
       border-radius: 0.3rem;
-      border: 1px solid map-get($map: $colors, $key: light);
-      color: map-get($map: $colors, $key: accent);
+      border: 1px solid map-get($map: $colors, $key: secondary);
+      color: map-get($map: $colors, $key: text-white);
       font-size: 1rem;
       font-weight: 900;
     }
 
     .login_form--fields:active {
       outline: none;
-      border: 1px solid map-get($map: $colors, $key: ternary);
+      border: 1px solid map-get($map: $colors, $key: primary);
     }
 
     .login_form--fields:focus {
       outline: none;
-      border: 1px solid map-get($map: $colors, $key: ternary);
+      border: 1px solid map-get($map: $colors, $key: primary);
     }
 
     .login_form--btn {
-      background-color: map-get($map: $colors, $key: primary);
-      color: map-get($map: $colors, $key: light);
-      border: 1px solid map-get($map: $colors, $key: primary);
+      background-color: map-get($map: $colors, $key: ternary);
+      color: map-get($map: $colors, $key: text-white);
+      border: 1px solid map-get($map: $colors, $key: ternary);
       font-size: 1.1rem;
       letter-spacing: 1px;
       border-radius: 0.3rem;
@@ -820,10 +824,10 @@ footer {
     }
 
     .login_form--forgot {
-      color: map-get($map: $colors, $key: primary);
-      font-weight: 600;
+      color: map-get($map: $colors, $key: text-color);
+      font-weight: 500;
+      font-size: 1.3rem;
       margin: 1rem 0;
-      text-align: right;
       text-decoration: none;
     }
   }
@@ -831,6 +835,7 @@ footer {
   .sign_up {
     margin: 1rem 0 0 0;
     display: inline-block;
+    color: map-get($map: $colors, $key: text-gray);
   }
 
   .sign_up--link {

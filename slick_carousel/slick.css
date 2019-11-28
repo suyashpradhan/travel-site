@@ -143,9 +143,9 @@ button {
   padding: 10px;
   border-radius: 100px;
   z-index: 999;
-  border: 1px solid #ccc;
+  border: 1px solid #f3533a;
   cursor: pointer;
-  color: #282726;
+  color: #fa9f42;
   font-weight: 900;
 }
 
@@ -157,9 +157,9 @@ button {
   padding: 10px;
   border-radius: 100px;
   z-index: 999;
-  border: 1px solid #ccc;
+  border: 1px solid #f3533a;
   cursor: pointer;
-  color: #282726;
+  color: #fa9f42;
   font-weight: 900;
 }
 
