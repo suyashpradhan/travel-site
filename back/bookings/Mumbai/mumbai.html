@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="../../../slick_carousel/slick-theme.css">
     <link rel="stylesheet" href="../../../slick_carousel/slick.css">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Google+Sans:400|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
+        href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css" />
+
 </head>
 
 <body>
@@ -43,12 +44,55 @@
                         <li><a href="">Goregoan</a></li>
                     </ul>
                 </div>
-                <!--<a href="#" class="view_more"><i class="fas fa-plus view_moreIcon"></i> View More </a>
- -->
-                <div class="priceWrapper">
+                <div class="priceWrapper leftWrapperGap">
                     <h1 class="bodyWrapper--header">Price</h1>
-                    <div id="app"></div>
+                    <div class="price-ranger">
+                        <input type="text" class="price-slider " name="my_range" value="" />
+                    </div>
                 </div>
+                <div class="collections leftWrapperGap">
+                    <h1 class="bodyWrapper--header">Collections</h1>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"><span class="checkbox-material"><span class="check"></span></span>
+                            <span class="label-text">Tourizto Luxe</span>
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"><span class="checkbox-material"><span class="check"></span></span>
+                            <span class="label-text">For Group Travellers</span>
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"><span class="checkbox-material"><span class="check"></span></span>
+                            <span class="label-text">Tourizto Welcomes Couples</span>
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"><span class="checkbox-material"><span class="check"></span></span>
+                            <span class="label-text">International Guests</span>
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"><span class="checkbox-material"><span class="check"></span></span>
+                            <span class="label-text">Business Traveller</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="check-in-features leftWrapperGap">
+                    <h1 class="bodyWrapper--header">Check-in Features</h1>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"><span class="checkbox-material"><span class="check"></span></span>
+                            <span class="label-text">Pay at hotel</span>
+                        </label>
+                    </div>
+                </div>
+
             </div>
             <div id="rightWrapper">
                 <div class="rightWrapper--head">
@@ -66,7 +110,7 @@
                     </div>
                 </div>
                 <div class="hotel__wrapper">
-                    <div id="hotel__one" class="hotel__grid">
+                    <div id="" class="hotel__grid">
                         <div class="hotel__wrapper--left">
                             <img src="../assets/images/exterior.jpg" alt="" class="hotel__images">
                             <img src="../assets/images/waiting_area.jpg" alt="" class="hotel__images">
@@ -130,7 +174,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="hotel__two" class="hotel__grid">
+                    <div id="" class="hotel__grid">
                         <div class="hotel__wrapper--left">
                             <img src="../assets/images/waiting_area.jpg" alt="" class="hotel__images">
                             <img src="../assets/images/exterior.jpg" alt="" class="hotel__images">
@@ -191,6 +235,96 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <div id="luxe" class="hotel__grid">
+                        <div class="hotel__wrapper--left">
+                            <img src="../assets/images/waiting_area.jpg" alt="" class="hotel__images">
+                            <img src="../assets/images/exterior.jpg" alt="" class="hotel__images">
+                            <img src="../assets/images/bedroom_1.jpg" alt="" class="hotel__images">
+                            <img src="../assets/images/bedroom_2.jpg" alt="" class="hotel__images">
+                        </div>
+                        <span class="premium-ribbon">Luxe</span>
+                        <div class="hotel__wrapper--right">
+                            <div class="hotel__wrapperHeader">
+                                <div class="hotel__nameWrapper">
+                                    <h1 class="hotel__wrapper--Header">JW Marriott
+                                        <span class="hotel__wrapper--subHeader">Juhu,Mumbai</span> </h1>
+                                </div>
+                                <div class="hotel__listings">
+                                    <h1 class="hotel__iconInfo"><i class="fas fa-bullhorn hotel__icons"></i> Hurry. Only
+                                        2<br> rooms left!</h1>
+                                </div>
+                            </div>
+                            <div id="ratings">
+                                <div class="star__ratings">
+                                    <span class="star__ratings--text">4.0<i
+                                            class="far fa-star ratings__icon"></i></span>
+                                </div>
+                                <div class="total__ratings">
+                                    <span class="ratings__text">(127 Ratings)</span>
+                                </div>
+                                <div class="reviews">
+                                    <span class="ratings__text">Good</span>
+                                </div>
+                            </div>
+                            <div id="hotel__features">
+                                <span class="features__text feature__card"><i
+                                        class="far fa-credit-card feature__icons"></i> Card Payment</span>
+                                <span class="features__text feature__parking"><i
+                                        class="fas fa-parking feature__icons"></i> Parking Facility </span>
+                                <span class="features__text feature__wheelchair"><i
+                                        class="fas fa-wheelchair feature__icons"></i> Wheelchair
+                                    Accessible </span>
+                                <span class="features__text feature__tv"><i class="fas fa-tv feature__icons"></i> TV
+                                </span>
+                                <span class="features__text feature__swimming"><i
+                                        class="fas fa-swimming-pool feature__icons"></i> Swimming Pool
+                                </span>
+                                <span class="features__text feature__swimming"> <i
+                                        class="fas fa-plus feature__icons"></i>(6 More)
+                                </span>
+                            </div>
+                            <div id="pricing">
+                                <div class="price__wrap">
+                                    <span class="price__wrap--text"><i class="fas fa-rupee-sign price__icons"></i>2000
+                                        <strike class="price__strike"><i
+                                                class="fas fa-rupee-sign price__icons"></i>3200</strike> <span
+                                            class="price__off">28%
+                                            off</span>
+                                        <span class="room__info">per room per night</span>
+                                    </span>
+                                    <a href="#" class="view__details--btn" id="details__btn">View Details</a>
+                                    <a href="#" class="book__now--btn" id="book__btn">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <div class="pagination-container">
+                        <div class="pagination-hover-overlay"></div>
+                        <a href="#0" class="pagination-prev">
+                            <span class="icon-pagination">
+                                <i class="fas fa-chevron-left">
+                                </i>
+                            </span>
+                        </a>
+
+                        <a href="#0" class="pagination-page-number">1</a>
+                        <a href="#0" class="pagination-page-number">2</a>
+                        <a href="#0" class="pagination-page-number">3</a>
+                        <a href="#0" class="pagination-page-number">4</a>
+                        <a href="#0" class="pagination-page-number">5</a>
+                        <a href="#0" class="pagination-page-number">6</a>
+                        <a href="#0" class="pagination-page-number">7</a>
+
+                        <a href="#0" class="pagination-next">
+                            <span class="icon-pagination ">
+                                <i class="fas fa-chevron-right">
+                                </i>
+                            </span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -258,6 +392,8 @@
     <script src="https://kit.fontawesome.com/7fdc918442.js"></script>
     <script src="../../../script/script.js"></script>
     <script src="../../../slick_carousel/slick.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
+
     <script>
         $('.hotel__wrapper--left').slick({
             slidesToShow: 1,
@@ -267,6 +403,17 @@
             speed: 1000,
             prevArrow: '<button class="slide-arrow prev-arrow fas fa-chevron-left hotel__previewPrev"></button>',
             nextArrow: '<button class="slide-arrow next-arrow fas fa-chevron-right hotel__previewNext"></button>'
+        });
+    </script>
+
+    <script>
+        $(".price-slider").ionRangeSlider({
+            type: "double",
+            grid: true,
+            min: 0,
+            max: 20000,
+            skin: "round",
+            prefix: ' <i class="fas fa-rupee-sign price__icons"></i> '
         });
     </script>
 </body>

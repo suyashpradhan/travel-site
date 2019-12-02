@@ -3,12 +3,13 @@
 $font: "Rubik", sans-serif;
 
 $colors: (
-  "primary": #f3533a,
-  "secondary": #fa9f42,
-  "ternary": #8ad879,
-  "text-color": #5acfc9,
+  "primary": #381805,
+  "secondary": #9b5b2a,
+  "ternary": #d89d5e,
   "text-white": #fff,
-  "text-gray": #696969
+  "text-gray": #4f565c,
+  "text-gray-light": #777,
+  "text-black": #101015
 );
 
 @mixin defaultStyling {
@@ -58,7 +59,6 @@ body {
   font-size: 16px;
   font-weight: 300;
   line-height: 1.5;
-  color: map-get($map: $colors, $key: accent);
 }
 
 img {
@@ -97,6 +97,13 @@ img {
 .secondary_icons {
   font-size: 0.8rem;
   padding-right: 0.2rem;
+}
+
+.label-text {
+  color: map-get($map: $colors, $key: text-gray);
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-left: 0.8rem;
 }
 
 .carousel_details {
@@ -394,7 +401,7 @@ nav {
   }
 
   .section__form--btn {
-    background-color: map-get($map: $colors, $key: ternary);
+    background-color: map-get($map: $colors, $key: primary);
     color: map-get($map: $colors, $key: text-white);
     font-size: 1.3rem;
     letter-spacing: 1px;
@@ -603,7 +610,7 @@ footer {
           color: map-get($map: $colors, $key: text-gray);
           text-decoration: none;
           text-align: center;
-          font-weight: 700;
+          font-weight: 500;
           font-size: 0.9rem;
           transition: all 0.5s ease;
 
@@ -854,32 +861,30 @@ footer {
 
   .bodyWrapper--header {
     font-size: 1.5rem;
-    font-weight: 700;
     color: map-get($map: $colors, $key: primary);
     @include defaultStyling();
   }
 
   .bodyWrapper--headerSub {
     font-size: 1rem;
-    color: map-get($map: $colors, $key: secondary);
+    color: map-get($map: $colors, $key: text-gray-light);
     @include defaultStyling();
     padding-bottom: 0.5rem !important;
   }
 
   #leftWrapper {
     flex: 3;
-    border-right: 1px solid map-get($map: $colors, $key: light);
+    border-right: 1px solid map-get($map: $colors, $key: text-gray-light);
     padding: 0 1rem 0 0;
 
     .bodyWrapper--tags {
       display: inline-block;
-      margin: 0.5rem 0;
 
       li {
         display: inline-block;
         @include defaultStyling();
         padding: 0.3rem 0.5rem;
-        background-color: map-get($map: $colors, $key: light);
+        background-color: map-get($map: $colors, $key: text-gray-light);
         border-radius: 0.3rem;
         margin: 0.3rem 0.2rem;
         transition: all 0.5s ease;
@@ -887,9 +892,57 @@ footer {
         a {
           @include defaultStyling();
           text-decoration: none;
-          color: map-get($map: $colors, $key: primary);
+          color: map-get($map: $colors, $key: text-white);
           font-weight: 500;
         }
+      }
+    }
+
+    .priceWrapper {
+      .price-ranger {
+        margin: 0 1.5rem 0 0.1rem;
+      }
+    }
+
+    .check-in-features {
+      .label-text {
+        color: map-get($map: $colors, $key: text-gray);
+        font-weight: 500;
+        font-size: 1.1rem;
+        margin-left: 0.8rem;
+      }
+    }
+
+    .section__form {
+      .section__form--fields {
+        width: 100%;
+        display: block;
+        padding: 0.7rem;
+        border-radius: 0.3rem;
+        border: 1px solid map-get($map: $colors, $key: secondary);
+        color: map-get($map: $colors, $key: text-gray);
+        font-size: 1rem;
+        font-weight: 900;
+
+        &::placeholder {
+          color: map-get($map: $colors, $key: text-gray);
+          font-weight: 500;
+        }
+      }
+
+      .section__form--fields:active {
+        outline: none;
+        border: 1px solid map-get($map: $colors, $key: primary);
+      }
+
+      .section__form--fields:focus {
+        outline: none;
+        border: 1px solid map-get($map: $colors, $key: primary);
+      }
+
+      label {
+        color: map-get($map: $colors, $key: text-gray);
+        text-transform: unset;
       }
     }
 
@@ -906,11 +959,9 @@ footer {
   }
 
   .leftWrapperGap {
-    border-bottom: 1px solid map-get($map: $colors, $key: light);
-    margin: 0.5rem 0;
-  }
-
-  .priceWrapper {
+    border-bottom: 1px solid map-get($map: $colors, $key: text-gray-light);
+    margin: 0 0 1rem 0;
+    padding: 0 0 1.5rem 0;
   }
 
   #rightWrapper {
@@ -922,14 +973,19 @@ footer {
       justify-content: space-between;
     }
 
+    label {
+      color: map-get($map: $colors, $key: text-gray-light) !important;
+    }
+
     .sortSelect {
       padding: 0.5rem 0.2rem;
       width: 14rem;
       margin-left: 5px;
-      border: 2px solid map-get($map: $colors, $key: ternary);
+      border: 1px solid map-get($map: $colors, $key: secondary);
       text-align-last: left;
       font-size: 1rem;
-      font-weight: 700;
+      border-radius: 0.3rem;
+      font-weight: 500;
       color: map-get($map: $colors, $key: primary);
 
       &:focus {
@@ -941,182 +997,200 @@ footer {
 
 .hotel__wrapper {
   margin: 1.5rem 0;
-}
 
-.hotel__grid {
-  display: grid;
-  grid-template-columns: 400px 1fr;
-  justify-items: flex-start;
-  margin: 1rem 0 2rem 0;
-  padding: 0 0 1rem 0;
-  border-bottom: 1px solid map-get($map: $colors, $key: light);
+  #luxe {
+    height: inherit;
+    position: relative;
 
-  .hotel__wrapper--left {
-    width: 100%;
-
-    .hotel__images {
-      height: 265px;
-      max-width: 380px;
-      width: 100%;
-      object-fit: fill;
+    .premium-ribbon {
+      width: auto;
+      height: auto;
+      padding: 0.1rem 0.5rem;
       border-radius: 0.3rem;
+      position: absolute;
+      left: 15px;
+      letter-spacing: 1px;
+      top: 20px;
+      color: map-get($map: $colors, $key: text-white);
+      border: 1px solid map-get($map: $colors, $key: text-black);
+      background-color: map-get($map: $colors, $key: text-black);
     }
   }
 
-  .hotel__wrapper--right {
-    width: 100%;
+  .hotel__grid {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    justify-items: flex-start;
+    padding: 0 0 2rem 0;
+    margin: 0 0 2rem 0;
+    border-bottom: 1px solid map-get($map: $colors, $key: ternary);
 
-    .hotel__wrapperHeader {
+    .hotel__wrapper--left {
+      width: 100%;
+
+      .hotel__images {
+        height: 265px;
+        max-width: 380px;
+        width: 100%;
+        object-fit: fill;
+        border-radius: 0.3rem;
+      }
+    }
+
+    .hotel__wrapper--right {
+      width: 100%;
+
+      .hotel__wrapperHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: row wrap;
+
+        .hotel__wrapper--Header {
+          font-size: 1.2rem;
+          color: map-get($map: $colors, $key: text-gray);
+          font-weight: 700;
+        }
+      }
+
+      .hotel__wrapper--subHeader {
+        font-size: 1rem;
+        color: map-get($map: $colors, $key: text-gray-light);
+        font-weight: 500;
+        display: block;
+      }
+    }
+
+    .hotel__listings {
+      .hotel__iconInfo {
+        font-size: 0.9rem;
+        color: map-get($map: $colors, $key: text-gray-light);
+        font-weight: 500;
+        border: 1px solid map-get($map: $colors, $key: secondary);
+        padding: 0.2rem 0.8rem 0 0.8rem;
+        text-align: center;
+        border-radius: 0.3rem;
+      }
+    }
+
+    .hotel__icons {
+      font-size: 0.8rem;
+      color: map-get($map: $colors, $key: ternary);
+    }
+
+    #ratings {
+      margin: 0.5rem 0;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
       flex-flow: row wrap;
 
-      .hotel__wrapper--Header {
-        font-size: 1.2rem;
-        color: map-get($map: $colors, $key: primary);
-        font-weight: 700;
+      .star__ratings {
+        background-color: map-get($map: $colors, $key: ternary);
+        padding: 0.1rem 0.3rem;
+        border-radius: 0.3rem;
+        margin: 0 1rem 0 0;
+
+        .star__ratings--text {
+          text-align: center;
+          width: 100%;
+          color: map-get($map: $colors, $key: text-white);
+          font-size: 0.9rem;
+
+          .ratings__icon {
+            font-size: 0.9rem;
+            margin-left: 0.5rem;
+          }
+        }
       }
-    }
 
-    .hotel__wrapper--subHeader {
-      font-size: 1rem;
-      color: map-get($map: $colors, $key: secondary);
-      font-weight: 500;
-      display: block;
-    }
-  }
+      .total__ratings {
+        margin: 0 1rem 0 0;
+      }
 
-  .hotel__listings {
-    .hotel__iconInfo {
-      font-size: 0.9rem;
-      color: map-get($map: $colors, $key: primary);
-      font-weight: 500;
-      border: 2px solid map-get($map: $colors, $key: secondary);
-      padding: 0.2rem 0.8rem 0 0.8rem;
-      text-align: center;
-      border-radius: 0.3rem;
-    }
-  }
-
-  .hotel__icons {
-    font-size: 0.8rem;
-    color: map-get($map: $colors, $key: ternary);
-  }
-
-  #ratings {
-    margin: 0.5rem 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-flow: row wrap;
-
-    .star__ratings {
-      background-color: map-get($map: $colors, $key: ternary);
-      padding: 0.1rem 0.3rem;
-      border-radius: 0.3rem;
-      margin: 0 1rem 0 0;
-
-      .star__ratings--text {
-        text-align: center;
-        width: 100%;
-        color: map-get($map: $colors, $key: text_light);
+      .ratings__text {
         font-size: 0.9rem;
-
-        .ratings__icon {
-          font-size: 0.9rem;
-          margin-left: 0.5rem;
-        }
+        font-weight: 500;
+        color: map-get($map: $colors, $key: text-gray-light);
       }
     }
 
-    .total__ratings {
-      margin: 0 1rem 0 0;
-    }
-
-    .ratings__text {
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: map-get($map: $colors, $key: primary);
-    }
-  }
-
-  #hotel__features {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    align-items: center;
-    grid-gap: 0.9rem;
-    margin: 1rem 0;
-
-    .features__text {
-      color: map-get($map: $colors, $key: primary);
-      font-size: 0.8rem;
-      text-align: center;
-      font-weight: 900;
-    }
-
-    .feature__icons {
-      font-size: 1rem;
-      margin: 0 auto 0.2rem auto;
-      display: block;
-      text-align: center;
-      color: map-get($map: $colors, $key: secondary);
-    }
-  }
-
-  #pricing {
-    margin: 1rem 0 0 0;
-
-    .price__wrap {
+    #hotel__features {
       display: grid;
-      grid-template-columns: 1fr auto auto;
-      grid-gap: 0.5rem;
+      grid-template-columns: repeat(5, auto);
       align-items: center;
+      grid-gap: 0.9rem;
+      margin: 1rem 0;
 
-      .price__wrap--text {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: map-get($map: $colors, $key: primary);
-
-        .price__icons {
-          font-size: 0.9rem;
-        }
-
-        .price__strike {
-          color: map-get($map: $colors, $key: secondary);
-          margin: 0 0.3rem;
-          font-size: 1rem;
-        }
-
-        .price__off {
-          color: map-get($map: $colors, $key: secondary);
-          font-size: 1rem;
-        }
-
-        .room__info {
-          font-size: 0.8rem;
-          color: map-get($map: $colors, $key: secondary);
-          display: block;
-        }
+      .features__text {
+        color: map-get($map: $colors, $key: text-gray-light);
+        font-size: 0.8rem;
+        text-align: center;
       }
 
-      .view__details--btn {
-        border: 2px solid map-get($map: $colors, $key: secondary);
-        padding: 0.3rem 0.8rem;
-        text-decoration: none;
-        color: map-get($map: $colors, $key: primary);
-        font-weight: 500;
-        border-radius: 0.3rem;
+      .feature__icons {
+        font-size: 1rem;
+        margin: 0 auto 0.2rem auto;
+        display: block;
+        text-align: center;
+        color: map-get($map: $colors, $key: ternary);
       }
+    }
 
-      .book__now--btn {
-        border: 2px solid map-get($map: $colors, $key: primary);
-        background-color: map-get($map: $colors, $key: primary);
-        padding: 0.3rem 0.8rem;
-        text-decoration: none;
-        border-radius: 0.3rem;
-        color: map-get($map: $colors, $key: text_light);
-        font-weight: 500;
+    #pricing {
+      margin: 1rem 0 0 0;
+
+      .price__wrap {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        grid-gap: 0.5rem;
+        align-items: center;
+
+        .price__wrap--text {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: map-get($map: $colors, $key: primary);
+
+          .price__icons {
+            font-size: 0.9rem;
+          }
+
+          .price__strike {
+            color: map-get($map: $colors, $key: secondary);
+            margin: 0 0.3rem;
+            font-size: 1rem;
+          }
+
+          .price__off {
+            color: map-get($map: $colors, $key: secondary);
+            font-size: 1rem;
+          }
+
+          .room__info {
+            font-size: 0.8rem;
+            color: map-get($map: $colors, $key: secondary);
+            display: block;
+          }
+        }
+
+        .view__details--btn {
+          border: 2px solid map-get($map: $colors, $key: secondary);
+          padding: 0.3rem 0.8rem;
+          text-decoration: none;
+          color: map-get($map: $colors, $key: primary);
+          font-weight: 500;
+          border-radius: 0.3rem;
+        }
+
+        .book__now--btn {
+          border: 2px solid map-get($map: $colors, $key: primary);
+          background-color: map-get($map: $colors, $key: primary);
+          padding: 0.3rem 0.8rem;
+          text-decoration: none;
+          border-radius: 0.3rem;
+          color: map-get($map: $colors, $key: text-white);
+          font-weight: 500;
+        }
       }
     }
   }
@@ -1129,8 +1203,10 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
+
   #__left {
     width: 45rem;
+
     .hotel__slider {
       .hotel__slider--image {
         height: 30rem !important;
@@ -1160,6 +1236,7 @@ footer {
 
   #__right {
     padding: 0 0 0 1rem;
+
     .hotel__checkoutWrapper {
       margin: 0 0 0.5rem 0;
 
@@ -1400,7 +1477,6 @@ footer {
 
       .checkbox {
         display: inline-block;
-
         -webkit-transform: translateZ(0);
         transform: translateZ(0);
       }
@@ -1529,6 +1605,7 @@ footer {
       }
     }
   }
+
   .book__room {
     box-shadow: 0 0px 2px 0 map-get($map: $colors, $key: secondary);
     border: solid 1px map-get($map: $colors, $key: text_light);
@@ -1541,6 +1618,7 @@ footer {
       color: map-get($map: $colors, $key: primary);
       @include defaultStyling();
     }
+
     .book__room--price {
       font-size: 1.2rem;
       color: map-get($map: $colors, $key: secondary);
@@ -1550,16 +1628,19 @@ footer {
         @include defaultStyling();
         margin-right: 1rem !important;
       }
+
       #cutoff__price {
         text-decoration: line-through !important;
         @include defaultStyling();
         margin-right: 1rem !important;
         color: map-get($map: $colors, $key: primary);
       }
+
       #percent__off {
         @include defaultStyling();
       }
     }
+
     .book__room--tax {
       font-size: 1rem;
       color: map-get($map: $colors, $key: ternary);
@@ -1634,7 +1715,7 @@ footer {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
-  color: rgb(0, 0, 0);
+  color: map-get($map: $colors, $key: primary);
   font-size: 1.4rem;
   padding: 0.8rem;
   background: rgb(249, 249, 251);
@@ -1656,15 +1737,15 @@ footer {
 .booking-hotel-name {
   font-size: 1.2rem;
   @include defaultStyling();
-  color: map-get($map: $colors, $key: primary);
-  font-weight: 700;
+  color: map-get($map: $colors, $key: text-gray);
+  font-weight: 500;
 }
 
 .booking-stay {
   font-size: 1rem;
   @include defaultStyling();
-  color: map-get($map: $colors, $key: secondary);
-  font-weight: 700;
+  color: map-get($map: $colors, $key: text-gray-light);
+  font-weight: 500;
 }
 
 .booking-img {
@@ -1676,33 +1757,29 @@ footer {
 }
 
 .booking-icon {
-  color: map-get($map: $colors, $key: secondary);
+  color: map-get($map: $colors, $key: ternary);
 }
 
 .booking-date {
-  color: map-get($map: $colors, $key: primary);
+  color: map-get($map: $colors, $key: text-gray);
   font-size: 0.9rem;
-  font-weight: 600;
 }
 
 .booking-room-detail {
-  color: map-get($map: $colors, $key: secondary);
+  color: map-get($map: $colors, $key: text-gray-light);
   font-size: 0.9rem;
-  font-weight: 600;
   text-align: right;
   display: block;
 }
 
 .booking-price-detail {
-  color: map-get($map: $colors, $key: primary);
+  color: map-get($map: $colors, $key: text-gray);
   font-size: 0.9rem;
-  font-weight: 600;
 }
 
 .booking-price {
-  color: map-get($map: $colors, $key: secondary);
+  color: map-get($map: $colors, $key: text-gray-light);
   font-size: 0.9rem;
-  font-weight: 600;
   text-align: right;
   display: block;
 }
@@ -1710,19 +1787,17 @@ footer {
 .final-price {
   color: map-get($map: $colors, $key: primary);
   font-size: 1.2rem;
-  font-weight: 600;
   display: block;
 }
 
 .tax-span {
-  color: map-get($map: $colors, $key: secondary);
+  color: map-get($map: $colors, $key: text-gray-light);
   font-size: 0.9rem;
 }
 
 .final-booking-price {
-  color: map-get($map: $colors, $key: primary);
+  color: map-get($map: $colors, $key: secondary);
   font-size: 1.5rem;
-  font-weight: 600;
   text-align: right;
   display: block;
 }
@@ -1750,7 +1825,7 @@ footer {
   .checkout-btn {
     background-color: map-get($map: $colors, $key: primary);
     border: 2px solid map-get($map: $colors, $key: primary);
-    color: map-get($map: $colors, $key: text_light);
+    color: map-get($map: $colors, $key: text-white);
   }
 }
 
@@ -1805,3 +1880,379 @@ footer {
 }
 
 /*End's Here*/
+
+/*Overridden Css*/
+
+.irs {
+  font-family: inherit !important;
+}
+
+.irs--round .irs-handle {
+  border: 2px solid map-get($map: $colors, $key: primary) !important;
+}
+
+.irs--round .irs-from,
+.irs--round .irs-to,
+.irs--round .irs-single {
+  background-color: map-get($map: $colors, $key: secondary) !important;
+}
+
+.irs--round .irs-from:before,
+.irs--round .irs-to:before,
+.irs--round .irs-single:before {
+  position: absolute;
+  display: block;
+  content: "";
+  bottom: -6px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -3px;
+  overflow: hidden;
+  border: 3px solid transparent;
+  border-top-color: map-get($map: $colors, $key: secondary) !important;
+}
+
+.irs--round .irs-bar {
+  top: 36px;
+  height: 4px;
+  background-color: map-get($map: $colors, $key: ternary) !important;
+}
+
+.irs--round .irs-grid-text {
+  color: map-get($map: $colors, $key: text-gray) !important;
+}
+
+/*Checkbox Css*/
+.checkbox {
+  display: block;
+  padding: 0.5rem 0 0 0;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.checkbox label {
+  cursor: pointer;
+  padding-left: 0;
+}
+.checkbox input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  margin: 0;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  left: 0;
+  pointer-events: none;
+}
+.checkbox .checkbox-material {
+  vertical-align: middle;
+  position: relative;
+  top: 3px;
+}
+.checkbox .checkbox-material:before {
+  position: absolute;
+  left: 8px;
+  top: 2px;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 4px;
+  width: 4px;
+  border-radius: 100%;
+  z-index: 1;
+  opacity: 0;
+  margin: 0;
+}
+.checkbox .checkbox-material .check {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid;
+  border-radius: 2px;
+  overflow: hidden;
+  z-index: 1;
+}
+.checkbox .checkbox-material .check:before {
+  position: absolute;
+  content: "";
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  display: block;
+  margin-top: -4px;
+  margin-left: 6px;
+  width: 0;
+  height: 0;
+  box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0,
+    0 0 0 0 inset;
+  -webkit-animation: checkbox-off 0.3s forwards ease-out;
+  animation: checkbox-off 0.3s forwards ease-out;
+}
+.checkbox input[type="checkbox"]:focus + .checkbox-material .check:after {
+  opacity: 0.2;
+}
+.checkbox input[type="checkbox"]:checked + .checkbox-material .check:before {
+  box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px,
+    -5px 5px 0 10px, 20px -12px 0 11px;
+  -webkit-animation: checkbox-on 0.3s forwards ease-out;
+  animation: checkbox-on 0.3s forwards ease-out;
+}
+.checkbox input[type="checkbox"]:not(:checked) + .checkbox-material:before {
+  -webkit-animation: rippleOff 700ms forwards ease-out;
+  animation: rippleOff 700ms forwards ease-out;
+}
+.checkbox input[type="checkbox"]:checked + .checkbox-material:before {
+  -webkit-animation: rippleOn 700ms forwards ease-out;
+  animation: rippleOn 700ms forwards ease-out;
+}
+.checkbox
+  input[type="checkbox"]:not(:checked)
+  + .checkbox-material
+  .check:after {
+  -webkit-animation: rippleOff 700ms forwards ease-out;
+  animation: rippleOff 700ms forwards ease-out;
+}
+.checkbox input[type="checkbox"]:checked + .checkbox-material .check:after {
+  -webkit-animation: rippleOn 700ms forwards ease-out;
+  animation: rippleOn 700ms forwards ease-out;
+}
+.checkbox
+  input[type="checkbox"][disabled]:not(:checked)
+  ~ .checkbox-material
+  .check:before,
+.checkbox input[type="checkbox"][disabled] + .circle {
+  opacity: 0.5;
+}
+.checkbox input[type="checkbox"][disabled] + .checkbox-material .check:after {
+  background-color: rgba(0, 0, 0, 0.84);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+@-webkit-keyframes checkbox-on {
+  0% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px,
+      -5px 5px 0 10px, 15px 2px 0 11px;
+  }
+  50% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px,
+      -5px 5px 0 10px, 20px 2px 0 11px;
+  }
+  100% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px,
+      -5px 5px 0 10px, 20px -12px 0 11px;
+  }
+}
+
+@keyframes checkbox-on {
+  0% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px,
+      -5px 5px 0 10px, 15px 2px 0 11px;
+  }
+  50% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px,
+      -5px 5px 0 10px, 20px 2px 0 11px;
+  }
+  100% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px,
+      -5px 5px 0 10px, 20px -12px 0 11px;
+  }
+}
+@-webkit-keyframes checkbox-off {
+  0% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px,
+      -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  25% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px,
+      -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  50% {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-top: -4px;
+    margin-left: 6px;
+    width: 0px;
+    height: 0px;
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px,
+      -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+  }
+  51% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0,
+      0px 0px 0 10px inset;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0,
+      0px 0px 0 0px inset;
+  }
+}
+@keyframes checkbox-off {
+  0% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px,
+      -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  25% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px,
+      -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  50% {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-top: -4px;
+    margin-left: 6px;
+    width: 0px;
+    height: 0px;
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px,
+      -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+  }
+  51% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0,
+      0px 0px 0 10px inset;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0,
+      0px 0px 0 0px inset;
+  }
+}
+@-webkit-keyframes rippleOn {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(13, 13);
+    transform: scale(13, 13);
+  }
+}
+@keyframes rippleOn {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(13, 13);
+    transform: scale(13, 13);
+  }
+}
+@-webkit-keyframes rippleOff {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(13, 13);
+    transform: scale(13, 13);
+  }
+}
+@keyframes rippleOff {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(13, 13);
+    transform: scale(13, 13);
+  }
+}
+
+/*Pagination*/
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+.pagination-container {
+  padding: 10px 0;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: inline-flex;
+  position: relative;
+  overflow: hidden;
+}
+.pagination-hover-overlay {
+  background-color: map-get($map: $colors, $key: primary);
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition-duration: 0.5s;
+  left: 60px;
+  opacity: 0;
+}
+.pagination .icon-pagination {
+  color: map-get($map: $colors, $key: primary);
+  font-size: 11px;
+  width: 50px;
+  text-decoration: none !important;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+  background-color: #fff;
+}
+
+.pagination-prev {
+  margin-right: 15px;
+  margin-left: 10px;
+  text-decoration: none !important;
+}
+.pagination-prev .icon-pagination-prev {
+  transform: rotate(0deg);
+}
+.pagination-next {
+  margin-left: 15px;
+  margin-right: 10px;
+  text-decoration: none !important;
+}
+.pagination-next .icon-pagination-next {
+  transform: rotate(180deg);
+}
+.pagination-page-number {
+  border-radius: 5px;
+  color: #333d45;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+  position: relative;
+  z-index: 2;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 18px;
+}
+.pagination-page-number:hover {
+  color: #fff;
+}
+.pagination-page-number.active {
+  color: #fff;
+}
