@@ -8,27 +8,40 @@
     <link rel="stylesheet" href="../../../css/style.css">
     <link rel="stylesheet" href="../../../slick_carousel/slick-theme.css">
     <link rel="stylesheet" href="../../../slick_carousel/slick.css">
-
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
         .slide-arrow {
             top: 50%;
+        }
+
+        #map {
+            height: 31.25rem !important;
+            border-radius: 0.3rem;
         }
     </style>
 </head>
 
 <body>
-    <nav>
-        <div class="navigation__bookings gutter margin">
-            <a href="#" class="navigation--logo fromLeft">Tourizto<span style="color: #54504c">.</span></a>
-            <ul class="navigation--list">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Sign up</a></li>
-            </ul>
+    <header>
+        <div class="container-fluid">
+            <nav id="navigation">
+                <a href="#" class="navigation--logo fromLeft">Tourizto<span style="color: #9b5b2a">.</span></a>
+                <a aria-label="mobile menu" class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <ul class="menu-left navigation--list">
+                    <li><a href="#"><i class="fas fa-globe secondary_icons"></i> English (IN)</a></li>
+                    <li><a href="#"><i class="fas fa-rupee-sign secondary_icons"></i> INR</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Sign up</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
     <div class="pageWrapperInner gutter pd">
         <div class="bodyWrapper">
             <div class="hotel__details">
@@ -45,6 +58,92 @@
                                 Andheri West, Mumbai, Maharashtra 400058</span>
                         </h1>
                     </div>
+                    <div class="features info__section">
+                        <h1 class="info__header">Amenities</h1>
+                        <div id="hotel__features">
+                            <span class="features__text feature__card"><i class="far fa-credit-card feature__icons"></i>
+                                Card Payment</span>
+                            <span class="features__text feature__parking"><i class="fas fa-parking feature__icons"></i>
+                                Parking Facility </span>
+                            <span class="features__text feature__wheelchair"><i
+                                    class="fas fa-wheelchair feature__icons"></i> Wheelchair
+                                Accessible </span>
+                            <span class="features__text feature__tv"><i class="fas fa-tv feature__icons"></i> TV
+                            </span>
+                            <span class="features__text feature__swimming"><i
+                                    class="fas fa-swimming-pool feature__icons"></i> Swimming Pool
+                            </span>
+                            <span class="features__text feature__wifi"><i class="fas fa-wifi feature__icons"></i>
+                                Free Wifi
+                            </span>
+                            <span class="features__text feature__ac"><i class="fas fa-fan feature__icons"></i> AC
+                            </span>
+                            <span class=" features__text feature__breakfast"><i
+                                    class="fas fa-utensils feature__icons"></i> Free
+                                Breakfast
+                            </span>
+                            <span class="features__text feature__cctv"><i class="fas fa-video feature__icons"></i>
+                                CCTV
+                                Cameras</span>
+                        </div>
+                    </div>
+                    <div class="rooms info__section">
+                        <h1 class="info__header">Choose your room</h1>
+                        <div class="room__selectionGrid">
+                            <div class="room--one">
+                                <img src="../assets/images/single.jpg" alt="" class="room-img">
+                                <div class="room-name-size">
+                                    <h1>Classic (2X)</h1>
+                                    <h2>Room size: 130 sqft</h2>
+                                </div>
+                                <a href="#" class="select-room">Select</a>
+                            </div>
+                            <div class="room--two">
+                                <img src="../assets/images/double.jpg" alt="" class="room-img">
+                                <div class="room-name-size">
+                                    <h1>Deluxe (3X)</h1>
+                                    <h2>26% more spacious than Classic (2X) Room</h2>
+                                </div>
+                                <a href="#" class="select-room">Select</a>
+                            </div>
+                            <div class="room--three">
+                                <img src="../assets/images/king.jpg" alt="" class="room-img">
+                                <div class="room-name-size">
+                                    <h1>Suite (4X)</h1>
+                                    <h2>18% more spacious than Deluxe (3X) Room</h2>
+                                </div>
+                                <a href="#" class="select-room">Select</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hotel__policies info__section">
+                        <h1 class="info__header">Hotel Policies</h1>
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="check-in">Check-in</label>
+                                <input type="text" name="check-in" placeholder="12:00 PM" class="form-control" disabled>
+                            </div>
+                            <div class="col-6">
+                                <label for="check-out">Check-out</label>
+                                <input type="text" name="check-out" placeholder="11:00 AM" class="form-control"
+                                    disabled>
+                            </div>
+                        </div>
+                        <ul class="policies-ul">
+                            <li class="policies-li">Couples are welcome</li>
+                            <li class="policies-li">Guests can check in using any local or outstation ID proof (PAN card
+                                not accepted).</li>
+                            <li class="policies-li">As a complimentary benefit, your stay is now insured by Suyash.</li>
+                            <li class="policies-li">Optional: You can add your GSTIN details anytime after booking, and
+                                before checkout</li>
+                            <li class="policies-li">This hotel is serviced under the trade name of Palette -U Hotels as
+                                per quality
+                                standards of Tourizto
+                            </li>
+                        </ul>
+                        <a href="#" class="guest-policy">View Guest Policy</a>
+                    </div>
+
                 </div>
 
                 <div id="__right">
@@ -64,7 +163,7 @@
                             </div>
                             <div class="rooms">
                                 <label for="rooms">Rooms</label><br>
-                                <select name="rooms" id="room" class="checkoutForm--select">
+                                <select name="rooXms" id="room" class="checkoutForm--select">
                                     <option value="">1</option>
                                     <option value="">2</option>
                                     <option value="">3</option>
@@ -94,7 +193,7 @@
                             </li>
                         </ul>
                     </div>
-                    <!-- <div class="bulk__booking" id="bulk">
+                    <div class="bulk__booking" id="bulk">
                         <h1 class="bulk__booking--header">For Bulk Booking, leave your name & phone number. We'll get
                             back to you
                             shortly.</h1>
@@ -102,8 +201,9 @@
                             <input type="text" placeholder="Full Name" class="bulk__bookingForm--fields">
                             <input class="bulk__bookingForm--fields" id="" value="+91" disabled>
                             <input type="text" placeholder="Phone Number" class="bulk__bookingForm--fields">
+                            <a href="#" name="bulk" class="bulk-btn">Contact</a>
                         </form>
-                    </div> -->
+                    </div>
 
                     <div class="breakfast__wrapper" id="breakfast">
                         <div class="breafast__inner">
@@ -113,7 +213,7 @@
                             <div class="breafast__innerHeader">
                                 <h1>Add Breakfast for <i class="fas fa-rupee-sign secondary_icons"></i>65</h1>
                                 <h2>1 Room and 1 Guest</h2>
-                                <div class="tooltip">Know More
+                                <div class="tooltip">Know More <i class="fas fa-info-circle"></i>
                                     <span class="tooltiptext">You have got a great deal on your room tariff. Enjoy
                                         Breakfast during your stay at a nominal price</span>
                                 </div>
@@ -140,14 +240,18 @@
                         <h1 class="coupon__text"><i class="fas fa-tag secondary_icons"></i> Coupon code FINDTOURIZTO is
                             pre-applied</h1>
                         <a href="#" id="book__btn" class="book__btn">Continue To Book</a>
+                        <div class="tooltip">Cancellation Policy <i class="fas fa-info-circle secondary_icons"></i>
+                            <span class="tooltiptext">This will be a non-refundable booking</span>
+                        </div>
                     </div>
+                    <div id="map"></div>
                 </div>
             </div>
         </div>
     </div>
 
     <footer>
-        <div class="footer_section pageWrapper pd">
+        <div class="footer_section pageWrapperInner  pd">
             <div class="footer_inner">
                 <div class="footer_inner--one">
                     <h1>Tourizto</h1>
@@ -219,6 +323,30 @@
             prevArrow: '<button class="slide-arrow prev-arrow fas fa-chevron-left hotel__previewPrev"></button>',
             nextArrow: '<button class="slide-arrow next-arrow fas fa-chevron-right hotel__previewNext"></button>'
         });
+    </script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmsGBYzxpx0wiPpHIZZo5icAtP6AimteM&callback=initMap">
+    </script>
+    <script>
+        function initMap() {
+            // The location of Uluru
+            var uluru = {
+                lat: 19.1258,
+                lng: 72.8448
+            };
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map'), {
+                    zoom: 4,
+                    center: uluru
+                });
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
     </script>
 </body>
 

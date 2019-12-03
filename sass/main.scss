@@ -9,7 +9,8 @@ $colors: (
   "text-white": #fff,
   "text-gray": #4f565c,
   "text-gray-light": #777,
-  "text-black": #101015
+  "text-black": #101015,
+  "border-color": #ced4da
 );
 
 @mixin defaultStyling {
@@ -56,9 +57,24 @@ $colors: (
 
 html,
 body {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.5;
+  font-size: 16px !important;
+  font-weight: 300 !important;
+  line-height: 1.5 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: unset;
+  line-height: unset;
+}
+
+ol,
+ul {
+  margin: 0 !important;
 }
 
 img {
@@ -84,7 +100,7 @@ img {
 
 .pageWrapperInner {
   max-width: 80rem;
-  margin: auto;
+  margin: 4rem auto 0 auto;
 }
 
 .section_span {
@@ -167,6 +183,64 @@ hr {
   border: 0.5px solid map-get($map: $colors, $key: text-gray);
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  @include defaultStyling();
+  color: map-get($map: $colors, $key: text-black);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 20rem;
+  background-color: map-get($map: $colors, $key: secondary);
+  color: map-get($map: $colors, $key: text-white);
+  text-align: center;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  margin-left: -60px;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: justify;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.navigation--logo {
+  color: map-get($map: $colors, $key: primary);
+  font-size: 2rem;
+  font-weight: 900;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation--list {
+  @include flexRow();
+
+  li {
+    @include defaultStyling();
+    padding: 0 1rem;
+    list-style: none;
+    position: relative;
+
+    a {
+      font-size: 1.1rem;
+      color: map-get($map: $colors, $key: secondary);
+      @include defaultStyling();
+    }
+  }
+}
+
 /*End's Here*/
 
 /*Hero Section Styling*/
@@ -187,127 +261,197 @@ hr {
     background: rgba(0, 0, 0, 0.4);
   } */
 }
-
 /*End's Here*/
 
 /*Navigation Section Styling*/
-nav {
+.navigation--logo {
+  color: map-get($map: $colors, $key: primary) !important;
+  font-size: 2rem;
+  font-weight: 900;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation--logo {
+  color: map-get($map: $colors, $key: primary);
+  font-size: 2rem;
+  font-weight: 900;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation--list {
+  @include flexRow();
+
+  li {
+    @include defaultStyling();
+    padding: 0.7rem 0 0 2rem;
+    list-style: none;
+    position: relative;
+    font-weight: 600;
+
+    a {
+      font-size: 1.1rem;
+      color: map-get($map: $colors, $key: primary);
+      @include defaultStyling();
+    }
+  }
+}
+
+.menu-left a {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0px;
+  transition: color 0.35s ease;
+}
+.menu-left a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  margin: 0.5rem 0 0 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  transition: width 0s ease, background 0.35s ease;
+}
+.menu-left a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: map-get($map: $colors, $key: secondary);
+  transition: width 0.35s ease;
+}
+.menu-left a:hover:before {
   width: 100%;
-  height: 4rem;
-  padding: 0.8rem 0;
-  /* box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1); */
+  background: map-get($map: $colors, $key: secondary);
+  transition: width 0.35s ease;
+}
+.menu-left a:hover:after {
+  width: 100%;
+  background: transparent;
+  transition: all 0s ease;
 }
 
-.navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1300px;
-  margin: auto;
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  height: 70px;
+  z-index: 3;
+  will-change: transform;
+  transition: background 0.3s,
+    -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
+  transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1),
+    background 0.3s;
+  transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1),
+    background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  padding: 0.5rem 0;
+}
 
-  .navigation--logo {
-    color: map-get($map: $colors, $key: text-white);
-    font-size: 2rem;
-    font-weight: 900;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
+@media (min-width: 768px) {
+  header nav ul li {
+    float: left;
+    margin-left: 1rem;
   }
-
-  .navigation--list {
-    @include flexRow();
-
-    li {
-      @include defaultStyling();
-      padding: 0 1rem;
-      list-style: none;
-      position: relative;
-
-      a {
-        font-size: 1.1rem;
-        color: map-get($map: $colors, $key: text-white);
-        @include defaultStyling();
-
-        &::after {
-          background: none repeat scroll 0 0 transparent;
-          bottom: 0;
-          content: "";
-          display: block;
-          height: 4px;
-          left: 50%;
-          top: 3rem;
-          position: absolute;
-          background: map-get($map: $colors, $key: primary);
-          transition: width 0.3s ease 0s, left 0.3s ease 0s;
-          width: 0;
-        }
-
-        &:hover::after {
-          width: 100%;
-          left: 0;
-        }
-      }
-    }
+}
+header nav ul li a {
+  display: block;
+}
+@media (min-width: 576px) {
+  header nav ul li a {
+    display: block;
+    padding: 0.425rem 0rem;
   }
 }
 
+@media (max-width: 768px) {
+  ul {
+    clear: both;
+  }
+  ul li {
+    padding: 0.5em 0;
+  }
+}
+
+.hide-nav {
+  transform: translateY(-120% !important);
+  -webkit-transform: translateY(-120%) !important;
+}
+
+ul.menu-left {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  z-index: 10;
+}
+@media (min-width: 768px) {
+  ul.menu-left {
+    display: block !important;
+    float: right;
+    max-height: none;
+  }
+}
+ul.menu-left:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+ul.menu-left.collapse {
+  max-height: 15em !important;
+}
+
+.nav-toggle {
+  display: block;
+  border-radius: 5px;
+  background-color: transparent;
+  float: right;
+  height: 38px;
+  width: 38px;
+  cursor: pointer;
+  padding: 8px 8px;
+}
+.nav-toggle.open span:first-child {
+  transform: rotate(45deg) translate(4.4px, 4.4px);
+}
+.nav-toggle.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+.nav-toggle.open span:last-child {
+  transform: rotate(-45deg) translate(4.4px, -4.4px);
+}
+@media (min-width: 768px) {
+  .nav-toggle {
+    display: none;
+  }
+}
+.nav-toggle span {
+  position: relative;
+  display: block;
+  height: 2px;
+  width: 100%;
+  margin-top: 4px;
+  background-color: #000;
+  transition: all 0.25s;
+}
 /*End's Here*/
-
-/*Booking Navigation*/
-
-.navigation__bookings {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1300px;
-  margin: auto;
-
-  .navigation--logo {
-    color: map-get($map: $colors, $key: primary);
-    font-size: 2rem;
-    font-weight: 900;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .navigation--list {
-    @include flexRow();
-
-    li {
-      @include defaultStyling();
-      padding: 0 1rem;
-      list-style: none;
-      position: relative;
-
-      a {
-        font-size: 1rem;
-        color: map-get($map: $colors, $key: text-white);
-        font-weight: 700;
-        @include defaultStyling();
-
-        &::after {
-          background: none repeat scroll 0 0 transparent;
-          bottom: 0;
-          content: "";
-          display: block;
-          height: 4px;
-          left: 50%;
-          top: 3rem;
-          position: absolute;
-          background: map-get($map: $colors, $key: secondary);
-          transition: width 0.3s ease 0s, left 0.3s ease 0s;
-          width: 0;
-        }
-
-        &:hover::after {
-          width: 100%;
-          left: 0;
-        }
-      }
-    }
-  }
-}
 
 /*About Section*/
 .about_section {
@@ -530,7 +674,7 @@ nav {
         font-weight: 500;
 
         &:first-child {
-          background-color: map-get($map: $colors, $key: text-color);
+          background-color: map-get($map: $colors, $key: ternary);
           color: map-get($map: $colors, $key: text-white);
           padding: 0.2rem 0.5rem;
           border-radius: 0.3rem;
@@ -1220,22 +1364,115 @@ footer {
 
     .hotel__nameWrapper {
       .hotel__nameWrapper--Header {
-        font-size: 1.5rem;
+        font-size: 2rem;
         display: block;
         color: map-get($map: $colors, $key: primary);
         @include defaultStyling();
+        padding-top: 0.3rem !important;
 
         .hotel__nameWrapper--subHeader {
-          font-size: 1.1rem;
+          font-size: 1.3rem;
           display: block;
           color: map-get($map: $colors, $key: secondary);
         }
       }
     }
+    .info__section {
+      padding: 1.5rem 0;
+
+      .info__header {
+        font-size: 1.4rem;
+        font-weight: 600;
+        display: block;
+        color: map-get($map: $colors, $key: primary);
+        @include defaultStyling();
+        padding-bottom: 0.6rem !important;
+      }
+
+      #hotel__features {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        align-items: center;
+        grid-gap: 0.9rem;
+
+        .features__text {
+          color: map-get($map: $colors, $key: text-gray);
+          font-size: 0.9rem;
+          text-align: center;
+          font-weight: 600;
+        }
+
+        .feature__icons {
+          font-size: 1.4rem;
+          margin: 0 auto 1rem auto;
+          display: block;
+          text-align: center;
+          color: map-get($map: $colors, $key: ternary);
+        }
+      }
+    }
+    .room__selectionGrid {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr 1fr !important;
+      justify-items: start !important;
+      grid-gap: 2rem !important;
+
+      .room-img {
+        height: 10rem;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0.3rem;
+        margin: 0 0 0.5rem 0;
+      }
+
+      .room-name-size {
+        h1 {
+          font-size: 1.4rem;
+          @include defaultStyling();
+          color: map-get($map: $colors, $key: primary);
+        }
+
+        h2 {
+          font-size: 0.9rem;
+          @include defaultStyling();
+          color: map-get($map: $colors, $key: secondary);
+          height: 3rem;
+        }
+      }
+
+      .select-room {
+        border: 2px solid map-get($map: $colors, $key: primary);
+        background-color: map-get($map: $colors, $key: primary);
+        padding: 0.4rem 0;
+        text-decoration: none;
+        border-radius: 0.3rem;
+        color: map-get($map: $colors, $key: text-white);
+        font-weight: 500;
+        text-align: center;
+        margin: 0.8rem 0 0 0;
+        display: block;
+      }
+    }
+
+    .hotel__policies {
+      .policies-ul {
+        padding: 1.5rem 2rem 0 1rem;
+
+        .policies-li {
+          color: map-get($map: $colors, $key: secondary);
+          padding: 0 0 0.3rem 0;
+          font-weight: 500;
+        }
+      }
+    }
+    .guest-policy {
+      color: map-get($map: $colors, $key: primary);
+      font-weight: 700;
+    }
   }
 
   #__right {
-    padding: 0 0 0 1rem;
+    padding: 0 0 0 0.5rem;
 
     .hotel__checkoutWrapper {
       margin: 0 0 0.5rem 0;
@@ -1254,11 +1491,11 @@ footer {
           padding: 0.5rem 1rem;
           border-radius: 0.3rem;
           width: 100% !important;
-          border: 1px solid map-get($map: $colors, $key: light);
+          border: 1px solid map-get($map: $colors, $key: border-color);
           font-size: 1rem !important;
 
           &:focus {
-            border: 1px solid map-get($map: $colors, $key: ternary);
+            border: 1px solid map-get($map: $colors, $key: secondary);
             outline: none;
           }
         }
@@ -1267,11 +1504,11 @@ footer {
           padding: 0.5rem 0.8rem;
           border-radius: 0.3rem;
           width: 100% !important;
-          border: 1px solid map-get($map: $colors, $key: light);
+          border: 1px solid map-get($map: $colors, $key: border-color);
           font-size: 1rem !important;
 
           &:focus {
-            border: 1px solid map-get($map: $colors, $key: ternary);
+            border: 1px solid map-get($map: $colors, $key: secondary);
             outline: none;
           }
         }
@@ -1279,6 +1516,7 @@ footer {
     }
 
     .booking__detailsWrapper {
+      padding: 1rem 0;
       ul {
         list-style-type: none;
       }
@@ -1312,7 +1550,7 @@ footer {
 
       .accordion li i {
         position: absolute;
-        top: 16px;
+        top: 5px;
         left: 12px;
         font-size: 18px;
         color: #595959;
@@ -1348,7 +1586,7 @@ footer {
 
         .room__form {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(2, 1fr);
           grid-gap: 0.6rem;
           align-items: center;
 
@@ -1357,13 +1595,12 @@ footer {
             display: block;
             padding: 0.7rem;
             border-radius: 0.3rem;
-            border: 1px solid map-get($map: $colors, $key: light);
+            border: 1px solid map-get($map: $colors, $key: border-color);
             color: map-get($map: $colors, $key: secondary);
             font-size: 0.9rem;
-            font-weight: 600;
 
             &:focus {
-              border: 1px solid map-get($map: $colors, $key: ternary);
+              border: 1px solid map-get($map: $colors, $key: secondary);
               outline: none;
             }
           }
@@ -1372,13 +1609,13 @@ footer {
     }
 
     .bulk__booking {
-      box-shadow: 0 0px 2px 0 map-get($map: $colors, $key: secondary);
-      border: solid 1px map-get($map: $colors, $key: text_light);
+      border: solid 1px map-get($map: $colors, $key: border-color);
       border-radius: 0.3rem;
       padding: 0.8rem 1rem;
+      margin: 0 0 1.5rem 0;
 
       .bulk__booking--header {
-        font-size: 1.1rem;
+        font-size: 1rem;
         @include defaultStyling();
         text-align: left;
         color: map-get($map: $colors, $key: primary);
@@ -1394,23 +1631,33 @@ footer {
         .bulk__bookingForm--fields {
           padding: 0.7rem;
           border-radius: 0.3rem;
-          border: 1px solid map-get($map: $colors, $key: light);
-          color: map-get($map: $colors, $key: secondary);
+          border: 1px solid map-get($map: $colors, $key: border-color);
           font-size: 1rem;
-          font-weight: 600;
+          font-weight: 500;
 
           &:focus {
             border: 1px solid map-get($map: $colors, $key: ternary);
             outline: none;
           }
         }
+
+        .bulk-btn {
+          border: 2px solid map-get($map: $colors, $key: primary);
+          background-color: map-get($map: $colors, $key: primary);
+          padding: 0.8rem 0.8rem;
+          text-decoration: none;
+          border-radius: 0.3rem;
+          color: map-get($map: $colors, $key: text-white);
+          font-weight: 500;
+          text-align: center;
+          grid-column: span 3;
+        }
       }
     }
 
     .breakfast__wrapper {
-      margin: 1.5rem 0;
-      box-shadow: 0 0px 2px 0 map-get($map: $colors, $key: secondary);
-      border: solid 1px map-get($map: $colors, $key: text_light);
+      margin: 0 0 1.5rem 0;
+      border: solid 1px map-get($map: $colors, $key: border-color);
       border-radius: 0.3rem;
 
       .breafast__inner {
@@ -1428,49 +1675,17 @@ footer {
 
         .breafast__innerHeader {
           h1 {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             @include defaultStyling();
             color: map-get($map: $colors, $key: primary);
-            font-weight: 900;
+            font-weight: 700;
           }
 
           h2 {
-            font-size: 1rem;
+            font-size: 1.1rem;
             @include defaultStyling();
-            color: map-get($map: $colors, $key: secondary);
+            color: map-get($map: $colors, $key: ternary);
             font-weight: 600;
-          }
-
-          .tooltip {
-            position: relative;
-            display: inline-block;
-            font-size: 1rem;
-            @include defaultStyling();
-            color: map-get($map: $colors, $key: secondary);
-            font-weight: 600;
-            cursor: pointer;
-          }
-
-          .tooltip .tooltiptext {
-            visibility: hidden;
-            width: 20rem;
-            background-color: map-get($map: $colors, $key: secondary);
-            color: map-get($map: $colors, $key: text_light);
-            text-align: center;
-            border-radius: 0.3rem;
-            padding: 0.5rem;
-            margin-left: -60px;
-            position: absolute;
-            z-index: 1;
-            top: 100%;
-            left: 50%;
-            font-size: 0.8rem;
-            font-weight: 500;
-            text-align: justify;
-          }
-
-          .tooltip:hover .tooltiptext {
-            visibility: visible;
           }
         }
       }
@@ -1607,8 +1822,7 @@ footer {
   }
 
   .book__room {
-    box-shadow: 0 0px 2px 0 map-get($map: $colors, $key: secondary);
-    border: solid 1px map-get($map: $colors, $key: text_light);
+    border: solid 1px map-get($map: $colors, $key: border-color);
     border-radius: 0.3rem;
     margin: 1.5rem 0;
     padding: 0.8rem 1rem;
@@ -1650,9 +1864,9 @@ footer {
     }
 
     .coupon__text {
-      font-size: 1rem;
+      font-size: 0.9rem;
       @include defaultStyling();
-      color: map-get($map: $colors, $key: primary);
+      color: map-get($map: $colors, $key: text-gray-light);
       padding: 0.3rem 0 0 0.3rem !important;
     }
 
@@ -1661,7 +1875,7 @@ footer {
       display: block;
       width: 100%;
       background-color: map-get($map: $colors, $key: primary);
-      color: map-get($map: $colors, $key: light);
+      color: map-get($map: $colors, $key: text-white);
       padding: 1rem 0;
       text-align: center;
       text-decoration: none;
@@ -1672,8 +1886,6 @@ footer {
 
       &:hover,
       :active {
-        background-color: map-get($map: $colors, $key: secondary);
-        color: map-get($map: $colors, $key: light);
         outline: none;
       }
     }

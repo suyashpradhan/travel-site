@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body style="background-position: center;
@@ -20,18 +21,25 @@ background-image: linear-gradient(
   ),
   url('../img/login.jpg');
   height: 100vh;">
-    <nav>
-        <div class="navigation gutter">
-            <a href="#" class="navigation--logo fromLeft">Tourizto<span style="color: #e74315">.</span></a>
-            <!-- <a href="#" class="navigation--menu fromRight">
-                        <img src="img/menu-button.png" alt="">
-                    </a> -->
-            <ul class="navigation--list">
-                <li><a href="#">Home</a></li>
-
-            </ul>
+    <header>
+        <div class="container-fluid">
+            <nav id="navigation">
+                <a href="#" class="navigation--logo fromLeft">Tourizto<span style="color: #9b5b2a">.</span></a>
+                <a aria-label="mobile menu" class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <ul class="menu-left navigation--list">
+                    <li><a href="#"><i class="fas fa-globe secondary_icons"></i> English (IN)</a></li>
+                    <li><a href="#"><i class="fas fa-rupee-sign secondary_icons"></i> INR</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Sign up</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
