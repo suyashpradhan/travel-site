@@ -6,61 +6,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tourizto.</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="slick_carousel/slick-theme.css">
     <link rel="stylesheet" href="slick_carousel/slick.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/datetimepicker.css">
+
 </head>
 
 <body>
-    <header>
-        <div class="container-fluid">
-            <nav id="navigation">
-                <a href="#" class="navigation--logo fromLeft">Tourizto<span style="color: #9b5b2a">.</span></a>
-                <a aria-label="mobile menu" class="nav-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a>
-                <ul class="menu-left navigation--list">
-                    <li><a href="#"><i class="fas fa-globe secondary_icons"></i> English (IN)</a></li>
-                    <li><a href="#"><i class="fas fa-rupee-sign secondary_icons"></i> INR</a></li>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Sign up</a></li>
-                </ul>
+    <header class="header_area">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <a class="navbar-brand logo_h" href="index.html"><img src="img/Logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav menu_nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href=""><i class="fas fa-globe"></i> English (IN)</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href=""><i class="fas fa-rupee-sign"></i> INR</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Help</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Log in</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Sign up</a></li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
-    <div class="about_section pageWrapper gutter pd">
-        <div class="about_section--right fromBottom">
-            <form action="#" method="post" class="section__form">
-                <h1 class="section__form--header">Book unique places to stay and things to do.</h1>
-                <div class="section__form-group"></div>
-                <label for="place">WHERE</label>
-                <input type="text" name="" id="place" placeholder="Anywhere" class="section__form--fields"><br>
-                <label for="check-in">CHECK-IN</label>
-                <input type="date" name="" id="check-in" placeholder="CHECK-IN" class="section__form--fields"><br>
-                <label for="check-out">CHECK-OUT</label>
-                <input type="date" name="" id="check-out" placeholder="CHECK-OUT" class="section__form--fields"><br>
-                <label for="check-out">GUEST</label>
-                <div class="section__form--guest">
-                    <input type="date" name="adults" placeholder="Adults" class="section__form--fields ">
-                    </input>
-                    <input type="text" name="senior" placeholder="Seniors (Above 60)" class="section__form--fields">
-                    </input>
-                    <input type="text" name="chidren" placeholder="Children (Ages 2-12)" class="section__form--fields">
-                    </input>
-                    <input type="text" name="infant" placeholder="Infants (Under 2)" class="section__form--fields">
-                    </input>
+    <!-- <section class="hero">
+        <div class="about_section pageWrapper gutter pd">
+            <div class="about_section--right fromBottom">
+                <form action="#" method="post" class="section__form">
+                    <h1 class="section__form--header">Book unique places to stay and things to do.</h1>
+                    <div class="section__form-group"></div>
+                    <label for="place">WHERE</label>
+                    <input type="text" name="" id="place" placeholder="Anywhere" class="section__form--fields"><br>
+                    <label for="check-in">CHECK-IN</label>
+                    <input type="date" name="" id="check-in" placeholder="CHECK-IN" class="section__form--fields"><br>
+                    <label for="check-out">CHECK-OUT</label>
+                    <input type="date" name="" id="check-out" placeholder="CHECK-OUT" class="section__form--fields"><br>
+                    <label for="check-out">GUEST</label>
+                    <div class="section__form--guest">
+                        <input type="date" name="adults" placeholder="Adults" class="section__form--fields ">
+                        </input>
+                        <input type="text" name="senior" placeholder="Seniors (Above 60)" class="section__form--fields">
+                        </input>
+                        <input type="text" name="chidren" placeholder="Children (Ages 2-12)"
+                            class="section__form--fields">
+                        </input>
+                        <input type="text" name="infant" placeholder="Infants (Under 2)" class="section__form--fields">
+                        </input>
 
-                </div><br>
-                <a href="#" class="section__form--btn">Search</a>
-            </form>
+                    </div><br>
+                    <a href="#" class="section__form--btn">Search</a>
+                </form>
+            </div>
         </div>
-    </div>
-    </header>
+    </section> -->
+    <section class="banner_area">
+        <div class="booking_table d_flex align-items-center">
+            <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0"
+                data-background=""></div>
+            <div class="pageWrapper">
+                <div class="banner_content text-center">
+                    <h6>Away from monotonous life</h6>
+                    <h2>Relax Your Mind</h2>
+                    <a href="#" class="btn theme_btn button_hover">Get Started</a>
+                </div>
+            </div>
+        </div>
+        <div class="hotel_booking_area position">
+            <div class="pageWrapper">
+                <div class="hotel_booking_table">
+                    <div class="col-md-3">
+                        <h2>Book<br> Your Room</h2>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="boking_table">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="book_tabel_item">
+                                        <div class="form-group">
+                                            <div class='input-group date' id='datetimepicker11'>
+                                                <input type='text' class="form-control" placeholder="Arrival Date" />
+                                                <span class="input-group-addon">
+                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class='input-group date' id='datetimepicker1'>
+                                                <input type='text' class="form-control" placeholder="Departure Date" />
+                                                <span class="input-group-addon">
+                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                </span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="book_tabel_item">
+                                        <div class="input-group">
+                                            <select class="wide">
+                                                <option data-display="Adult">Adult</option>
+                                                <option value="1">Old</option>
+                                                <option value="2">Younger</option>
+                                                <option value="3">Potato</option>
+                                                <span class="input-group-addon">
+                                                    <i class="fas fa-angle-down"></i>
+                                                </span>
+                                            </select>
+
+                                        </div>
+                                        <div class="input-group">
+                                            <select class="wide">
+                                                <option data-display="Child">Child</option>
+                                                <option value="1">Child</option>
+                                                <option value="2">Baby</option>
+                                                <option value="3">Child</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="book_tabel_item">
+                                        <div class="input-group">
+                                            <select class="wide">
+                                                <option data-display="Child">Number of Rooms</option>
+                                                <option value="1">Room 01</option>
+                                                <option value="2">Room 02</option>
+                                                <option value="3">Room 03</option>
+                                            </select>
+                                        </div>
+                                        <a class="book_now_btn button_hover" href="#">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <div class="explore_section pageWrapper gutter pd">
         <h1 class="section_header">
             Explore Tourizto
@@ -371,7 +471,9 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/7fdc918442.js"></script>
+    <script src="script/nice-select.js"></script>
     <script src="slick_carousel/slick.js"></script>
+    <script src="script/datetimepicker-min.js"></script>
     <script src="script/script.js"></script>
     <script>
         $('.recommended_section--inner').slick({
@@ -403,6 +505,12 @@
             loop: true,
             prevArrow: '<button class="slide-arrow prev-arrow fas fa-chevron-left"></button>',
             nextArrow: '<button class="slide-arrow next-arrow fas fa-chevron-right"></button>'
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker1').datetimepicker();
         });
     </script>
 </body>

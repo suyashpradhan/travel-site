@@ -11,32 +11,37 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body style="background-position: center;
+<body style="background-position: center;height: 100vh;
 background-size: cover;
 background-repeat: no-repeat;
+background-position: center;
 background-image: linear-gradient(
     -180deg,
     rgba(0, 0, 0, 0) 5%,
     rgb(0, 0, 0) 100%
   ),
-  url('../img/login.jpg');
-  height: 100vh;">
-    <header>
-        <div class="container-fluid">
-            <nav id="navigation">
-                <a href="#" class="navigation--logo fromLeft">Tourizto<span style="color: #9b5b2a">.</span></a>
-                <a aria-label="mobile menu" class="nav-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a>
-                <ul class="menu-left navigation--list">
-                    <li><a href="#"><i class="fas fa-globe secondary_icons"></i> English (IN)</a></li>
-                    <li><a href="#"><i class="fas fa-rupee-sign secondary_icons"></i> INR</a></li>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Sign up</a></li>
-                </ul>
+  url('../img/login.jpg');">
+    <header class="header_area">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <a class="navbar-brand logo_h" href="index.html"><img src="img/Logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav menu_nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href=""><i class="fas fa-globe"></i> English (IN)</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="">Help</a></li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>

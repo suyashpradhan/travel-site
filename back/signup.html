@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body style="background-position: center;
@@ -20,18 +21,30 @@ background-image: linear-gradient(
   ),
   url('../img/login.jpg');
   height: 100vh;">
-    <nav>
-        <div class="navigation gutter">
-            <a href="#" class="navigation--logo fromLeft">Tourizto<span style="color: #e74315">.</span></a>
-            <!-- <a href="#" class="navigation--menu fromRight">
-                        <img src="img/menu-button.png" alt="">
-                    </a> -->
-            <ul class="navigation--list">
-                <li><a href="#">Home</a></li>
-
-            </ul>
+    <header class="header_area">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <a class="navbar-brand logo_h" href="index.html"><img src="img/Logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav menu_nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href=""><i class="fas fa-globe"></i> English (IN)</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="">Help</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-    </nav>
+    </header>
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
