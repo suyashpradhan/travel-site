@@ -3,8 +3,8 @@
 $font: "Lato", sans-serif;
 
 $colors: (
-  "primary": #61892f,
-  "secondary": #86c232,
+  "primary": #40407a,
+  "secondary": #2c2c54,
   "ternary": #222629,
   "text-white": #f8eee7,
   "text-gray": #474b4f,
@@ -100,7 +100,7 @@ img {
 
 .pageWrapperInner {
   max-width: 80rem;
-  margin: 4rem auto 0 auto;
+  margin: 2rem auto 0 auto;
 }
 
 .section_span {
@@ -215,32 +215,6 @@ hr {
   visibility: visible;
 }
 
-.navigation--logo {
-  color: map-get($map: $colors, $key: primary);
-  font-size: 2rem;
-  font-weight: 900;
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navigation--list {
-  @include flexRow();
-
-  li {
-    @include defaultStyling();
-    padding: 0 1rem;
-    list-style: none;
-    position: relative;
-
-    a {
-      font-size: 1.1rem;
-      color: map-get($map: $colors, $key: secondary);
-      @include defaultStyling();
-    }
-  }
-}
-
 /*End's Here*/
 
 /*Hero Section Styling*/
@@ -315,305 +289,6 @@ hr {
         }
       }
     }
-  }
-}
-
-.navbar {
-  padding: 0px;
-  border: 0px;
-  border-radius: 0px;
-}
-
-.navbar {
-  background: #fff;
-  padding: 25px !important;
-
-  .logo_h {
-    padding-top: 0px;
-  }
-
-  .menu_nav {
-    .nav-item {
-      .nav-link {
-        color: map-get($map: $colors, $key: primary);
-        padding: 0px;
-        font-weight: 600;
-        font-size: 1.1rem;
-
-        &:after {
-          display: none;
-        }
-      }
-
-      &:hover,
-      &.active {
-        .nav-link {
-          color: map-get($map: $colors, $key: secondary);
-        }
-      }
-
-      &.submenu {
-        position: relative;
-
-        ul {
-          border: none;
-          padding: 0px;
-          border-radius: 0px;
-          box-shadow: none;
-          margin: 0px;
-          background: transparent;
-
-          @media (min-width: 992px) {
-            position: absolute;
-            top: 100%;
-            left: 0px;
-            min-width: 220px;
-            text-align: left;
-            opacity: 0;
-            transition: all 300ms ease-in;
-            visibility: hidden;
-            display: block;
-            border: none;
-            padding: 0px;
-            border-radius: 0px;
-          }
-
-          &:before {
-            content: "";
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 10px 10px 0 10px;
-            border-color: #eeeeee transparent transparent transparent;
-            position: absolute;
-            right: 24px;
-            top: 45px;
-            z-index: 3;
-            opacity: 0;
-            transition: all 400ms linear;
-          }
-
-          .nav-item {
-            display: block;
-            float: none;
-            margin-right: 0px;
-            border-bottom: 1px solid #ededed;
-            margin-left: 0px;
-            background: #fff;
-            transition: all 0.4s linear;
-
-            @media (min-width: 992px) {
-              margin-top: 10px;
-            }
-
-            .nav-link {
-              line-height: 45px;
-              color: map-get($map: $colors, $key: primary);
-              padding: 0px 30px;
-              transition: all 150ms linear;
-              display: block;
-            }
-
-            &:last-child {
-              border-bottom: none;
-            }
-
-            &:hover {
-              .nav-link {
-                background: #f0f0f0;
-                color: map-get($map: $colors, $key: primary);
-              }
-            }
-          }
-        }
-
-        &:hover {
-          ul {
-            @media (min-width: 992px) {
-              visibility: visible;
-              opacity: 1;
-            }
-
-            .nav-item {
-              margin-top: 0px;
-            }
-          }
-        }
-      }
-
-      & + li {
-        margin-left: 30px;
-      }
-    }
-  }
-}
-
-.menu_two {
-  background: rgba(255, 255, 255, 0.15);
-
-  .menu_nav {
-    .nav-item {
-      .nav-link {
-        line-height: 60px;
-        color: #fff;
-      }
-    }
-  }
-}
-
-//affix menu css
-
-.navbar_fixed {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  background: #fff;
-  top: 0;
-  top: -50px;
-  -webkit-transform: translateY(50px);
-  -ms-transform: translateY(50px);
-  transform: translateY(50px);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-  transition: transform 300ms ease, background 300ms ease,
-    -webkit-transform 300ms ease;
-
-  .navbar {
-    background: transparent;
-  }
-
-  .header-top {
-    display: none;
-  }
-
-  &.header_two {
-    background: rgba(34, 34, 34, 0.9);
-  }
-}
-
-/*End's Here*/
-
-/*About Section*/
-.about_section {
-  padding-top: auto;
-
-  .section__header--main {
-    font-size: 4rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-    color: #f5f6f7;
-    margin: 0;
-    padding: 0;
-  }
-
-  .section__header--sub {
-    font-size: 2rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-    color: #f5f6f7;
-    margin: 0;
-    padding: 0;
-  }
-
-  .section__header--btn {
-    background-color: map-get($map: $colors, $key: ternary);
-    color: #f5f6f7;
-    font-size: 1.3rem;
-    letter-spacing: 1px;
-    padding: 1rem 2rem;
-    border-radius: 0.8rem;
-    margin: 2rem 0 0 0;
-    display: inline-block;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
-    backface-visibility: hidden;
-  }
-
-  .section__header--btn:hover {
-    transform: translateY(-3px) scale(1.03);
-  }
-
-  .section__header--btn:active {
-    outline: none;
-    transform: translateZ(-3px);
-  }
-
-  .section__form {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-flow: column wrap;
-    background: #fff;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    border-radius: 0.5rem;
-    height: auto;
-    width: 30rem;
-    padding: 1.5rem;
-
-    label {
-      color: map-get($map: $colors, $key: text-gray);
-      text-transform: unset;
-    }
-  }
-
-  .section__form--fields {
-    width: 100%;
-    display: block;
-    padding: 0.7rem;
-    border-radius: 0.3rem;
-    border: 1px solid map-get($map: $colors, $key: secondary);
-    color: map-get($map: $colors, $key: text-gray);
-    font-size: 1rem;
-    font-weight: 900;
-
-    &::placeholder {
-      color: map-get($map: $colors, $key: text-gray);
-    }
-  }
-
-  .section__form--fields:active {
-    outline: none;
-    border: 1px solid map-get($map: $colors, $key: primary);
-  }
-
-  .section__form--fields:focus {
-    outline: none;
-    border: 1px solid map-get($map: $colors, $key: primary);
-  }
-
-  .section__form--btn {
-    background-color: map-get($map: $colors, $key: primary);
-    color: map-get($map: $colors, $key: text-white);
-    font-size: 1.3rem;
-    letter-spacing: 1px;
-    border-radius: 0.3rem;
-    margin: 0.6rem 0 0 0;
-    padding: 0.7rem 0;
-    width: 100%;
-    font-weight: 500;
-    text-align: center;
-    display: inline-block;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
-    backface-visibility: hidden;
-  }
-
-  .section__form--btn:active {
-    outline: none;
-    transform: translateZ(-3px);
-  }
-
-  .section__form--header {
-    font-size: 1.7rem;
-    @include defaultStyling();
-    margin-bottom: 0.8rem !important;
-    color: map-get($map: $colors, $key: primary);
-  }
-
-  .section__form--guest {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 0.5rem;
-    width: 100%;
   }
 }
 
@@ -714,8 +389,8 @@ hr {
         font-weight: 500;
 
         &:first-child {
-          background-color: map-get($map: $colors, $key: ternary);
-          color: map-get($map: $colors, $key: primary);
+          background-color: map-get($map: $colors, $key: text-gray);
+          color: map-get($map: $colors, $key: text-white);
           padding: 0.2rem 0.5rem;
           border-radius: 0.3rem;
         }
@@ -1144,7 +819,7 @@ footer {
   }
 
   .leftWrapperGap {
-    border-bottom: 1px solid map-get($map: $colors, $key: text-gray-light);
+    border-bottom: 1px solid #ccc;
     margin: 0 0 1rem 0;
     padding: 0 0 1.5rem 0;
   }
@@ -1208,7 +883,7 @@ footer {
     justify-items: flex-start;
     padding: 0 0 2rem 0;
     margin: 0 0 2rem 0;
-    border-bottom: 1px solid map-get($map: $colors, $key: ternary);
+    border-bottom: 1px solid #ccc;
 
     .hotel__wrapper--left {
       width: 100%;
@@ -1572,10 +1247,6 @@ footer {
       .accordion {
         width: 100%;
         margin: 0;
-        background: #fff;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        border-radius: 4px;
       }
 
       .accordion .link {
@@ -1951,24 +1622,9 @@ footer {
     margin: 0 0.8rem;
   }
 
-  .about_section {
-    display: flex !important;
-    justify-content: space-evenly !important;
-    align-items: center;
-    flex-flow: column wrap !important;
-    height: 90vh !important;
-  }
-
-  .about_section--left {
-    width: 100%;
-  }
-
-  .section__header--main {
-    font-size: 2rem;
-  }
-
-  .section__header--sub {
-    font-size: 1rem;
+  .explore_section--inner {
+    display: grid;
+    grid-template-columns: 1fr !important;
   }
 }
 
@@ -2095,26 +1751,6 @@ footer {
 @media screen and (max-width: 43.75rem) and (min-width: 25.1rem) {
   .gutter {
     margin: 0 0.8rem;
-  }
-
-  .about_section {
-    display: flex !important;
-    justify-content: space-evenly !important;
-    align-items: center;
-    flex-flow: column wrap !important;
-    height: 90vh !important;
-
-    .about_section--left {
-      width: 100%;
-    }
-
-    .section__header--main {
-      font-size: 2rem;
-    }
-
-    .section__header--sub {
-      font-size: 1rem;
-    }
   }
 }
 
@@ -2643,12 +2279,15 @@ footer {
 .hotel_booking_table {
   background: #04091e;
   align-items: center;
-  padding: 40px 50px 30px;
+  padding: 20px;
   display: flex;
 
   h2 {
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 28px;
+    line-height: inherit;
+    margin: -60px 0 0 0;
+    display: block;
+    padding: 0;
     color: #fff;
     text-transform: uppercase;
   }
@@ -2714,16 +2353,13 @@ footer {
 
 .theme_btn {
   background: map-get($map: $colors, $key: primary);
+  color: map-get($map: $colors, $key: text-white);
   text-transform: uppercase;
   font-weight: 500;
   padding: 0.5rem 1rem;
   text-align: center;
   text-decoration: none;
   transition: all 0.5s ease-in;
-
-  &:before {
-    background: map-get($map: $colors, $key: secondary);
-  }
 
   &:hover {
     text-decoration: none !important;
@@ -2733,16 +2369,18 @@ footer {
 }
 
 .book_now_btn {
-  width: 100%;
+  width: fit-content;
   display: block;
   background: map-get($map: $colors, $key: primary);
-  color: map-get($map: $colors, $key: text-black);
+  color: map-get($map: $colors, $key: text-white);
   text-transform: uppercase;
   font-weight: 500;
   padding: 0.5rem 1rem;
   text-align: center;
   text-decoration: none;
   transition: all 0.5s ease-in;
+  border-radius: 0.2rem;
+  margin: 0.5rem auto 0 auto;
 
   &:hover {
     text-decoration: none !important;
@@ -2752,3 +2390,155 @@ footer {
 }
 
 /*============= End banner_area css =============*/
+
+//Navbar
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a {
+  display: block;
+  padding: 0 0 0 40px;
+  background: #ffffff;
+  color: map-get($map: $colors, $key: primary);
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 4.2rem;
+  margin: 0;
+}
+nav ul li a:hover {
+  background: #eee;
+  color: map-get($map: $colors, $key: secondary);
+  text-decoration: none;
+}
+nav ul li a:not(:only-child):after {
+  padding-left: 4px;
+  content: " ▾";
+}
+nav ul li ul li {
+  min-width: 190px;
+  width: 15rem;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  z-index: 99999;
+  /* Guarantees that the dropdown will display on top of any content. */
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  display: none;
+  width: 15rem;
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  height: 70px;
+  width: 70px;
+}
+
+@media only screen and (max-width: 800px) {
+  .nav-mobile {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #463f3f;
+  position: absolute;
+  display: block;
+  content: "";
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before,
+#nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 800px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+
+.navigation {
+  height: 70px;
+  background: #ffffff;
+}
+
+.navigation-shadow {
+  background-color: #fff;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.brand {
+  position: absolute;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+}
+.brand a,
+.brand a:visited {
+  color: #463f3f;
+  text-decoration: none;
+}

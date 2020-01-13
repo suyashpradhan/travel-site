@@ -14,35 +14,41 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body>
-    <header class="header_area">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <a class="navbar-brand logo_h" href="index.html"><img src="img/Logo.png" alt=""></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-                    <ul class="nav navbar-nav menu_nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href=""><i class="fas fa-globe"></i> English (IN)</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href=""><i class="fas fa-rupee-sign"></i> INR</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Help</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Log in</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Sign up</a></li>
-                    </ul>
+<body style="background-color:#f8f8f8">
+    <section class="navigation navigation-shadow">
+        <div style="max-width: 80rem;margin:0 auto">
+            <div class=" brand">
+                <a href="#!">LOGO</a>
+            </div>
+            <nav>
+                <div class="nav-mobile">
+                    <a id="nav-toggle" href="#!"><span></span></a>
                 </div>
+                <ul class="nav-list">
+                    <!-- Setting the links to #! will ensure that no action takes place on click. -->
+                    <li><a href="#!">Home</a></li>
+                    <li><a href="#!"><i class="fas fa-globe"></i> English (IN)</a>
+                        <ul class="nav-dropdown">
+                            <li><a href="#!">English (US)</a></li>
+                            <li><a href="#!">English (UK)</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#!"><i class="fas fa-rupee-sign"></i> INR</a>
+                        <ul class="nav-dropdown">
+                            <li><a href="#!"><i class="fas fa-dollar-sign fa-fw"></i> United States Dollar</a></li>
+                            <li><a href="#!"><i class="fas fa-yen-sign fa-fw"></i> Chinese Yuan </a></li>
+                            <li><a href="#!"><i class="fas fa-euro-sign fa-fw"></i> Euro</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#!">Help</a></li>
+                    <li><a href="#!">Sign up</a></li>
+                    <li><a href="#!">Login</a></li>
+                </ul>
             </nav>
         </div>
-    </header>
-    <div class="pageWrapperInner gutter pd">
+    </section>
+    <div class="pageWrapperInner gutter">
         <div class="bodyWrapper">
             <div id="leftWrapper">
                 <div class="filtersWrapper leftWrapperGap">
@@ -186,7 +192,7 @@
                                         <span class="room__info">per room per night</span>
                                     </span>
                                     <a href="#" class="view__details--btn" id="details__btn">View Details</a>
-                                    <a href="#" class="book__now--btn" id="book__btn">Book Now</a>
+                                    <a href="check_in.html" class="book__now--btn" id="book__btn">Book Now</a>
                                 </div>
                             </div>
                         </div>
