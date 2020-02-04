@@ -1,17 +1,20 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
 
-$font: "Lato", sans-serif;
 
-$colors: (
-  "primary": #40407a,
+$font: "Lato",
+sans-serif;
+$logo_font:'Satisfy',
+cursive;
+
+$colors: ("primary": #40407a,
   "secondary": #2c2c54,
   "ternary": #222629,
   "text-white": #f8eee7,
   "text-gray": #474b4f,
   "text-gray-light": #6b6e70,
   "text-black": #222629,
-  "border-color": #474b4f
-);
+  "border-color": #474b4f);
 
 @mixin defaultStyling {
   margin: 0;
@@ -138,11 +141,9 @@ img {
     padding-top: 2rem;
     text-align: center;
     color: map-get($map: $colors, $key: text-white);
-    background-image: linear-gradient(
-      -180deg,
-      rgba(0, 0, 0, 0) 5%,
-      rgb(0, 0, 0) 100%
-    ) !important;
+    background-image: linear-gradient(-180deg,
+        rgba(0, 0, 0, 0) 5%,
+        rgb(0, 0, 0) 100%) !important;
     height: 6.5rem !important;
     width: 13.5rem !important;
     border-radius: 0.3rem;
@@ -229,7 +230,181 @@ hr {
 /*End's Here*/
 
 /*Navigation Section Styling*/
-/*============== header css =============*/
+//Navbar
+nav {
+  float: right;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  float: left;
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  padding: 0 20px;
+  background: #ffffff;
+  color: map-get($map: $colors, $key: primary);
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 4.2rem;
+  margin: 0;
+}
+
+nav ul li a:hover {
+  border-bottom: 3px solid map-get($map: $colors, $key:secondary);
+  color: map-get($map: $colors, $key:primary);
+  text-decoration: none;
+}
+
+nav ul li a:not(:only-child):after {
+  padding-left: 4px;
+  /* content: " ▾"; */
+}
+
+nav ul li ul li {
+  min-width: 190px;
+  width: 15rem;
+}
+
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  z-index: 99999;
+  /* Guarantees that the dropdown will display on top of any content. */
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  display: none;
+  width: 15rem;
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  height: 70px;
+  width: 70px;
+}
+
+@media only screen and (max-width: 800px) {
+  .nav-mobile {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav ul li {
+    float: none;
+  }
+
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+}
+
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #463f3f;
+  position: absolute;
+  display: block;
+  content: "";
+  transition: all 300ms ease-in-out;
+}
+
+#nav-toggle span:before {
+  top: -10px;
+}
+
+#nav-toggle span:after {
+  bottom: -10px;
+}
+
+#nav-toggle.active span {
+  background-color: transparent;
+}
+
+#nav-toggle.active span:before,
+#nav-toggle.active span:after {
+  top: 0;
+}
+
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 800px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+
+.navigation {
+  height: 70px;
+  background: #ffffff;
+}
+
+.navigation-shadow {
+  background-color: #fff;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.brand {
+  position: absolute;
+  float: left;
+  line-height: 70px;
+
+}
+
+.brand a,
+.brand a:visited {
+  text-decoration: none;
+  font-size: 3rem;
+  color: map-get($map: $colors, $key:primary);
+  font-family: $logo_font !important;
+}
+
+
 .header_area {
   position: absolute;
   top: 0;
@@ -1480,60 +1655,43 @@ footer {
         animation: checkbox-off 0.3s forwards ease-out;
       }
 
-      .checkbox input[type="checkbox"]:focus + .checkbox-material .check:after {
+      .checkbox input[type="checkbox"]:focus+.checkbox-material .check:after {
         opacity: 0.2;
       }
 
-      .checkbox
-        input[type="checkbox"]:checked
-        + .checkbox-material
-        .check:before {
+      .checkbox input[type="checkbox"]:checked+.checkbox-material .check:before {
         box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px,
           0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
         -webkit-animation: checkbox-on 0.3s forwards ease-out;
         animation: checkbox-on 0.3s forwards ease-out;
       }
 
-      .checkbox
-        input[type="checkbox"]:not(:checked)
-        + .checkbox-material:before {
+      .checkbox input[type="checkbox"]:not(:checked)+.checkbox-material:before {
         -webkit-animation: rippleOff 700ms forwards ease-out;
         animation: rippleOff 700ms forwards ease-out;
       }
 
-      .checkbox input[type="checkbox"]:checked + .checkbox-material:before {
+      .checkbox input[type="checkbox"]:checked+.checkbox-material:before {
         -webkit-animation: rippleOn 700ms forwards ease-out;
         animation: rippleOn 700ms forwards ease-out;
       }
 
-      .checkbox
-        input[type="checkbox"]:not(:checked)
-        + .checkbox-material
-        .check:after {
+      .checkbox input[type="checkbox"]:not(:checked)+.checkbox-material .check:after {
         -webkit-animation: rippleOff 700ms forwards ease-out;
         animation: rippleOff 700ms forwards ease-out;
       }
 
-      .checkbox
-        input[type="checkbox"]:checked
-        + .checkbox-material
-        .check:after {
+      .checkbox input[type="checkbox"]:checked+.checkbox-material .check:after {
         -webkit-animation: rippleOn 700ms forwards ease-out;
         animation: rippleOn 700ms forwards ease-out;
       }
 
-      .checkbox
-        input[type="checkbox"][disabled]:not(:checked)
-        ~ .checkbox-material
-        .check:before,
-      .checkbox input[type="checkbox"][disabled] + .circle {
+      .checkbox input[type="checkbox"][disabled]:not(:checked)~.checkbox-material .check:before,
+      .checkbox input[type="checkbox"][disabled]+.circle {
         opacity: 0.5;
       }
 
-      .checkbox
-        input[type="checkbox"][disabled]
-        + .checkbox-material
-        .check:after {
+      .checkbox input[type="checkbox"][disabled]+.checkbox-material .check:after {
         background-color: rgba(0, 0, 0, 0.84);
         -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg);
@@ -1894,49 +2052,43 @@ footer {
   animation: checkbox-off 0.3s forwards ease-out;
 }
 
-.checkbox input[type="checkbox"]:focus + .checkbox-material .check:after {
+.checkbox input[type="checkbox"]:focus+.checkbox-material .check:after {
   opacity: 0.2;
 }
 
-.checkbox input[type="checkbox"]:checked + .checkbox-material .check:before {
+.checkbox input[type="checkbox"]:checked+.checkbox-material .check:before {
   box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px,
     -5px 5px 0 10px, 20px -12px 0 11px;
   -webkit-animation: checkbox-on 0.3s forwards ease-out;
   animation: checkbox-on 0.3s forwards ease-out;
 }
 
-.checkbox input[type="checkbox"]:not(:checked) + .checkbox-material:before {
+.checkbox input[type="checkbox"]:not(:checked)+.checkbox-material:before {
   -webkit-animation: rippleOff 700ms forwards ease-out;
   animation: rippleOff 700ms forwards ease-out;
 }
 
-.checkbox input[type="checkbox"]:checked + .checkbox-material:before {
+.checkbox input[type="checkbox"]:checked+.checkbox-material:before {
   -webkit-animation: rippleOn 700ms forwards ease-out;
   animation: rippleOn 700ms forwards ease-out;
 }
 
-.checkbox
-  input[type="checkbox"]:not(:checked)
-  + .checkbox-material
-  .check:after {
+.checkbox input[type="checkbox"]:not(:checked)+.checkbox-material .check:after {
   -webkit-animation: rippleOff 700ms forwards ease-out;
   animation: rippleOff 700ms forwards ease-out;
 }
 
-.checkbox input[type="checkbox"]:checked + .checkbox-material .check:after {
+.checkbox input[type="checkbox"]:checked+.checkbox-material .check:after {
   -webkit-animation: rippleOn 700ms forwards ease-out;
   animation: rippleOn 700ms forwards ease-out;
 }
 
-.checkbox
-  input[type="checkbox"][disabled]:not(:checked)
-  ~ .checkbox-material
-  .check:before,
-.checkbox input[type="checkbox"][disabled] + .circle {
+.checkbox input[type="checkbox"][disabled]:not(:checked)~.checkbox-material .check:before,
+.checkbox input[type="checkbox"][disabled]+.circle {
   opacity: 0.5;
 }
 
-.checkbox input[type="checkbox"][disabled] + .checkbox-material .check:after {
+.checkbox input[type="checkbox"][disabled]+.checkbox-material .check:after {
   background-color: rgba(0, 0, 0, 0.84);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -2389,156 +2541,357 @@ footer {
   }
 }
 
-/*============= End banner_area css =============*/
+/*End's Here*/
 
-//Navbar
-nav {
-  float: right;
-}
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-nav ul li {
-  float: left;
-  position: relative;
-}
-nav ul li a {
-  display: block;
-  padding: 0 0 0 40px;
-  background: #ffffff;
-  color: map-get($map: $colors, $key: primary);
-  font-size: 18px;
-  font-weight: 500;
-  text-decoration: none;
-  line-height: 4.2rem;
-  margin: 0;
-}
-nav ul li a:hover {
-  background: #eee;
-  color: map-get($map: $colors, $key: secondary);
-  text-decoration: none;
-}
-nav ul li a:not(:only-child):after {
-  padding-left: 4px;
-  content: " ▾";
-}
-nav ul li ul li {
-  min-width: 190px;
-  width: 15rem;
-}
-nav ul li ul li a {
-  padding: 15px;
-  line-height: 20px;
-}
+/*Pricing Table*/
+$h1color: #6e768d;
+$h3color: #b4bdc6;
+$widthoftable: 31%;
+$bgctables: #ffffff;
+$bgfontcolor: #717787;
 
-.nav-dropdown {
-  position: absolute;
-  z-index: 99999;
-  /* Guarantees that the dropdown will display on top of any content. */
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
-  display: none;
-  width: 15rem;
-}
+.pricingTable {
+  margin: 40px auto;
 
-.nav-mobile {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: #fff;
-  height: 70px;
-  width: 70px;
-}
-
-@media only screen and (max-width: 800px) {
-  .nav-mobile {
-    display: block;
+  &>&-title {
+    text-align: center;
+    color: map-get($map: $colors, $key:primary);
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    padding: 0;
+    letter-spacing: 0.04em;
   }
 
-  nav {
-    width: 100%;
-    padding: 70px 0 15px;
+  &>&-subtitle {
+    text-align: center;
+    color: map-get($map: $colors, $key:text-gray-light);
+    font-size: 1.3rem;
+    letter-spacing: 0.04em;
+    margin-bottom: .5rem;
   }
-  nav ul {
-    display: none;
-  }
-  nav ul li {
-    float: none;
-  }
-  nav ul li a {
-    padding: 15px;
-    line-height: 20px;
-  }
-  nav ul li ul li a {
-    padding-left: 30px;
-  }
-}
-#nav-toggle {
-  position: absolute;
-  left: 18px;
-  top: 22px;
-  cursor: pointer;
-  padding: 10px 35px 16px 0px;
-}
-#nav-toggle span,
-#nav-toggle span:before,
-#nav-toggle span:after {
-  cursor: pointer;
-  border-radius: 1px;
-  height: 5px;
-  width: 35px;
-  background: #463f3f;
-  position: absolute;
-  display: block;
-  content: "";
-  transition: all 300ms ease-in-out;
-}
-#nav-toggle span:before {
-  top: -10px;
-}
-#nav-toggle span:after {
-  bottom: -10px;
-}
-#nav-toggle.active span {
-  background-color: transparent;
-}
-#nav-toggle.active span:before,
-#nav-toggle.active span:after {
-  top: 0;
-}
-#nav-toggle.active span:before {
-  transform: rotate(45deg);
-}
-#nav-toggle.active span:after {
-  transform: rotate(-45deg);
-}
 
-@media screen and (min-width: 800px) {
-  .nav-list {
-    display: block !important;
+  &-firstTable {
+    list-style: none;
+    padding-left: 2em;
+    padding-right: 2em;
+    text-align: center;
+
+    &_table {
+      vertical-align: middle;
+      margin: 3rem 0 0 0;
+      width: $widthoftable;
+      background-color: $bgctables;
+      display: inline-block;
+      padding: 0px 30px 40px;
+      text-align: center;
+      max-width: 320px;
+      transition: all 0.3s ease;
+      border-radius: 5px;
+
+      @media screen and (max-width: 767px) {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        max-width: 90%;
+        margin-bottom: 20px;
+        padding: 10px;
+        padding-left: 20px;
+      }
+
+      &>* {
+        @media screen and (max-width: 767px) {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        @media screen and (max-width: 480px) {
+          display: block;
+          float: none;
+        }
+      }
+
+      &:after {
+        @media screen and (max-width: 767px) {
+          display: table;
+          content: '';
+          clear: both;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.08);
+
+        @media screen and (max-width: 767px) {
+          transform: none;
+        }
+      }
+
+      &:not(:last-of-type) {
+        margin-right: (100%-$widthoftable*3)/2;
+
+        @media screen and (max-width: 767px) {
+          margin-right: auto;
+        }
+      }
+
+      &:nth-of-type(2) {
+        position: relative;
+
+        & h1 {
+          @media screen and (max-width: 767px) {
+            padding-top: 8%;
+          }
+        }
+
+        &:before {
+          content: 'Most Popular';
+          position: absolute;
+          color: white;
+          display: block;
+          background-color: #3bbdee;
+          text-align: center;
+          right: 15px;
+          top: -25px;
+          height: 65px;
+          width: 65px;
+          border-radius: 50%;
+          box-sizing: border-box;
+          font-size: 0.5em;
+          padding-top: 22px;
+          text-transform: uppercase;
+          letter-spacing: 0.13em;
+          transition: all 0.5s ease;
+
+          @media screen and (max-width: 988px) {
+            font-size: 0.6em;
+          }
+
+          @media screen and (max-width: 767px) {
+            left: 10px;
+            width: 45px;
+            height: 45px;
+            top: -10px;
+            padding-top: 13px;
+          }
+
+          @media screen and (max-width: 480px) {
+            font-size: 0.8em;
+          }
+
+        }
+
+        &:hover:before {
+          transform: rotate(360deg);
+        }
+      }
+
+      &__header {
+        font-size: 1.6em;
+        padding: 40px 0px;
+        border-bottom: 2px solid #ebedec;
+        letter-spacing: 0.03em;
+
+        @media screen and (max-width: 1068px) {
+          font-size: 1.45em;
+        }
+
+        @media screen and (max-width: 767px) {
+          padding: 0px;
+          border-bottom: none;
+          float: left;
+          width: 33%;
+          padding-top: 3%;
+          padding-bottom: 2%;
+        }
+
+        @media screen and (max-width: 610px) {
+          font-size: 1.3em;
+        }
+
+        @media screen and (max-width: 480px) {
+          float: none;
+          width: 100%;
+          font-size: 1.8em;
+          margin-bottom: 5px;
+        }
+
+      }
+
+      &__pricing {
+        font-size: 3em;
+        padding: 30px 0px;
+        border-bottom: 2px solid #ebedec;
+        line-height: 0.7;
+
+        @media screen and (max-width: 1068px) {
+          font-size: 2.8em;
+        }
+
+        @media screen and (max-width: 767px) {
+          border-bottom: none;
+          padding: 0;
+          float: left;
+          clear: left;
+          width: 33%;
+        }
+
+        @media screen and (max-width: 610px) {
+          font-size: 2.4em;
+        }
+
+        @media screen and (max-width: 480px) {
+          float: none;
+          width: 100%;
+          font-size: 3em;
+          margin-bottom: 10px;
+        }
+
+        span:first-of-type {
+          font-size: 0.35em;
+          vertical-align: top;
+          letter-spacing: 0.15em;
+
+          @media screen and (max-width: 1068px) {
+            font-size: 0.3em;
+          }
+        }
+
+        span:last-of-type {
+          vertical-align: bottom;
+          font-size: 0.30em;
+          letter-spacing: 0.04em;
+          padding-left: 0.2em;
+
+          @media screen and (max-width: 1068px) {
+            font-size: 0.25em;
+          }
+        }
+      }
+
+      &__options {
+        list-style: none;
+        padding: 15px;
+        font-size: 0.9em;
+        border-bottom: 2px solid #ebedec;
+
+        @media screen and (max-width: 1068px) {
+          font-size: 0.85em;
+        }
+
+        @media screen and (max-width: 767px) {
+          border-bottom: none;
+          padding: 0;
+          margin-right: 10%;
+        }
+
+        @media screen and (max-width: 610px) {
+          font-size: 0.7em;
+          margin-right: 8%;
+        }
+
+        @media screen and (max-width: 480px) {
+          font-size: 1.3em;
+          margin-right: none;
+          margin-bottom: 10px;
+        }
+
+
+
+        &>li {
+          padding: 8px 0px;
+
+          @media screen and (max-width: 767px) {
+            text-align: left;
+          }
+
+          @media screen and (max-width: 610px) {
+            padding: 5px 0;
+          }
+
+          @media screen and (max-width: 480px) {
+            text-align: center;
+          }
+
+          &:before {
+            content: '✓';
+            display: inline-block;
+            margin-right: 15px;
+            color: white;
+            background-color: #74ce6a;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            font-size: 0.8em;
+            padding: 2px;
+            text-align: center;
+
+            @media screen and (max-width: 1068px) {
+              width: 14px;
+              height: 14px;
+              padding: 1.5px;
+            }
+
+            @media screen and (max-width: 767px) {
+              width: 12px;
+              height: 12px;
+            }
+
+          }
+        }
+      }
+
+      &__getstart {
+        color: white;
+        background-color: #71ce73;
+        margin-top: 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 15px;
+        box-shadow: 0px 3px 0px 0px rgba(102, 172, 100, 1);
+        letter-spacing: 0.07em;
+        transition: all 0.4s ease;
+
+        @media screen and (max-width: 1068px) {
+          font-size: 0.95em;
+        }
+
+        @media screen and (max-width: 767px) {
+          margin-top: 0;
+        }
+
+        @media screen and (max-width: 610px) {
+          font-size: 0.9em;
+          padding: 10px;
+        }
+
+        @media screen and (max-width: 480px) {
+          font-size: 1em;
+          width: 50%;
+          margin: 10px auto;
+        }
+
+        &:hover {
+          transform: translateY(-10px);
+          box-shadow: 0px 40px 29px -19px rgba(102, 172, 100, 0.9);
+
+          @media screen and (max-width: 767px) {
+            transform: none;
+            box-shadow: none;
+          }
+        }
+
+        &:active {
+          box-shadow: inset 0 0 10px 1px rgba(102, 165, 100, 1), 0px 40px 29px -19px rgba(102, 172, 100, 0.95);
+          transform: scale(0.95) translateY(-9px);
+
+          @media screen and (max-width: 767px) {
+            transform: scale(0.95) translateY(0);
+            box-shadow: none;
+          }
+        }
+      }
+    }
+
+
   }
-}
-
-.navigation {
-  height: 70px;
-  background: #ffffff;
-}
-
-.navigation-shadow {
-  background-color: #fff;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-}
-
-.brand {
-  position: absolute;
-  float: left;
-  line-height: 70px;
-  text-transform: uppercase;
-}
-.brand a,
-.brand a:visited {
-  color: #463f3f;
-  text-decoration: none;
 }
