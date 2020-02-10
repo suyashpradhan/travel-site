@@ -21,30 +21,39 @@ background-image: linear-gradient(
     rgb(0, 0, 0) 100%
   ),
   url('../img/login.jpg');">
-    <header class="header_area">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <a class="navbar-brand logo_h" href="index.html"><img src="img/Logo.png" alt=""></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-                    <ul class="nav navbar-nav menu_nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href=""><i class="fas fa-globe"></i> English (IN)</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="">Help</a></li>
-                    </ul>
+    <section class="navigation navigation-shadow">
+        <div style="max-width: 80rem;margin:0 auto">
+            <div class=" brand">
+                <a href="#!">Tourizto</a>
+            </div>
+            <nav>
+                <div class="nav-mobile">
+                    <a id="nav-toggle" href="#!"><span></span></a>
                 </div>
+                <ul class="nav-list">
+                    <!-- Setting the links to #! will ensure that no action takes place on click. -->
+                    <li><a href="#!">Home</a></li>
+                    <li><a href="#!"><i class="fas fa-globe"></i> English (IN)</a>
+                        <ul class="nav-dropdown">
+                            <li><a href="#!">English (US)</a></li>
+                            <li><a href="#!">English (UK)</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#!"><i class="fas fa-rupee-sign"></i> INR</a>
+                        <ul class="nav-dropdown">
+                            <li><a href="#!"><i class="fas fa-dollar-sign fa-fw"></i> United States Dollar</a></li>
+                            <li><a href="#!"><i class="fas fa-yen-sign fa-fw"></i> Chinese Yuan </a></li>
+                            <li><a href="#!"><i class="fas fa-euro-sign fa-fw"></i> Euro</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#!">Help</a></li>
+                    <li><a href="#!">Sign up</a></li>
+                    <li><a href="#!">Login</a></li>
+                </ul>
             </nav>
         </div>
-    </header>
+    </section>
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">

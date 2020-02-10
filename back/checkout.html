@@ -11,22 +11,40 @@
 
 </head>
 
-<body>
-  <nav>
-    <div class="navigation gutter">
-      <a href="#" class="navigation--logo fromLeft">Tourizto<span style="color: #54504c">.</span></a>
-      <!-- <a href="#" class="navigation--menu fromRight">
-                <img src="img/menu-button.png" alt="">
-            </a> -->
-      <ul class="navigation--list">
-        <li><a href="#">Host a home</a></li>
-        <li><a href="#">Host an experience</a></li>
-        <li><a href="#">Help</a></li>
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Sign up</a></li>
-      </ul>
+<body style="background-color:#f8f8f8">
+  <section class="navigation navigation-shadow">
+    <div style="max-width: 80rem;margin:0 auto">
+      <div class=" brand">
+        <a href="#!">Tourizto</a>
+      </div>
+      <nav>
+        <div class="nav-mobile">
+          <a id="nav-toggle" href="#!"><span></span></a>
+        </div>
+        <ul class="nav-list">
+          <!-- Setting the links to #! will ensure that no action takes place on click. -->
+          <li><a href="#!">Home</a></li>
+          <li><a href="#!"><i class="fas fa-globe"></i> English (IN)</a>
+            <ul class="nav-dropdown">
+              <li><a href="#!">English (US)</a></li>
+              <li><a href="#!">English (UK)</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#!"><i class="fas fa-rupee-sign"></i> INR</a>
+            <ul class="nav-dropdown">
+              <li><a href="#!"><i class="fas fa-dollar-sign fa-fw"></i> United States Dollar</a></li>
+              <li><a href="#!"><i class="fas fa-yen-sign fa-fw"></i> Chinese Yuan </a></li>
+              <li><a href="#!"><i class="fas fa-euro-sign fa-fw"></i> Euro</a></li>
+            </ul>
+          </li>
+          <li><a href="#!">Help</a></li>
+          <li><a href="#!">Sign up</a></li>
+          <li><a href="#!">Login</a></li>
+        </ul>
+      </nav>
     </div>
-  </nav>
+  </section>
 
   <div class="pageWrapper gutter pd">
     <div class="container">
