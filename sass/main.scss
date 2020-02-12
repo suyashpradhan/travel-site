@@ -1,20 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
-@import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Satisfy&display=swap");
 
+$font: "Lato", sans-serif;
+$logo_font: "Satisfy", cursive;
 
-$font: "Lato",
-sans-serif;
-$logo_font:'Satisfy',
-cursive;
-
-$colors: ("primary": #40407a,
+$colors: (
+  "primary": #40407a,
   "secondary": #2c2c54,
   "ternary": #222629,
   "text-white": #f8eee7,
   "text-gray": #474b4f,
   "text-gray-light": #6b6e70,
   "text-black": #222629,
-  "border-color": #474b4f);
+  "border-color": #474b4f
+);
 
 @mixin defaultStyling {
   margin: 0;
@@ -141,9 +140,11 @@ img {
     padding-top: 2rem;
     text-align: center;
     color: map-get($map: $colors, $key: text-white);
-    background-image: linear-gradient(-180deg,
-        rgba(0, 0, 0, 0) 5%,
-        rgb(0, 0, 0) 100%) !important;
+    background-image: linear-gradient(
+      -180deg,
+      rgba(0, 0, 0, 0) 5%,
+      rgb(0, 0, 0) 100%
+    ) !important;
     height: 6.5rem !important;
     width: 13.5rem !important;
     border-radius: 0.3rem;
@@ -259,8 +260,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  border-bottom: 3px solid map-get($map: $colors, $key:secondary);
-  color: map-get($map: $colors, $key:primary);
+  border-bottom: 3px solid map-get($map: $colors, $key: secondary);
+  color: map-get($map: $colors, $key: primary);
   text-decoration: none;
 }
 
@@ -393,17 +394,15 @@ nav ul li ul li a {
   position: absolute;
   float: left;
   line-height: 70px;
-
 }
 
 .brand a,
 .brand a:visited {
   text-decoration: none;
   font-size: 3rem;
-  color: map-get($map: $colors, $key:primary);
+  color: map-get($map: $colors, $key: primary);
   font-family: $logo_font !important;
 }
-
 
 .header_area {
   position: absolute;
@@ -1655,43 +1654,60 @@ footer {
         animation: checkbox-off 0.3s forwards ease-out;
       }
 
-      .checkbox input[type="checkbox"]:focus+.checkbox-material .check:after {
+      .checkbox input[type="checkbox"]:focus + .checkbox-material .check:after {
         opacity: 0.2;
       }
 
-      .checkbox input[type="checkbox"]:checked+.checkbox-material .check:before {
+      .checkbox
+        input[type="checkbox"]:checked
+        + .checkbox-material
+        .check:before {
         box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px,
           0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
         -webkit-animation: checkbox-on 0.3s forwards ease-out;
         animation: checkbox-on 0.3s forwards ease-out;
       }
 
-      .checkbox input[type="checkbox"]:not(:checked)+.checkbox-material:before {
+      .checkbox
+        input[type="checkbox"]:not(:checked)
+        + .checkbox-material:before {
         -webkit-animation: rippleOff 700ms forwards ease-out;
         animation: rippleOff 700ms forwards ease-out;
       }
 
-      .checkbox input[type="checkbox"]:checked+.checkbox-material:before {
+      .checkbox input[type="checkbox"]:checked + .checkbox-material:before {
         -webkit-animation: rippleOn 700ms forwards ease-out;
         animation: rippleOn 700ms forwards ease-out;
       }
 
-      .checkbox input[type="checkbox"]:not(:checked)+.checkbox-material .check:after {
+      .checkbox
+        input[type="checkbox"]:not(:checked)
+        + .checkbox-material
+        .check:after {
         -webkit-animation: rippleOff 700ms forwards ease-out;
         animation: rippleOff 700ms forwards ease-out;
       }
 
-      .checkbox input[type="checkbox"]:checked+.checkbox-material .check:after {
+      .checkbox
+        input[type="checkbox"]:checked
+        + .checkbox-material
+        .check:after {
         -webkit-animation: rippleOn 700ms forwards ease-out;
         animation: rippleOn 700ms forwards ease-out;
       }
 
-      .checkbox input[type="checkbox"][disabled]:not(:checked)~.checkbox-material .check:before,
-      .checkbox input[type="checkbox"][disabled]+.circle {
+      .checkbox
+        input[type="checkbox"][disabled]:not(:checked)
+        ~ .checkbox-material
+        .check:before,
+      .checkbox input[type="checkbox"][disabled] + .circle {
         opacity: 0.5;
       }
 
-      .checkbox input[type="checkbox"][disabled]+.checkbox-material .check:after {
+      .checkbox
+        input[type="checkbox"][disabled]
+        + .checkbox-material
+        .check:after {
         background-color: rgba(0, 0, 0, 0.84);
         -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg);
@@ -2052,43 +2068,49 @@ footer {
   animation: checkbox-off 0.3s forwards ease-out;
 }
 
-.checkbox input[type="checkbox"]:focus+.checkbox-material .check:after {
+.checkbox input[type="checkbox"]:focus + .checkbox-material .check:after {
   opacity: 0.2;
 }
 
-.checkbox input[type="checkbox"]:checked+.checkbox-material .check:before {
+.checkbox input[type="checkbox"]:checked + .checkbox-material .check:before {
   box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px,
     -5px 5px 0 10px, 20px -12px 0 11px;
   -webkit-animation: checkbox-on 0.3s forwards ease-out;
   animation: checkbox-on 0.3s forwards ease-out;
 }
 
-.checkbox input[type="checkbox"]:not(:checked)+.checkbox-material:before {
+.checkbox input[type="checkbox"]:not(:checked) + .checkbox-material:before {
   -webkit-animation: rippleOff 700ms forwards ease-out;
   animation: rippleOff 700ms forwards ease-out;
 }
 
-.checkbox input[type="checkbox"]:checked+.checkbox-material:before {
+.checkbox input[type="checkbox"]:checked + .checkbox-material:before {
   -webkit-animation: rippleOn 700ms forwards ease-out;
   animation: rippleOn 700ms forwards ease-out;
 }
 
-.checkbox input[type="checkbox"]:not(:checked)+.checkbox-material .check:after {
+.checkbox
+  input[type="checkbox"]:not(:checked)
+  + .checkbox-material
+  .check:after {
   -webkit-animation: rippleOff 700ms forwards ease-out;
   animation: rippleOff 700ms forwards ease-out;
 }
 
-.checkbox input[type="checkbox"]:checked+.checkbox-material .check:after {
+.checkbox input[type="checkbox"]:checked + .checkbox-material .check:after {
   -webkit-animation: rippleOn 700ms forwards ease-out;
   animation: rippleOn 700ms forwards ease-out;
 }
 
-.checkbox input[type="checkbox"][disabled]:not(:checked)~.checkbox-material .check:before,
-.checkbox input[type="checkbox"][disabled]+.circle {
+.checkbox
+  input[type="checkbox"][disabled]:not(:checked)
+  ~ .checkbox-material
+  .check:before,
+.checkbox input[type="checkbox"][disabled] + .circle {
   opacity: 0.5;
 }
 
-.checkbox input[type="checkbox"][disabled]+.checkbox-material .check:after {
+.checkbox input[type="checkbox"][disabled] + .checkbox-material .check:after {
   background-color: rgba(0, 0, 0, 0.84);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -2555,32 +2577,32 @@ $bgfontcolor: #717787;
 
   .pricingTable-icon {
     font-size: 1.2rem;
-    margin-right: .3rem;
-    color: map-get($map: $colors, $key:primary);
+    margin-right: 0.3rem;
+    color: map-get($map: $colors, $key: primary);
   }
 
   .pricingTable-list {
     display: grid;
     grid-template-columns: 1.5rem 1fr;
     align-items: center;
-    grid-gap: .5rem;
+    grid-gap: 0.5rem;
   }
 
-  &>&-title {
+  & > &-title {
     text-align: center;
-    color: map-get($map: $colors, $key:primary);
+    color: map-get($map: $colors, $key: primary);
     font-size: 4rem;
     margin-bottom: 1rem;
     padding: 0;
     letter-spacing: 0.04em;
   }
 
-  &>&-subtitle {
+  & > &-subtitle {
     text-align: center;
-    color: map-get($map: $colors, $key:text-gray-light);
+    color: map-get($map: $colors, $key: text-gray-light);
     font-size: 1.3rem;
     letter-spacing: 0.04em;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
   &-firstTable {
@@ -2611,7 +2633,7 @@ $bgfontcolor: #717787;
         padding-left: 20px;
       }
 
-      &>* {
+      & > * {
         @media screen and (max-width: 767px) {
           display: inline-block;
           vertical-align: middle;
@@ -2626,7 +2648,7 @@ $bgfontcolor: #717787;
       &:after {
         @media screen and (max-width: 767px) {
           display: table;
-          content: '';
+          content: "";
           clear: both;
         }
       }
@@ -2640,7 +2662,7 @@ $bgfontcolor: #717787;
       }
 
       &:not(:last-of-type) {
-        margin-right: (100%-$widthoftable*3)/2;
+        margin-right: (100%-$widthoftable * 3)/2;
 
         @media screen and (max-width: 767px) {
           margin-right: auto;
@@ -2657,11 +2679,11 @@ $bgfontcolor: #717787;
         }
 
         &:before {
-          content: 'Most Popular';
+          content: "Most Popular";
           position: absolute;
           color: white;
           display: block;
-          background-color: map-get($map: $colors, $key:ternary);
+          background-color: map-get($map: $colors, $key: ternary);
           text-align: center;
           right: 15px;
           top: -25px;
@@ -2690,7 +2712,6 @@ $bgfontcolor: #717787;
           @media screen and (max-width: 480px) {
             font-size: 0.8em;
           }
-
         }
 
         &:hover:before {
@@ -2701,9 +2722,9 @@ $bgfontcolor: #717787;
       &__header {
         font-size: 2rem;
         padding: 40px 0px;
-        border-bottom: 2px solid map-get($map: $colors, $key:text-white);
+        border-bottom: 2px solid map-get($map: $colors, $key: text-white);
         letter-spacing: 0.03em;
-        color: map-get($map: $colors, $key:secondary);
+        color: map-get($map: $colors, $key: secondary);
 
         @media screen and (max-width: 1068px) {
           font-size: 1.45em;
@@ -2728,7 +2749,6 @@ $bgfontcolor: #717787;
           font-size: 1.8em;
           margin-bottom: 5px;
         }
-
       }
 
       &__pricing {
@@ -2772,7 +2792,7 @@ $bgfontcolor: #717787;
 
         span:last-of-type {
           vertical-align: bottom;
-          font-size: 0.30em;
+          font-size: 0.3em;
           letter-spacing: 0.04em;
           padding-left: 0.2em;
 
@@ -2809,15 +2829,11 @@ $bgfontcolor: #717787;
           margin-bottom: 10px;
         }
 
-
-
-        &>li {
+        & > li {
           padding: 8px 0px;
           font-size: 1rem;
           text-align: left;
-          color: map-get($map: $colors, $key:text-gray-light);
-
-
+          color: map-get($map: $colors, $key: text-gray-light);
 
           @media screen and (max-width: 767px) {
             text-align: left;
@@ -2830,18 +2846,17 @@ $bgfontcolor: #717787;
           @media screen and (max-width: 480px) {
             text-align: center;
           }
-
         }
       }
 
       &__getstart {
-        color: map-get($map: $colors, $key:text-white);
-        background-color: map-get($map: $colors, $key:primary);
+        color: map-get($map: $colors, $key: text-white);
+        background-color: map-get($map: $colors, $key: primary);
         margin-top: 30px;
         border-radius: 5px;
         cursor: pointer;
         padding: 15px;
-        box-shadow: 0px 3px 0px 0px map-get($map: $colors, $key:secondary);
+        box-shadow: 0px 3px 0px 0px map-get($map: $colors, $key: secondary);
         letter-spacing: 0.07em;
         transition: all 0.4s ease;
 
@@ -2866,7 +2881,7 @@ $bgfontcolor: #717787;
 
         &:hover {
           transform: translateY(-10px);
-          box-shadow: 0px 40px 29px -19px map-get($map: $colors, $key:secondary);
+          box-shadow: 0px 40px 29px -19px map-get($map: $colors, $key: secondary);
 
           @media screen and (max-width: 767px) {
             transform: none;
@@ -2875,8 +2890,8 @@ $bgfontcolor: #717787;
         }
 
         &:active {
-          box-shadow: inset 0 0 10px 1px map-get($map: $colors, $key:primary),
-            0px 40px 29px -19px map-get($map: $colors, $key:primary);
+          box-shadow: inset 0 0 10px 1px map-get($map: $colors, $key: primary),
+            0px 40px 29px -19px map-get($map: $colors, $key: primary);
           transform: scale(0.95) translateY(-9px);
 
           @media screen and (max-width: 767px) {
@@ -2889,13 +2904,12 @@ $bgfontcolor: #717787;
   }
 }
 
-
 /*Inner Pages*/
 
 .page-head {
   font-size: 3rem;
   margin: 2rem 0;
-  color: map-get($map: $colors, $key:text-gray);
+  color: map-get($map: $colors, $key: text-gray);
 }
 
 .block-card {
@@ -2911,19 +2925,19 @@ $bgfontcolor: #717787;
   }
 
   .block-head {
-    color: map-get($map: $colors, $key:text-black);
+    color: map-get($map: $colors, $key: text-black);
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1.6rem;
     padding: 0;
-    margin: .5rem 0 1rem 0;
+    margin: 0.5rem 0 1rem 0;
     letter-spacing: 1px;
   }
 
   .block-para {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: map-get($map: $colors, $key:text-gray-light);
+    color: map-get($map: $colors, $key: text-gray-light);
     padding: 0;
     margin: 0 0 2rem 0;
     display: block !important;
@@ -2932,14 +2946,14 @@ $bgfontcolor: #717787;
   .block-btn {
     display: block;
     background-color: map-get($map: $colors, $key: primary);
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     width: fit-content;
-    color: map-get($map: $colors, $key:text-white);
+    color: map-get($map: $colors, $key: text-white);
     display: block;
     border-radius: 0.3rem;
     font-size: 1.1rem;
     text-decoration: none;
-    transition: all .2s ease-in;
+    transition: all 0.2s ease-in;
 
     &:hover {
       background-color: map-get($map: $colors, $key: secondary);
@@ -2954,15 +2968,15 @@ $bgfontcolor: #717787;
       list-style: none;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      padding: 0 0 .4rem 0;
+      padding: 0 0 0.4rem 0;
 
       .block-span-main {
-        color: map-get($map: $colors, $key:text-gray);
+        color: map-get($map: $colors, $key: text-gray);
         font-size: 1.1rem;
       }
 
       .block-span-sub {
-        color: map-get($map: $colors, $key:text-black);
+        color: map-get($map: $colors, $key: text-black);
         font-size: 1.1rem;
         font-weight: 600;
       }
@@ -2972,5 +2986,12 @@ $bgfontcolor: #717787;
   .block-card-flex {
     display: flex;
     justify-content: space-between;
+  }
+
+  .block-icon {
+    font-size: 1.2rem;
+    color: map-get($map: $colors, $key: text-black);
+    margin: 0 0 0 0.3rem;
+    cursor: pointer;
   }
 }
