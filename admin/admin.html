@@ -128,26 +128,18 @@
                     <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
                         <span class="user-img"><img class="rounded-circle" src="../img/user.jpg" width="40" alt="Admin">
                             <span class="status online"></span></span>
-                        <span>Hi Suyash Pradhan</span>
                     </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="profile.html">My Profile</a>
-                        <a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
-                        <a class="dropdown-item" href="settings.html">Settings</a>
-                        <a class="dropdown-item" href="login.html">Logout</a>
+                    <div class="dropdown">
+                        <div class="dropdown-content">
+                            <a href="">My Profile</a>
+                            <a href="">Edit Profile</a>
+                            <hr style="margin: 0;">
+                            <a href="" class="btn btn-danger" style="color: #Fff;">Logout</a>
+                        </div>
                     </div>
+
                 </li>
             </ul>
-            <div class="dropdown mobile-user-menu float-right">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
-                        class="fa fa-ellipsis-v"></i></a>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="profile.html">My Profile</a>
-                    <a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
-                    <a class="dropdown-item" href="settings.html">Settings</a>
-                    <a class="dropdown-item" href="login.html">Logout</a>
-                </div>
-            </div>
         </div>
         <div class="sidebar" id="sidebar">
             <div class="sidebar-inner slimscroll">
@@ -228,18 +220,24 @@
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title">Today's Status</h4>
-                                <hr>
                             </div>
-
+                            <hr>
+                            <ul class="status-list">
+                                <li class="status-li">Checkin's Left <span>05 of 12</span></li>
+                                <li class="status-li">Checkouts Left <span>02 of 12</span></li>
+                                <hr class="light-hr">
+                                <li class="status-li">Rooms In Use <span>05 of 12</span></li>
+                                <li class="status-li">Cleaning In Progress <span>01 of 12</span></li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title">Price</h4>
-                                <hr>
+                                <a href="#" class="modify-btn">Modify</a>
                             </div>
-                            <div id="visit-area"></div>
+                            <hr>
                         </div>
                     </div>
                 </div>

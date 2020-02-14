@@ -53,12 +53,12 @@ Version      : 1.0
 	1. General
 -----------------------*/
 
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 
-*{
-  margin:0;
-  padding:0;
-  font-family: 'Poppins', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -801,7 +801,9 @@ textarea.form-control {
   border: 0 none;
   font-size: 16px;
   line-height: 30px;
-  padding: 15px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .card .card-header .card-title {
@@ -5857,4 +5859,69 @@ blockquote p {
   font-size: 2rem;
   margin: 2rem 0;
   color: #181818;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin: -15px 0 0 -110px;
+}
+
+.dropdown_mobile {
+  margin-left: -0px !important;
+  min-width: 300px !important;
+}
+
+.dropdown-content a {
+  color: #5c5b5b;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.modify-btn {
+  color: #2980b9;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.status-list {
+  margin: 0;
+  padding: 5px 20px;
+}
+
+.light-hr {
+  border-top: 1px solid #eee !important;
+}
+
+.status-li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 10px 0;
+  margin: 0;
+  color: #4d4d4d;
+  font-size: 17px;
+}
+
+.status-list span {
+  color: #181818;
+  font-size: 17px;
+  font-weight: 600;
 }
