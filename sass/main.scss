@@ -1,19 +1,22 @@
-@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Satisfy&display=swap");
+@font-face {
+  font-family: 'gilroy-regular';
+  font-weight: 400;
+  font-style: normal;
+  src: url(../font/Gilroy/Gilroy-Regular.otf) format("opentype");
+}
 
-$font: "Lato", sans-serif;
-$logo_font: "Satisfy", cursive;
+$font: "gilroy-regular";
+$logo_font: "Satisfy",
+cursive;
 
-$colors: (
-  "primary": #40407a,
+$colors: ("primary": #40407a,
   "secondary": #2c2c54,
   "ternary": #222629,
   "text-white": #f8eee7,
   "text-gray": #474b4f,
   "text-gray-light": #6b6e70,
-  "text-black": #222629,
-  "border-color": #474b4f
-);
+  "text-black": #181818,
+  "border-color": #474b4f);
 
 @mixin defaultStyling {
   margin: 0;
@@ -140,11 +143,9 @@ img {
     padding-top: 2rem;
     text-align: center;
     color: map-get($map: $colors, $key: text-white);
-    background-image: linear-gradient(
-      -180deg,
-      rgba(0, 0, 0, 0) 5%,
-      rgb(0, 0, 0) 100%
-    ) !important;
+    background-image: linear-gradient(-180deg,
+        rgba(0, 0, 0, 0) 5%,
+        rgb(0, 0, 0) 100%) !important;
     height: 6.5rem !important;
     width: 13.5rem !important;
     border-radius: 0.3rem;
@@ -401,7 +402,7 @@ nav ul li ul li a {
   text-decoration: none;
   font-size: 3rem;
   color: map-get($map: $colors, $key: primary);
-  font-family: $logo_font !important;
+  font-family: $font !important;
 }
 
 .header_area {
@@ -509,7 +510,7 @@ nav ul li ul li a {
       color: map-get($map: $colors, $key: primary) !important;
 
       span {
-        font-size: 1rem;
+        font-size: .9rem;
         color: map-get($map: $colors, $key: secondary) !important;
         font-weight: 600;
       }
@@ -1654,60 +1655,43 @@ footer {
         animation: checkbox-off 0.3s forwards ease-out;
       }
 
-      .checkbox input[type="checkbox"]:focus + .checkbox-material .check:after {
+      .checkbox input[type="checkbox"]:focus+.checkbox-material .check:after {
         opacity: 0.2;
       }
 
-      .checkbox
-        input[type="checkbox"]:checked
-        + .checkbox-material
-        .check:before {
+      .checkbox input[type="checkbox"]:checked+.checkbox-material .check:before {
         box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px,
           0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
         -webkit-animation: checkbox-on 0.3s forwards ease-out;
         animation: checkbox-on 0.3s forwards ease-out;
       }
 
-      .checkbox
-        input[type="checkbox"]:not(:checked)
-        + .checkbox-material:before {
+      .checkbox input[type="checkbox"]:not(:checked)+.checkbox-material:before {
         -webkit-animation: rippleOff 700ms forwards ease-out;
         animation: rippleOff 700ms forwards ease-out;
       }
 
-      .checkbox input[type="checkbox"]:checked + .checkbox-material:before {
+      .checkbox input[type="checkbox"]:checked+.checkbox-material:before {
         -webkit-animation: rippleOn 700ms forwards ease-out;
         animation: rippleOn 700ms forwards ease-out;
       }
 
-      .checkbox
-        input[type="checkbox"]:not(:checked)
-        + .checkbox-material
-        .check:after {
+      .checkbox input[type="checkbox"]:not(:checked)+.checkbox-material .check:after {
         -webkit-animation: rippleOff 700ms forwards ease-out;
         animation: rippleOff 700ms forwards ease-out;
       }
 
-      .checkbox
-        input[type="checkbox"]:checked
-        + .checkbox-material
-        .check:after {
+      .checkbox input[type="checkbox"]:checked+.checkbox-material .check:after {
         -webkit-animation: rippleOn 700ms forwards ease-out;
         animation: rippleOn 700ms forwards ease-out;
       }
 
-      .checkbox
-        input[type="checkbox"][disabled]:not(:checked)
-        ~ .checkbox-material
-        .check:before,
-      .checkbox input[type="checkbox"][disabled] + .circle {
+      .checkbox input[type="checkbox"][disabled]:not(:checked)~.checkbox-material .check:before,
+      .checkbox input[type="checkbox"][disabled]+.circle {
         opacity: 0.5;
       }
 
-      .checkbox
-        input[type="checkbox"][disabled]
-        + .checkbox-material
-        .check:after {
+      .checkbox input[type="checkbox"][disabled]+.checkbox-material .check:after {
         background-color: rgba(0, 0, 0, 0.84);
         -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg);
@@ -2068,49 +2052,43 @@ footer {
   animation: checkbox-off 0.3s forwards ease-out;
 }
 
-.checkbox input[type="checkbox"]:focus + .checkbox-material .check:after {
+.checkbox input[type="checkbox"]:focus+.checkbox-material .check:after {
   opacity: 0.2;
 }
 
-.checkbox input[type="checkbox"]:checked + .checkbox-material .check:before {
+.checkbox input[type="checkbox"]:checked+.checkbox-material .check:before {
   box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px,
     -5px 5px 0 10px, 20px -12px 0 11px;
   -webkit-animation: checkbox-on 0.3s forwards ease-out;
   animation: checkbox-on 0.3s forwards ease-out;
 }
 
-.checkbox input[type="checkbox"]:not(:checked) + .checkbox-material:before {
+.checkbox input[type="checkbox"]:not(:checked)+.checkbox-material:before {
   -webkit-animation: rippleOff 700ms forwards ease-out;
   animation: rippleOff 700ms forwards ease-out;
 }
 
-.checkbox input[type="checkbox"]:checked + .checkbox-material:before {
+.checkbox input[type="checkbox"]:checked+.checkbox-material:before {
   -webkit-animation: rippleOn 700ms forwards ease-out;
   animation: rippleOn 700ms forwards ease-out;
 }
 
-.checkbox
-  input[type="checkbox"]:not(:checked)
-  + .checkbox-material
-  .check:after {
+.checkbox input[type="checkbox"]:not(:checked)+.checkbox-material .check:after {
   -webkit-animation: rippleOff 700ms forwards ease-out;
   animation: rippleOff 700ms forwards ease-out;
 }
 
-.checkbox input[type="checkbox"]:checked + .checkbox-material .check:after {
+.checkbox input[type="checkbox"]:checked+.checkbox-material .check:after {
   -webkit-animation: rippleOn 700ms forwards ease-out;
   animation: rippleOn 700ms forwards ease-out;
 }
 
-.checkbox
-  input[type="checkbox"][disabled]:not(:checked)
-  ~ .checkbox-material
-  .check:before,
-.checkbox input[type="checkbox"][disabled] + .circle {
+.checkbox input[type="checkbox"][disabled]:not(:checked)~.checkbox-material .check:before,
+.checkbox input[type="checkbox"][disabled]+.circle {
   opacity: 0.5;
 }
 
-.checkbox input[type="checkbox"][disabled] + .checkbox-material .check:after {
+.checkbox input[type="checkbox"][disabled]+.checkbox-material .check:after {
   background-color: rgba(0, 0, 0, 0.84);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -2588,7 +2566,7 @@ $bgfontcolor: #717787;
     grid-gap: 0.5rem;
   }
 
-  & > &-title {
+  &>&-title {
     text-align: center;
     color: map-get($map: $colors, $key: primary);
     font-size: 4rem;
@@ -2597,7 +2575,7 @@ $bgfontcolor: #717787;
     letter-spacing: 0.04em;
   }
 
-  & > &-subtitle {
+  &>&-subtitle {
     text-align: center;
     color: map-get($map: $colors, $key: text-gray-light);
     font-size: 1.3rem;
@@ -2633,7 +2611,7 @@ $bgfontcolor: #717787;
         padding-left: 20px;
       }
 
-      & > * {
+      &>* {
         @media screen and (max-width: 767px) {
           display: inline-block;
           vertical-align: middle;
@@ -2829,7 +2807,7 @@ $bgfontcolor: #717787;
           margin-bottom: 10px;
         }
 
-        & > li {
+        &>li {
           padding: 8px 0px;
           font-size: 1rem;
           text-align: left;

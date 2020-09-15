@@ -1,12 +1,16 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Satisfy&display=swap");
+@font-face {
+  font-family: 'gilroy-regular';
+  font-weight: 400;
+  font-style: normal;
+  src: url(../font/Gilroy/Gilroy-Regular.otf) format("opentype"); }
+
 /*Default CSS Styling*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Lato", sans-serif; }
+  font-family: "gilroy-regular"; }
 
 html,
 body {
@@ -122,7 +126,7 @@ hr {
   margin: 0;
   padding: 0;
   text-decoration: none;
-  color: #222629;
+  color: #181818;
   font-weight: 700;
   cursor: pointer; }
 
@@ -291,7 +295,7 @@ nav ul li ul li a {
   text-decoration: none;
   font-size: 3rem;
   color: #40407a;
-  font-family: "Satisfy", cursive !important; }
+  font-family: "gilroy-regular" !important; }
 
 .header_area {
   position: absolute;
@@ -376,7 +380,7 @@ nav ul li ul li a {
     font-weight: 600;
     color: #40407a !important; }
     .explore_section .explore_section--innerWrap .innerHeader span {
-      font-size: 1rem;
+      font-size: .9rem;
       color: #2c2c54 !important;
       font-weight: 600; }
 
@@ -786,8 +790,8 @@ footer {
       letter-spacing: 1px;
       top: 20px;
       color: #f8eee7;
-      border: 1px solid #222629;
-      background-color: #222629; }
+      border: 1px solid #181818;
+      background-color: #181818; }
   .hotel__wrapper .hotel__grid {
     display: grid;
     grid-template-columns: 400px 1fr;
@@ -1228,43 +1232,26 @@ footer {
         animation: checkbox-off 0.3s forwards ease-out; }
       .hotel__details #__right .breakfast__wrapper .checkbox input[type="checkbox"]:focus + .checkbox-material .check:after {
         opacity: 0.2; }
-      .hotel__details #__right .breakfast__wrapper .checkbox
-input[type="checkbox"]:checked
-+ .checkbox-material
-.check:before {
+      .hotel__details #__right .breakfast__wrapper .checkbox input[type="checkbox"]:checked + .checkbox-material .check:before {
         box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
         -webkit-animation: checkbox-on 0.3s forwards ease-out;
         animation: checkbox-on 0.3s forwards ease-out; }
-      .hotel__details #__right .breakfast__wrapper .checkbox
-input[type="checkbox"]:not(:checked)
-+ .checkbox-material:before {
+      .hotel__details #__right .breakfast__wrapper .checkbox input[type="checkbox"]:not(:checked) + .checkbox-material:before {
         -webkit-animation: rippleOff 700ms forwards ease-out;
         animation: rippleOff 700ms forwards ease-out; }
       .hotel__details #__right .breakfast__wrapper .checkbox input[type="checkbox"]:checked + .checkbox-material:before {
         -webkit-animation: rippleOn 700ms forwards ease-out;
         animation: rippleOn 700ms forwards ease-out; }
-      .hotel__details #__right .breakfast__wrapper .checkbox
-input[type="checkbox"]:not(:checked)
-+ .checkbox-material
-.check:after {
+      .hotel__details #__right .breakfast__wrapper .checkbox input[type="checkbox"]:not(:checked) + .checkbox-material .check:after {
         -webkit-animation: rippleOff 700ms forwards ease-out;
         animation: rippleOff 700ms forwards ease-out; }
-      .hotel__details #__right .breakfast__wrapper .checkbox
-input[type="checkbox"]:checked
-+ .checkbox-material
-.check:after {
+      .hotel__details #__right .breakfast__wrapper .checkbox input[type="checkbox"]:checked + .checkbox-material .check:after {
         -webkit-animation: rippleOn 700ms forwards ease-out;
         animation: rippleOn 700ms forwards ease-out; }
-      .hotel__details #__right .breakfast__wrapper .checkbox
-input[type="checkbox"][disabled]:not(:checked)
-~ .checkbox-material
-.check:before,
+      .hotel__details #__right .breakfast__wrapper .checkbox input[type="checkbox"][disabled]:not(:checked) ~ .checkbox-material .check:before,
       .hotel__details #__right .breakfast__wrapper .checkbox input[type="checkbox"][disabled] + .circle {
         opacity: 0.5; }
-      .hotel__details #__right .breakfast__wrapper .checkbox
-input[type="checkbox"][disabled]
-+ .checkbox-material
-.check:after {
+      .hotel__details #__right .breakfast__wrapper .checkbox input[type="checkbox"][disabled] + .checkbox-material .check:after {
         background-color: rgba(0, 0, 0, 0.84);
         -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg); }
@@ -1582,10 +1569,7 @@ input[type="checkbox"][disabled]
   -webkit-animation: rippleOn 700ms forwards ease-out;
   animation: rippleOn 700ms forwards ease-out; }
 
-.checkbox
-input[type="checkbox"]:not(:checked)
-+ .checkbox-material
-.check:after {
+.checkbox input[type="checkbox"]:not(:checked) + .checkbox-material .check:after {
   -webkit-animation: rippleOff 700ms forwards ease-out;
   animation: rippleOff 700ms forwards ease-out; }
 
@@ -1593,10 +1577,7 @@ input[type="checkbox"]:not(:checked)
   -webkit-animation: rippleOn 700ms forwards ease-out;
   animation: rippleOn 700ms forwards ease-out; }
 
-.checkbox
-input[type="checkbox"][disabled]:not(:checked)
-~ .checkbox-material
-.check:before,
+.checkbox input[type="checkbox"][disabled]:not(:checked) ~ .checkbox-material .check:before,
 .checkbox input[type="checkbox"][disabled] + .circle {
   opacity: 0.5; }
 
@@ -2205,7 +2186,7 @@ input[type="checkbox"][disabled]:not(:checked)
     max-width: 100%;
     margin: 0; }
   .block-card .block-head {
-    color: #222629;
+    color: #181818;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1.6rem;
@@ -2244,7 +2225,7 @@ input[type="checkbox"][disabled]:not(:checked)
         color: #474b4f;
         font-size: 1.1rem; }
       .block-card .block-ul .block-list .block-span-sub {
-        color: #222629;
+        color: #181818;
         font-size: 1.1rem;
         font-weight: 600; }
   .block-card .block-card-flex {
@@ -2252,6 +2233,6 @@ input[type="checkbox"][disabled]:not(:checked)
     justify-content: space-between; }
   .block-card .block-icon {
     font-size: 1.2rem;
-    color: #222629;
+    color: #181818;
     margin: 0 0 0 0.3rem;
     cursor: pointer; }
